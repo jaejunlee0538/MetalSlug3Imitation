@@ -1,0 +1,2946 @@
+{"frames": [
+
+{
+	"filename": "CharacterTarmaWithPistol/AllBoarding_0",
+	"frame": {"x":285,"y":381,"w":30,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":55},
+	"sourceSize": {"w":30,"h":55},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllBoarding_1",
+	"frame": {"x":165,"y":449,"w":29,"h":53},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":53},
+	"sourceSize": {"w":29,"h":53},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllBoarding_2",
+	"frame": {"x":359,"y":119,"w":33,"h":41},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":41},
+	"sourceSize": {"w":33,"h":41},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllBoarding_3",
+	"frame": {"x":72,"y":352,"w":31,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":35},
+	"sourceSize": {"w":31,"h":35},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllBoarding_4",
+	"frame": {"x":220,"y":515,"w":29,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":26},
+	"sourceSize": {"w":29,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllBoarding_5",
+	"frame": {"x":464,"y":664,"w":28,"h":15},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":15},
+	"sourceSize": {"w":28,"h":15},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllBombKeening_0",
+	"frame": {"x":299,"y":269,"w":33,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":26},
+	"sourceSize": {"w":33,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllBombKeening_1",
+	"frame": {"x":373,"y":635,"w":28,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":26},
+	"sourceSize": {"w":28,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllBombKeening_2",
+	"frame": {"x":289,"y":353,"w":31,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":26},
+	"sourceSize": {"w":31,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllBombKeening_3",
+	"frame": {"x":328,"y":74,"w":41,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":28},
+	"sourceSize": {"w":41,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllBombKeening_4",
+	"frame": {"x":1,"y":204,"w":38,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":26},
+	"sourceSize": {"w":38,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllBombKeening_5",
+	"frame": {"x":228,"y":204,"w":36,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":26},
+	"sourceSize": {"w":36,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllCrawling_0",
+	"frame": {"x":263,"y":245,"w":34,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":24},
+	"sourceSize": {"w":34,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllCrawling_1",
+	"frame": {"x":226,"y":264,"w":34,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":24},
+	"sourceSize": {"w":34,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllCrawling_2",
+	"frame": {"x":419,"y":211,"w":34,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":24},
+	"sourceSize": {"w":34,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllCrawling_3",
+	"frame": {"x":455,"y":233,"w":34,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":24},
+	"sourceSize": {"w":34,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllCrawling_4",
+	"frame": {"x":152,"y":288,"w":35,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":24},
+	"sourceSize": {"w":35,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllCrawling_5",
+	"frame": {"x":115,"y":292,"w":35,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":24},
+	"sourceSize": {"w":35,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllCrawling_6",
+	"frame": {"x":385,"y":183,"w":35,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":24},
+	"sourceSize": {"w":35,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllFalling_0",
+	"frame": {"x":233,"y":428,"w":29,"h":44},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":44},
+	"sourceSize": {"w":29,"h":44},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllFalling_1",
+	"frame": {"x":196,"y":479,"w":29,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":34},
+	"sourceSize": {"w":29,"h":34},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllFalling_2",
+	"frame": {"x":282,"y":549,"w":29,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":24},
+	"sourceSize": {"w":29,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllFalling_3",
+	"frame": {"x":313,"y":576,"w":29,"h":15},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":15},
+	"sourceSize": {"w":29,"h":15},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllFalling_4",
+	"frame": {"x":103,"y":101,"w":14,"h":6},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":6},
+	"sourceSize": {"w":14,"h":6},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllFireKneeFront_0",
+	"frame": {"x":120,"y":39,"w":50,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":27},
+	"sourceSize": {"w":50,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllFireKneeFront_1",
+	"frame": {"x":243,"y":1,"w":51,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":26},
+	"sourceSize": {"w":51,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllFireKneeFront_2",
+	"frame": {"x":1,"y":71,"w":52,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":52,"h":26},
+	"sourceSize": {"w":52,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllFireKneeFront_3",
+	"frame": {"x":1,"y":290,"w":37,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":26},
+	"sourceSize": {"w":37,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllFireKneeFront_4",
+	"frame": {"x":115,"y":214,"w":37,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":29},
+	"sourceSize": {"w":37,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllFireKneeFront_5",
+	"frame": {"x":41,"y":244,"w":37,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":29},
+	"sourceSize": {"w":37,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllFireKneeFront_6",
+	"frame": {"x":40,"y":275,"w":37,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":27},
+	"sourceSize": {"w":37,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllFireKneeFront_7",
+	"frame": {"x":340,"y":222,"w":34,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":27},
+	"sourceSize": {"w":34,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllFireKneeFront_8",
+	"frame": {"x":376,"y":243,"w":33,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":27},
+	"sourceSize": {"w":33,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllFireKneeFront_9",
+	"frame": {"x":471,"y":353,"w":32,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":28},
+	"sourceSize": {"w":32,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllKneening_0",
+	"frame": {"x":233,"y":474,"w":29,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":39},
+	"sourceSize": {"w":29,"h":39},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllKneening_1",
+	"frame": {"x":285,"y":438,"w":29,"h":41},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":41},
+	"sourceSize": {"w":29,"h":41},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllKneening_2",
+	"frame": {"x":285,"y":481,"w":29,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":38},
+	"sourceSize": {"w":29,"h":38},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllKneening_3",
+	"frame": {"x":144,"y":383,"w":31,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":27},
+	"sourceSize": {"w":31,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllKneening_4",
+	"frame": {"x":105,"y":385,"w":31,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":27},
+	"sourceSize": {"w":31,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllKneening_5",
+	"frame": {"x":68,"y":389,"w":31,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":27},
+	"sourceSize": {"w":31,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllKneening_6",
+	"frame": {"x":34,"y":401,"w":31,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":27},
+	"sourceSize": {"w":31,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllKneening_7",
+	"frame": {"x":419,"y":237,"w":34,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":24},
+	"sourceSize": {"w":34,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllKneening_8",
+	"frame": {"x":334,"y":280,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllKneening_9",
+	"frame": {"x":297,"y":297,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllKneening_10",
+	"frame": {"x":374,"y":272,"w":33,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":24},
+	"sourceSize": {"w":33,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllKneeningAfterBomb_0",
+	"frame": {"x":77,"y":324,"w":32,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":26},
+	"sourceSize": {"w":32,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllKneeningAfterBomb_1",
+	"frame": {"x":38,"y":341,"w":32,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":26},
+	"sourceSize": {"w":32,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllKneeningAfterBomb_2",
+	"frame": {"x":252,"y":359,"w":31,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":26},
+	"sourceSize": {"w":31,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllKneeningAfterBomb_3",
+	"frame": {"x":1,"y":352,"w":32,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":26},
+	"sourceSize": {"w":32,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllManOnEdge_0",
+	"frame": {"x":111,"y":347,"w":31,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":36},
+	"sourceSize": {"w":31,"h":36},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllManOnEdge_1",
+	"frame": {"x":79,"y":288,"w":34,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":34},
+	"sourceSize": {"w":34,"h":34},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllManOnEdge_2",
+	"frame": {"x":1,"y":318,"w":35,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":32},
+	"sourceSize": {"w":35,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllManOnEdge_3",
+	"frame": {"x":189,"y":171,"w":37,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":32},
+	"sourceSize": {"w":37,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllManOnEdge_4",
+	"frame": {"x":45,"y":165,"w":42,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":33},
+	"sourceSize": {"w":42,"h":33},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllManOnEdge_5",
+	"frame": {"x":55,"y":79,"w":46,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":39},
+	"sourceSize": {"w":46,"h":39},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllManOnEdge_6",
+	"frame": {"x":61,"y":38,"w":57,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":57,"h":39},
+	"sourceSize": {"w":57,"h":39},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllManOnEdge_7",
+	"frame": {"x":127,"y":1,"w":60,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":36},
+	"sourceSize": {"w":60,"h":36},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllManOnEdge_8",
+	"frame": {"x":1,"y":1,"w":61,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":61,"h":35},
+	"sourceSize": {"w":61,"h":35},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllManOnEdge_9",
+	"frame": {"x":64,"y":1,"w":61,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":61,"h":35},
+	"sourceSize": {"w":61,"h":35},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllManOnEdge_10",
+	"frame": {"x":1,"y":38,"w":58,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":58,"h":31},
+	"sourceSize": {"w":58,"h":31},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllManOnEdge_11",
+	"frame": {"x":242,"y":29,"w":48,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":30},
+	"sourceSize": {"w":48,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllManOnEdge_12",
+	"frame": {"x":239,"y":61,"w":44,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":29},
+	"sourceSize": {"w":44,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllManOnEdge_13",
+	"frame": {"x":446,"y":33,"w":45,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":29},
+	"sourceSize": {"w":45,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllManOnEdge_14",
+	"frame": {"x":446,"y":1,"w":45,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":30},
+	"sourceSize": {"w":45,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllManOnEdge_15",
+	"frame": {"x":347,"y":36,"w":45,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":36},
+	"sourceSize": {"w":45,"h":36},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllManOnEdge_16",
+	"frame": {"x":440,"y":64,"w":44,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":35},
+	"sourceSize": {"w":44,"h":35},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllManOnEdge_17",
+	"frame": {"x":115,"y":137,"w":43,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":31},
+	"sourceSize": {"w":43,"h":31},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllMissionComplete_0",
+	"frame": {"x":189,"y":127,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllMissionComplete_1",
+	"frame": {"x":115,"y":170,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllMissionComplete_2",
+	"frame": {"x":45,"y":200,"w":38,"h":42},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":42},
+	"sourceSize": {"w":38,"h":42},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllMissionComplete_3",
+	"frame": {"x":435,"y":166,"w":38,"h":43},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":43},
+	"sourceSize": {"w":38,"h":43},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllPistolOutKnee_0",
+	"frame": {"x":154,"y":225,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllPistolOutKnee_1",
+	"frame": {"x":152,"y":256,"w":35,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":30},
+	"sourceSize": {"w":35,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllPistolOutKnee_2",
+	"frame": {"x":189,"y":262,"w":35,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":26},
+	"sourceSize": {"w":35,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllPistolOutKnee_3",
+	"frame": {"x":189,"y":205,"w":36,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":22},
+	"sourceSize": {"w":36,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllPistolOutKnee_4",
+	"frame": {"x":267,"y":184,"w":36,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":27},
+	"sourceSize": {"w":36,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllPistolOutKnee_5",
+	"frame": {"x":308,"y":183,"w":36,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":31},
+	"sourceSize": {"w":36,"h":31},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllPistolOutKnee_6",
+	"frame": {"x":347,"y":162,"w":36,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":32},
+	"sourceSize": {"w":36,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllPistolOutKnee_7",
+	"frame": {"x":475,"y":195,"w":36,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":36},
+	"sourceSize": {"w":36,"h":36},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllPistolOutKnee_8",
+	"frame": {"x":1,"y":260,"w":37,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":28},
+	"sourceSize": {"w":37,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllPistolOutKnee_9",
+	"frame": {"x":266,"y":213,"w":35,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":30},
+	"sourceSize": {"w":35,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllPistolOutKnee_10",
+	"frame": {"x":189,"y":229,"w":35,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":31},
+	"sourceSize": {"w":35,"h":31},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllPistolOutKnee_11",
+	"frame": {"x":303,"y":216,"w":35,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":23},
+	"sourceSize": {"w":35,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllPistolOutKnee_12",
+	"frame": {"x":346,"y":196,"w":35,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":24},
+	"sourceSize": {"w":35,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllPistolOutKnee_13",
+	"frame": {"x":1,"y":232,"w":38,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":26},
+	"sourceSize": {"w":38,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllPistolOutKnee_14",
+	"frame": {"x":229,"y":127,"w":38,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":25},
+	"sourceSize": {"w":38,"h":25},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllPistolOutKnee_15",
+	"frame": {"x":269,"y":130,"w":38,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":25},
+	"sourceSize": {"w":38,"h":25},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllPistolOutKnee_16",
+	"frame": {"x":394,"y":156,"w":39,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":25},
+	"sourceSize": {"w":39,"h":25},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllPistolOutKnee_17",
+	"frame": {"x":318,"y":104,"w":39,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":26},
+	"sourceSize": {"w":39,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllPistolOutKnee_18",
+	"frame": {"x":277,"y":101,"w":39,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":27},
+	"sourceSize": {"w":39,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllRebirthing_0",
+	"frame": {"x":1,"y":470,"w":29,"h":233},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":233},
+	"sourceSize": {"w":29,"h":233},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllRebirthing_1",
+	"frame": {"x":65,"y":466,"w":29,"h":199},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":199},
+	"sourceSize": {"w":29,"h":199},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllRebirthing_2",
+	"frame": {"x":32,"y":476,"w":29,"h":153},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":153},
+	"sourceSize": {"w":29,"h":153},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllRebirthing_3",
+	"frame": {"x":32,"y":631,"w":29,"h":112},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":112},
+	"sourceSize": {"w":29,"h":112},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllRebirthing_4",
+	"frame": {"x":1,"y":705,"w":29,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":82},
+	"sourceSize": {"w":29,"h":82},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllRebirthing_5",
+	"frame": {"x":202,"y":419,"w":29,"h":58},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":58},
+	"sourceSize": {"w":29,"h":58},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllRebirthing_6",
+	"frame": {"x":443,"y":309,"w":32,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":33},
+	"sourceSize": {"w":32,"h":33},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllStopping_0",
+	"frame": {"x":347,"y":504,"w":29,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":37},
+	"sourceSize": {"w":29,"h":37},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllStopping_1",
+	"frame": {"x":347,"y":543,"w":29,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":36},
+	"sourceSize": {"w":29,"h":36},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllStopping_2",
+	"frame": {"x":419,"y":405,"w":30,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":37},
+	"sourceSize": {"w":30,"h":37},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllStopping_3",
+	"frame": {"x":332,"y":306,"w":32,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":37},
+	"sourceSize": {"w":32,"h":37},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllTeleporting_0",
+	"frame": {"x":486,"y":72,"w":25,"h":43},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":43},
+	"sourceSize": {"w":25,"h":43},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllTeleporting_1",
+	"frame": {"x":32,"y":745,"w":22,"h":43},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":43},
+	"sourceSize": {"w":22,"h":43},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllTeleporting_2",
+	"frame": {"x":371,"y":74,"w":21,"h":43},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":43},
+	"sourceSize": {"w":21,"h":43},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllTeleporting_3",
+	"frame": {"x":103,"y":109,"w":10,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":10,"h":29},
+	"sourceSize": {"w":10,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_0",
+	"frame": {"x":248,"y":387,"w":30,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":39},
+	"sourceSize": {"w":30,"h":39},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_1",
+	"frame": {"x":355,"y":387,"w":30,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":39},
+	"sourceSize": {"w":30,"h":39},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_2",
+	"frame": {"x":480,"y":117,"w":31,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":39},
+	"sourceSize": {"w":31,"h":39},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_3",
+	"frame": {"x":223,"y":290,"w":31,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":39},
+	"sourceSize": {"w":31,"h":39},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_4",
+	"frame": {"x":316,"y":472,"w":29,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":39},
+	"sourceSize": {"w":29,"h":39},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_5",
+	"frame": {"x":155,"y":184,"w":32,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":39},
+	"sourceSize": {"w":32,"h":39},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_6",
+	"frame": {"x":409,"y":291,"w":32,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":38},
+	"sourceSize": {"w":32,"h":38},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_7",
+	"frame": {"x":186,"y":319,"w":31,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":38},
+	"sourceSize": {"w":31,"h":38},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_8",
+	"frame": {"x":369,"y":298,"w":32,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":38},
+	"sourceSize": {"w":32,"h":38},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_9",
+	"frame": {"x":149,"y":343,"w":31,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":38},
+	"sourceSize": {"w":31,"h":38},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_10",
+	"frame": {"x":317,"y":392,"w":30,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":38},
+	"sourceSize": {"w":30,"h":38},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_11",
+	"frame": {"x":387,"y":394,"w":30,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":38},
+	"sourceSize": {"w":30,"h":38},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_12",
+	"frame": {"x":349,"y":428,"w":30,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":38},
+	"sourceSize": {"w":30,"h":38},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_13",
+	"frame": {"x":317,"y":432,"w":30,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":38},
+	"sourceSize": {"w":30,"h":38},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_14",
+	"frame": {"x":85,"y":239,"w":28,"h":47},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":47},
+	"sourceSize": {"w":28,"h":47},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_15",
+	"frame": {"x":115,"y":245,"w":35,"h":45},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":45},
+	"sourceSize": {"w":35,"h":45},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_16",
+	"frame": {"x":394,"y":115,"w":40,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":39},
+	"sourceSize": {"w":40,"h":39},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_17",
+	"frame": {"x":399,"y":1,"w":45,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":39},
+	"sourceSize": {"w":45,"h":39},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_18",
+	"frame": {"x":1,"y":99,"w":46,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":38},
+	"sourceSize": {"w":46,"h":38},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_19",
+	"frame": {"x":119,"y":98,"w":43,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":37},
+	"sourceSize": {"w":43,"h":37},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_20",
+	"frame": {"x":285,"y":61,"w":41,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":38},
+	"sourceSize": {"w":41,"h":38},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllThrowingCigar_21",
+	"frame": {"x":436,"y":126,"w":39,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":38},
+	"sourceSize": {"w":39,"h":38},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllTurnningFront_0",
+	"frame": {"x":150,"y":640,"w":24,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":38},
+	"sourceSize": {"w":24,"h":38},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllTurnningKnee_0",
+	"frame": {"x":25,"y":790,"w":21,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":26},
+	"sourceSize": {"w":21,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/AllTurnningUp_0",
+	"frame": {"x":164,"y":105,"w":23,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":40},
+	"sourceSize": {"w":23,"h":40},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerJumpingStayStill_0",
+	"frame": {"x":493,"y":1,"w":18,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":25},
+	"sourceSize": {"w":18,"h":25},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerJumpingStayStill_1",
+	"frame": {"x":264,"y":428,"w":19,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":25},
+	"sourceSize": {"w":19,"h":25},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerJumpingStayStill_2",
+	"frame": {"x":162,"y":722,"w":20,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":25},
+	"sourceSize": {"w":20,"h":25},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerJumpingStayStill_3",
+	"frame": {"x":140,"y":739,"w":20,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":23},
+	"sourceSize": {"w":20,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerJumpingStayStill_4",
+	"frame": {"x":232,"y":626,"w":21,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":20},
+	"sourceSize": {"w":21,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerJumpingStayStill_5",
+	"frame": {"x":201,"y":660,"w":21,"h":19},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":19},
+	"sourceSize": {"w":21,"h":19},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerJumpingWalk_0",
+	"frame": {"x":307,"y":625,"w":27,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":22},
+	"sourceSize": {"w":27,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerJumpingWalk_1",
+	"frame": {"x":282,"y":575,"w":29,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":20},
+	"sourceSize": {"w":29,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerJumpingWalk_2",
+	"frame": {"x":446,"y":290,"w":33,"h":17},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":17},
+	"sourceSize": {"w":33,"h":17},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerJumpingWalk_3",
+	"frame": {"x":66,"y":448,"w":30,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":16},
+	"sourceSize": {"w":30,"h":16},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerJumpingWalk_4",
+	"frame": {"x":33,"y":460,"w":30,"h":14},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":14},
+	"sourceSize": {"w":30,"h":14},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerJumpingWalk_5",
+	"frame": {"x":124,"y":619,"w":26,"h":15},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":15},
+	"sourceSize": {"w":26,"h":15},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerQuivering_0",
+	"frame": {"x":255,"y":648,"w":21,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":16},
+	"sourceSize": {"w":21,"h":16},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerQuivering_1",
+	"frame": {"x":278,"y":648,"w":21,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":16},
+	"sourceSize": {"w":21,"h":16},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerQuivering_2",
+	"frame": {"x":301,"y":649,"w":21,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":16},
+	"sourceSize": {"w":21,"h":16},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerQuivering_3",
+	"frame": {"x":255,"y":666,"w":21,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":16},
+	"sourceSize": {"w":21,"h":16},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerStandStill_0",
+	"frame": {"x":278,"y":666,"w":21,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":16},
+	"sourceSize": {"w":21,"h":16},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerWalking_0",
+	"frame": {"x":255,"y":626,"w":21,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":20},
+	"sourceSize": {"w":21,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerWalking_1",
+	"frame": {"x":434,"y":662,"w":28,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":20},
+	"sourceSize": {"w":28,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerWalking_2",
+	"frame": {"x":355,"y":369,"w":31,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":16},
+	"sourceSize": {"w":31,"h":16},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerWalking_3",
+	"frame": {"x":264,"y":477,"w":19,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":20},
+	"sourceSize": {"w":19,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerWalking_4",
+	"frame": {"x":172,"y":61,"w":15,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":20},
+	"sourceSize": {"w":15,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerWalking_5",
+	"frame": {"x":170,"y":83,"w":16,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":20},
+	"sourceSize": {"w":16,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerWalking_6",
+	"frame": {"x":232,"y":648,"w":21,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":20},
+	"sourceSize": {"w":21,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerWalking_7",
+	"frame": {"x":152,"y":618,"w":26,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":20},
+	"sourceSize": {"w":26,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerWalking_8",
+	"frame": {"x":322,"y":374,"w":31,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":16},
+	"sourceSize": {"w":31,"h":16},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerWalking_9",
+	"frame": {"x":162,"y":749,"w":20,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":20},
+	"sourceSize": {"w":20,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerWalking_10",
+	"frame": {"x":172,"y":39,"w":15,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":20},
+	"sourceSize": {"w":15,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerWalking_11",
+	"frame": {"x":493,"y":28,"w":18,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":20},
+	"sourceSize": {"w":18,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerWalking_12",
+	"frame": {"x":278,"y":626,"w":21,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":20},
+	"sourceSize": {"w":21,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerWalking_13",
+	"frame": {"x":90,"y":698,"w":24,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":20},
+	"sourceSize": {"w":24,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerWalking_14",
+	"frame": {"x":103,"y":79,"w":14,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":20},
+	"sourceSize": {"w":14,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerWalking_15",
+	"frame": {"x":264,"y":455,"w":19,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":20},
+	"sourceSize": {"w":19,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerWalking_16",
+	"frame": {"x":180,"y":598,"w":26,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":20},
+	"sourceSize": {"w":26,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/LowerWalking_17",
+	"frame": {"x":493,"y":50,"w":16,"h":20},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":20},
+	"sourceSize": {"w":16,"h":20},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperBomb_0",
+	"frame": {"x":1,"y":380,"w":31,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":29},
+	"sourceSize": {"w":31,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperBomb_1",
+	"frame": {"x":455,"y":259,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":29},
+	"sourceSize": {"w":33,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperBomb_2",
+	"frame": {"x":35,"y":369,"w":31,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":30},
+	"sourceSize": {"w":31,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperBomb_3",
+	"frame": {"x":256,"y":299,"w":31,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":28},
+	"sourceSize": {"w":31,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperBomb_4",
+	"frame": {"x":289,"y":323,"w":31,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":28},
+	"sourceSize": {"w":31,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperBomb_5",
+	"frame": {"x":374,"y":604,"w":28,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":29},
+	"sourceSize": {"w":28,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperDrinking_0",
+	"frame": {"x":440,"y":537,"w":29,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":30},
+	"sourceSize": {"w":29,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperDrinking_1",
+	"frame": {"x":471,"y":540,"w":29,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":30},
+	"sourceSize": {"w":29,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperDrinking_2",
+	"frame": {"x":409,"y":537,"w":29,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":32},
+	"sourceSize": {"w":29,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperDrinking_3",
+	"frame": {"x":403,"y":331,"w":32,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":30},
+	"sourceSize": {"w":32,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperDrinking_4",
+	"frame": {"x":366,"y":338,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperDrinking_5",
+	"frame": {"x":226,"y":232,"w":35,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":30},
+	"sourceSize": {"w":35,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperDrinking_6",
+	"frame": {"x":383,"y":209,"w":34,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":32},
+	"sourceSize": {"w":34,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperDrinking_7",
+	"frame": {"x":349,"y":468,"w":30,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":34},
+	"sourceSize": {"w":30,"h":34},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperDrinking_8",
+	"frame": {"x":316,"y":513,"w":29,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":37},
+	"sourceSize": {"w":29,"h":37},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperDrinking_9",
+	"frame": {"x":378,"y":534,"w":29,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":37},
+	"sourceSize": {"w":29,"h":37},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireDown_0",
+	"frame": {"x":491,"y":233,"w":20,"h":52},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":52},
+	"sourceSize": {"w":20,"h":52},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireDown_1",
+	"frame": {"x":224,"y":670,"w":20,"h":52},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":52},
+	"sourceSize": {"w":20,"h":52},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireDown_2",
+	"frame": {"x":93,"y":140,"w":20,"h":54},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":54},
+	"sourceSize": {"w":20,"h":54},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireDown_3",
+	"frame": {"x":176,"y":656,"w":23,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":29},
+	"sourceSize": {"w":23,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireDown_4",
+	"frame": {"x":196,"y":718,"w":20,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":31},
+	"sourceSize": {"w":20,"h":31},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireDown_5",
+	"frame": {"x":174,"y":687,"w":20,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":33},
+	"sourceSize": {"w":20,"h":33},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireFront_0",
+	"frame": {"x":296,"y":1,"w":50,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":23},
+	"sourceSize": {"w":50,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireFront_1",
+	"frame": {"x":189,"y":25,"w":51,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":22},
+	"sourceSize": {"w":51,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireFront_2",
+	"frame": {"x":189,"y":1,"w":52,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":52,"h":22},
+	"sourceSize": {"w":52,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireFront_3",
+	"frame": {"x":308,"y":159,"w":37,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":22},
+	"sourceSize": {"w":37,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireFront_4",
+	"frame": {"x":309,"y":132,"w":37,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":25},
+	"sourceSize": {"w":37,"h":25},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireFront_5",
+	"frame": {"x":269,"y":157,"w":37,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":25},
+	"sourceSize": {"w":37,"h":25},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireFront_6",
+	"frame": {"x":228,"y":179,"w":37,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":37,"h":23},
+	"sourceSize": {"w":37,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireFront_7",
+	"frame": {"x":303,"y":241,"w":34,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":26},
+	"sourceSize": {"w":34,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireFront_8",
+	"frame": {"x":339,"y":251,"w":33,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":27},
+	"sourceSize": {"w":33,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireFront_9",
+	"frame": {"x":189,"y":290,"w":32,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":27},
+	"sourceSize": {"w":32,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireUp_0",
+	"frame": {"x":88,"y":720,"w":22,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":64},
+	"sourceSize": {"w":22,"h":64},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireUp_1",
+	"frame": {"x":63,"y":737,"w":22,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":64},
+	"sourceSize": {"w":22,"h":64},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireUp_2",
+	"frame": {"x":116,"y":707,"w":22,"h":66},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":66},
+	"sourceSize": {"w":22,"h":66},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireUp_3",
+	"frame": {"x":1,"y":789,"w":22,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":22,"h":39},
+	"sourceSize": {"w":22,"h":39},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireUp_4",
+	"frame": {"x":123,"y":636,"w":25,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":38},
+	"sourceSize": {"w":25,"h":38},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireUp_5",
+	"frame": {"x":96,"y":620,"w":25,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":40},
+	"sourceSize": {"w":25,"h":40},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireUp_6",
+	"frame": {"x":89,"y":196,"w":24,"h":41},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":41},
+	"sourceSize": {"w":24,"h":41},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireUp_7",
+	"frame": {"x":336,"y":644,"w":26,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":40},
+	"sourceSize": {"w":26,"h":40},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireUp_8",
+	"frame": {"x":364,"y":663,"w":26,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":37},
+	"sourceSize": {"w":26,"h":37},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperFireUp_9",
+	"frame": {"x":158,"y":534,"w":29,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":27},
+	"sourceSize": {"w":29,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingDown_0",
+	"frame": {"x":201,"y":681,"w":20,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":35},
+	"sourceSize": {"w":20,"h":35},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingNormal_0",
+	"frame": {"x":251,"y":515,"w":29,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":26},
+	"sourceSize": {"w":29,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingNormal_1",
+	"frame": {"x":251,"y":543,"w":29,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":25},
+	"sourceSize": {"w":29,"h":25},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingNormal_2",
+	"frame": {"x":251,"y":570,"w":29,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":24},
+	"sourceSize": {"w":29,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingNormal_3",
+	"frame": {"x":220,"y":571,"w":29,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":23},
+	"sourceSize": {"w":29,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingNormal_4",
+	"frame": {"x":313,"y":552,"w":29,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":22},
+	"sourceSize": {"w":29,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingNormal_5",
+	"frame": {"x":189,"y":573,"w":29,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":23},
+	"sourceSize": {"w":29,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingStayStill_0",
+	"frame": {"x":251,"y":515,"w":29,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":26},
+	"sourceSize": {"w":29,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingStayStill_1",
+	"frame": {"x":251,"y":543,"w":29,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":25},
+	"sourceSize": {"w":29,"h":25},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingStayStill_2",
+	"frame": {"x":251,"y":570,"w":29,"h":24},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":24},
+	"sourceSize": {"w":29,"h":24},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingStayStill_3",
+	"frame": {"x":220,"y":571,"w":29,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":23},
+	"sourceSize": {"w":29,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingStayStill_4",
+	"frame": {"x":313,"y":552,"w":29,"h":22},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":22},
+	"sourceSize": {"w":29,"h":22},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingStayStill_5",
+	"frame": {"x":189,"y":573,"w":29,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":23},
+	"sourceSize": {"w":29,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingUp_0",
+	"frame": {"x":262,"y":271,"w":33,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":26},
+	"sourceSize": {"w":33,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingUp_1",
+	"frame": {"x":411,"y":263,"w":33,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":33,"h":26},
+	"sourceSize": {"w":33,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingWalk_0",
+	"frame": {"x":63,"y":703,"w":23,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":32},
+	"sourceSize": {"w":23,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingWalk_1",
+	"frame": {"x":464,"y":681,"w":27,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":33},
+	"sourceSize": {"w":27,"h":33},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingWalk_2",
+	"frame": {"x":477,"y":319,"w":32,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":32},
+	"sourceSize": {"w":32,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingWalk_3",
+	"frame": {"x":160,"y":147,"w":27,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":35},
+	"sourceSize": {"w":27,"h":35},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingWalk_4",
+	"frame": {"x":207,"y":626,"w":23,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":32},
+	"sourceSize": {"w":23,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperJumpingWalk_5",
+	"frame": {"x":140,"y":708,"w":20,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":29},
+	"sourceSize": {"w":20,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingA_0",
+	"frame": {"x":490,"y":287,"w":21,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":30},
+	"sourceSize": {"w":21,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingA_1",
+	"frame": {"x":392,"y":700,"w":26,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":30},
+	"sourceSize": {"w":26,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingA_2",
+	"frame": {"x":234,"y":92,"w":41,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":33},
+	"sourceSize": {"w":41,"h":33},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingA_3",
+	"frame": {"x":49,"y":120,"w":42,"h":43},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":43},
+	"sourceSize": {"w":42,"h":43},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingA_4",
+	"frame": {"x":394,"y":42,"w":44,"h":41},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":41},
+	"sourceSize": {"w":44,"h":41},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingA_5",
+	"frame": {"x":189,"y":80,"w":43,"h":45},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":45},
+	"sourceSize": {"w":43,"h":45},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingB_0",
+	"frame": {"x":123,"y":676,"w":24,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":24,"h":29},
+	"sourceSize": {"w":24,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingB_1",
+	"frame": {"x":149,"y":680,"w":23,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":23,"h":26},
+	"sourceSize": {"w":23,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingB_2",
+	"frame": {"x":448,"y":748,"w":26,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":27},
+	"sourceSize": {"w":26,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingB_3",
+	"frame": {"x":437,"y":101,"w":41,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":23},
+	"sourceSize": {"w":41,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingB_4",
+	"frame": {"x":120,"y":68,"w":48,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":28},
+	"sourceSize": {"w":48,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingB_5",
+	"frame": {"x":189,"y":49,"w":48,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":48,"h":29},
+	"sourceSize": {"w":48,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingKneeA_0",
+	"frame": {"x":1,"y":175,"w":42,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":27},
+	"sourceSize": {"w":42,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingKneeA_1",
+	"frame": {"x":1,"y":139,"w":42,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":34},
+	"sourceSize": {"w":42,"h":34},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingKneeA_2",
+	"frame": {"x":40,"y":304,"w":35,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":35,"h":35},
+	"sourceSize": {"w":35,"h":35},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingKneeA_3",
+	"frame": {"x":477,"y":158,"w":34,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":34,"h":35},
+	"sourceSize": {"w":34,"h":35},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingKneeB_0",
+	"frame": {"x":99,"y":444,"w":30,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":26},
+	"sourceSize": {"w":30,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingKneeB_1",
+	"frame": {"x":124,"y":591,"w":26,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":26},
+	"sourceSize": {"w":26,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingKneeB_2",
+	"frame": {"x":96,"y":591,"w":26,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":27},
+	"sourceSize": {"w":26,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingKneeB_3",
+	"frame": {"x":394,"y":85,"w":41,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":28},
+	"sourceSize": {"w":41,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingKneeB_4",
+	"frame": {"x":348,"y":1,"w":49,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":33},
+	"sourceSize": {"w":49,"h":33},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperKnifingKneeB_5",
+	"frame": {"x":296,"y":26,"w":49,"h":33},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":33},
+	"sourceSize": {"w":49,"h":33},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperPistolOut_0",
+	"frame": {"x":152,"y":591,"w":26,"h":25},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":25},
+	"sourceSize": {"w":26,"h":25},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperPistolOut_1",
+	"frame": {"x":420,"y":720,"w":26,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":29},
+	"sourceSize": {"w":26,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperPistolOut_2",
+	"frame": {"x":477,"y":480,"w":30,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":28},
+	"sourceSize": {"w":30,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperPistolOut_3",
+	"frame": {"x":96,"y":562,"w":29,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":27},
+	"sourceSize": {"w":29,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperPistolOut_4",
+	"frame": {"x":215,"y":361,"w":31,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":26},
+	"sourceSize": {"w":31,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperPistolOut_5",
+	"frame": {"x":381,"y":434,"w":30,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":36},
+	"sourceSize": {"w":30,"h":36},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperPistolOut_6",
+	"frame": {"x":392,"y":664,"w":26,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":34},
+	"sourceSize": {"w":26,"h":34},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperPistolOut_7",
+	"frame": {"x":229,"y":154,"w":38,"h":23},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":23},
+	"sourceSize": {"w":38,"h":23},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperQuivering_0",
+	"frame": {"x":378,"y":573,"w":29,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":29},
+	"sourceSize": {"w":29,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperQuivering_1",
+	"frame": {"x":413,"y":444,"w":30,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":29},
+	"sourceSize": {"w":30,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperQuivering_2",
+	"frame": {"x":471,"y":572,"w":29,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":29},
+	"sourceSize": {"w":29,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperQuivering_3",
+	"frame": {"x":413,"y":475,"w":30,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":29},
+	"sourceSize": {"w":30,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperQuivering_4",
+	"frame": {"x":138,"y":412,"w":30,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":28},
+	"sourceSize": {"w":30,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperQuivering_5",
+	"frame": {"x":381,"y":503,"w":30,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":29},
+	"sourceSize": {"w":30,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperQuivering_6",
+	"frame": {"x":101,"y":414,"w":30,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":28},
+	"sourceSize": {"w":30,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperQuivering_7",
+	"frame": {"x":477,"y":449,"w":30,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":29},
+	"sourceSize": {"w":30,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperQuivering_8",
+	"frame": {"x":67,"y":418,"w":30,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":28},
+	"sourceSize": {"w":30,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperQuivering_9",
+	"frame": {"x":115,"y":318,"w":32,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":27},
+	"sourceSize": {"w":32,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperQuivering_10",
+	"frame": {"x":445,"y":507,"w":30,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":28},
+	"sourceSize": {"w":30,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperQuivering_11",
+	"frame": {"x":152,"y":314,"w":32,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":27},
+	"sourceSize": {"w":32,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperQuivering_12",
+	"frame": {"x":477,"y":510,"w":30,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":28},
+	"sourceSize": {"w":30,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperQuivering_13",
+	"frame": {"x":381,"y":472,"w":30,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":29},
+	"sourceSize": {"w":30,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperQuivering_14",
+	"frame": {"x":177,"y":389,"w":30,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":28},
+	"sourceSize": {"w":30,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperQuivering_15",
+	"frame": {"x":445,"y":445,"w":30,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":29},
+	"sourceSize": {"w":30,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperSnoozing_0",
+	"frame": {"x":440,"y":569,"w":29,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":30},
+	"sourceSize": {"w":29,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperSnoozing_1",
+	"frame": {"x":344,"y":581,"w":28,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":30},
+	"sourceSize": {"w":28,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperSnoozing_2",
+	"frame": {"x":448,"y":716,"w":26,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":30},
+	"sourceSize": {"w":26,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperSnoozing_3",
+	"frame": {"x":96,"y":662,"w":25,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":34},
+	"sourceSize": {"w":25,"h":34},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperSnoozing_4",
+	"frame": {"x":63,"y":667,"w":25,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":34},
+	"sourceSize": {"w":25,"h":34},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperSnoozing_5",
+	"frame": {"x":180,"y":620,"w":25,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":25,"h":34},
+	"sourceSize": {"w":25,"h":34},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperSnoozing_6",
+	"frame": {"x":420,"y":684,"w":26,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":34},
+	"sourceSize": {"w":26,"h":34},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperSnoozing_7",
+	"frame": {"x":483,"y":413,"w":28,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":34},
+	"sourceSize": {"w":28,"h":34},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperStandStill_0",
+	"frame": {"x":440,"y":601,"w":29,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":29},
+	"sourceSize": {"w":29,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperStandStill_1",
+	"frame": {"x":409,"y":603,"w":29,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":29},
+	"sourceSize": {"w":29,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperStandStill_2",
+	"frame": {"x":34,"y":430,"w":30,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":28},
+	"sourceSize": {"w":30,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperStandStill_3",
+	"frame": {"x":1,"y":411,"w":31,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":27},
+	"sourceSize": {"w":31,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperStayStillUp_0",
+	"frame": {"x":282,"y":521,"w":29,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":26},
+	"sourceSize": {"w":29,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperStayStillUp_1",
+	"frame": {"x":220,"y":543,"w":29,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":26},
+	"sourceSize": {"w":29,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperStayStillUp_2",
+	"frame": {"x":189,"y":545,"w":29,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":26},
+	"sourceSize": {"w":29,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperStayStillUp_3",
+	"frame": {"x":158,"y":563,"w":29,"h":26},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":26},
+	"sourceSize": {"w":29,"h":26},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWalking_0",
+	"frame": {"x":434,"y":375,"w":32,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":28},
+	"sourceSize": {"w":32,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWalking_1",
+	"frame": {"x":445,"y":476,"w":30,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":29},
+	"sourceSize": {"w":30,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWalking_2",
+	"frame": {"x":404,"y":634,"w":28,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":28},
+	"sourceSize": {"w":28,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWalking_3",
+	"frame": {"x":278,"y":597,"w":27,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":27},
+	"sourceSize": {"w":27,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWalking_4",
+	"frame": {"x":471,"y":634,"w":29,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":28},
+	"sourceSize": {"w":29,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWalking_5",
+	"frame": {"x":170,"y":419,"w":30,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":28},
+	"sourceSize": {"w":30,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWalking_6",
+	"frame": {"x":437,"y":344,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWalking_7",
+	"frame": {"x":400,"y":363,"w":32,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":29},
+	"sourceSize": {"w":32,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWalking_8",
+	"frame": {"x":468,"y":383,"w":32,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":32,"h":28},
+	"sourceSize": {"w":32,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWalking_9",
+	"frame": {"x":322,"y":345,"w":31,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":27},
+	"sourceSize": {"w":31,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWalking_10",
+	"frame": {"x":256,"y":329,"w":31,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":28},
+	"sourceSize": {"w":31,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWalking_11",
+	"frame": {"x":219,"y":331,"w":31,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":28},
+	"sourceSize": {"w":31,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWalking_12",
+	"frame": {"x":471,"y":603,"w":29,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":29},
+	"sourceSize": {"w":29,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWalking_13",
+	"frame": {"x":413,"y":506,"w":30,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":29},
+	"sourceSize": {"w":30,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWalking_14",
+	"frame": {"x":440,"y":632,"w":29,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":28},
+	"sourceSize": {"w":29,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWalking_15",
+	"frame": {"x":1,"y":440,"w":30,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":28},
+	"sourceSize": {"w":30,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWalking_16",
+	"frame": {"x":182,"y":359,"w":31,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":31,"h":28},
+	"sourceSize": {"w":31,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWalking_17",
+	"frame": {"x":209,"y":389,"w":30,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":28},
+	"sourceSize": {"w":30,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWipingSweat_0",
+	"frame": {"x":127,"y":562,"w":29,"h":27},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":27},
+	"sourceSize": {"w":29,"h":27},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWipingSweat_1",
+	"frame": {"x":96,"y":472,"w":29,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":28},
+	"sourceSize": {"w":29,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWipingSweat_2",
+	"frame": {"x":249,"y":596,"w":27,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":28},
+	"sourceSize": {"w":27,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWipingSweat_3",
+	"frame": {"x":476,"y":716,"w":26,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":29},
+	"sourceSize": {"w":26,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWipingSweat_4",
+	"frame": {"x":343,"y":613,"w":28,"h":29},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":29},
+	"sourceSize": {"w":28,"h":29},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWipingSweat_5",
+	"frame": {"x":133,"y":442,"w":30,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":28},
+	"sourceSize": {"w":30,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWipingSweat_6",
+	"frame": {"x":158,"y":504,"w":29,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":28},
+	"sourceSize": {"w":29,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWipingSweat_7",
+	"frame": {"x":96,"y":532,"w":29,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":28},
+	"sourceSize": {"w":29,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWipingSweat_8",
+	"frame": {"x":127,"y":532,"w":29,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":28},
+	"sourceSize": {"w":29,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWipingSweat_9",
+	"frame": {"x":189,"y":515,"w":29,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":28},
+	"sourceSize": {"w":29,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWipingSweat_10",
+	"frame": {"x":127,"y":472,"w":29,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":28},
+	"sourceSize": {"w":29,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWipingSweat_11",
+	"frame": {"x":96,"y":502,"w":29,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":28},
+	"sourceSize": {"w":29,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWipingSweat_12",
+	"frame": {"x":409,"y":571,"w":29,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":30},
+	"sourceSize": {"w":29,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWipingSweat_13",
+	"frame": {"x":451,"y":413,"w":30,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":30,"h":30},
+	"sourceSize": {"w":30,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWipingSweat_14",
+	"frame": {"x":313,"y":593,"w":28,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":28,"h":30},
+	"sourceSize": {"w":28,"h":30},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWipingSweat_15",
+	"frame": {"x":476,"y":747,"w":26,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":26,"h":28},
+	"sourceSize": {"w":26,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWipingSweat_16",
+	"frame": {"x":220,"y":596,"w":27,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":27,"h":28},
+	"sourceSize": {"w":27,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+},
+{
+	"filename": "CharacterTarmaWithPistol/UpperWipingSweat_17",
+	"frame": {"x":127,"y":502,"w":29,"h":28},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":29,"h":28},
+	"sourceSize": {"w":29,"h":28},
+	"pivot": {"x":0.5,"y":0.5}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "C:\\Users\\jaeju\\Desktop\\MetalSlug3Imitation/ABC2.png",
+	"format": "RGB888",
+	"size": {"w":512,"h":1024},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:338616977703e93aa7a446061b0449aa:764297801df46d191edf40445ebc9a0f:14700a81bb39850b4bc11a4429b548c5$"
+}
+}
