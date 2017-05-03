@@ -163,6 +163,7 @@
   <ItemGroup>
     <ClInclude Include="GameNode.h" />
     <ClInclude Include="GameWorld.h" />
+    <ClInclude Include="InputManager.h" />
     <ClInclude Include="KeyManager.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="PlayerState.h" />

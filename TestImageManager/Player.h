@@ -1,37 +1,39 @@
 #pragma once
 #include <Windows.h>
 #include <vector>
-class SpritesAnimation;
-class PlayerState;
-class Player
-{
-public:
-	Player();
-	~Player();
+namespace SGA {
+	class SpritesAnimation;
+	class PlayerState;
+	class Player
+	{
+	public:
+		Player();
+		~Player();
 
-	void update();
-	
-	void render(HDC hdc);
+		void update();
 
-	void setAnimation(const std::vector<SpritesAnimation*>& animations) {
-		_animations = animations;
-	}
+		void render(HDC hdc);
 
-	void setPosition(float x, float y) {
-		_x = x;
-		_y = y;
-	}
+		void setAnimation(const std::vector<SpritesAnimation*>& animations) {
+			_animations = animations;
+		}
 
-	void movePosition(float dx, float dy) {
-		setPosition(_x + dx, _y + dy);
-	}
+		void setPosition(float x, float y) {
+			_x = x;
+			_y = y;
+		}
 
-	POINTFLOAT getPosition() const {
-		return{ _x, _y };
-	}
-private:
-	float _x, _y;
-	PlayerState* _state;
-	std::vector<SpritesAnimation*> _animations;
-};
+		void movePosition(float dx, float dy) {
+			setPosition(_x + dx, _y + dy);
+		}
 
+		POINTFLOAT getPosition() const {
+			return{ _x, _y };
+		}
+	private:
+		float _x, _y;
+		PlayerState* _state;
+		std::vector<SpritesAnimation*> _animations;
+	};
+
+}

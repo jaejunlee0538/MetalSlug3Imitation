@@ -1,0 +1,60 @@
+{
+  "animation": [
+    {
+      "name": "JumpingStayStill_UpperRight",
+      "sprites": [
+        "CharacterTarmaWithPistol/UpperJumpingStayStill_0",
+        "CharacterTarmaWithPistol/UpperJumpingStayStill_1",
+        "CharacterTarmaWithPistol/UpperJumpingStayStill_2",
+        "CharacterTarmaWithPistol/UpperJumpingStayStill_3",
+        "CharacterTarmaWithPistol/UpperJumpingStayStill_4",
+        "CharacterTarmaWithPistol/UpperJumpingStayStill_5"
+      ],
+      "duration": 200,
+      "mirrored": false,
+      "maxReplayCount": 0
+    },
+    {
+      "name": "JumpingStayStill_LowerRight",
+      "sprites": [
+        "CharacterTarmaWithPistol/LowerJumpingStayStill_0",
+        "CharacterTarmaWithPistol/LowerJumpingStayStill_1",
+        "CharacterTarmaWithPistol/LowerJumpingStayStill_2",
+        "CharacterTarmaWithPistol/LowerJumpingStayStill_3",
+        "CharacterTarmaWithPistol/LowerJumpingStayStill_4",
+        "CharacterTarmaWithPistol/LowerJumpingStayStill_5"
+      ],
+      "duration": 200,
+      "mirrored": false,
+      "maxReplayCount": 0
+    },
+     {
+      "name": "JumpingStayStill_UpperLeft",
+      "sprites": [
+        "CharacterTarmaWithPistol/UpperJumpingStayStill_0",
+        "CharacterTarmaWithPistol/UpperJumpingStayStill_1",
+        "CharacterTarmaWithPistol/UpperJumpingStayStill_2",
+        "CharacterTarmaWithPistol/UpperJumpingStayStill_3",
+        "CharacterTarmaWithPistol/UpperJumpingStayStill_4",
+        "CharacterTarmaWithPistol/UpperJumpingStayStill_5"
+      ],
+      "duration": 200,
+      "mirrored": true,
+      "maxReplayCount": 0
+    },
+    {
+      "name": "JumpingStayStill_LowerLeft",
+      "sprites": [
+        "CharacterTarmaWithPistol/LowerJumpingStayStill_0",
+        "CharacterTarmaWithPistol/LowerJumpingStayStill_1",
+        "CharacterTarmaWithPistol/LowerJumpingStayStill_2",
+        "CharacterTarmaWithPistol/LowerJumpingStayStill_3",
+        "CharacterTarmaWithPistol/LowerJumpingStayStill_4",
+        "CharacterTarmaWithPistol/LowerJumpingStayStill_5"
+      ],
+      "duration": 200,
+      "mirrored": true,
+      "maxReplayCount": 0
+    }
+  ]
+}

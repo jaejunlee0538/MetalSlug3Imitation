@@ -26,7 +26,7 @@ namespace SGA {
 		모든 스프라이트와 아틀라스 이미지를 삭제한다.
 		*/
 		void clearAll();
-		void loadFromXMLFile(const std::string& xmlFile);
+		void loadFromJSON(const std::string& configFile);
 		void addSprite(const std::string& imageFile, const std::string& spriteName);
 		void addSprite(const std::string& imageFile, const std::string& spriteName, int clipX, int clipY, int clipW, int clipH);
 		void addSprite(const std::string& imageFile, const std::string& spriteName, int clipX, int clipY, int clipW, int clipH, int pivotX, int pivotY);

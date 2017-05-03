@@ -2883,7 +2883,7 @@
 "meta": {
 	"app": "http://www.codeandweb.com/texturepacker",
 	"version": "1.0",
-	"image": "C:\\Users\\jaeju\\Desktop\\MetalSlug3Imitation/ABC.bmp",
+	"image": "TestAtlas.bmp",
 	"format": "RGB888",
 	"size": {"w":512,"h":1024},
 	"scale": "1",

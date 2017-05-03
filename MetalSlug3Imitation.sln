@@ -8,6 +8,10 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ImageManager", "ImageManager\ImageManager.vcxproj", "{A8ED1DB1-7391-4C3B-B1DD-F39857977232}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestImageManager", "TestImageManager\TestImageManager.vcxproj", "{450C4814-DCE5-4F2F-8E8C-B70DBCEE6801}"
+	ProjectSection(ProjectDependencies) = postProject
+		{38EA8C41-626E-4AD5-83A0-340533C429A7} = {38EA8C41-626E-4AD5-83A0-340533C429A7}
+		{A8ED1DB1-7391-4C3B-B1DD-F39857977232} = {A8ED1DB1-7391-4C3B-B1DD-F39857977232}
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CommonUtils", "CommonUtils\CommonUtils.vcxproj", "{38EA8C41-626E-4AD5-83A0-340533C429A7}"
 EndProject

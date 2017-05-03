@@ -20,6 +20,6 @@ public:
 
 	virtual void render(HDC hdc);
 private:
-	Player *_player;
+	SGA::Player *_player;
 };
 

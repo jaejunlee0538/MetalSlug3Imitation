@@ -29,10 +29,10 @@ namespace SGA {
 		_atlasImageMap.clear();
 	}
 
-	void SpriteManager::loadFromXMLFile(const std::string & xmlFile)
+	void SpriteManager::loadFromJSON(const std::string & configFile)
 	{
 		using json = nlohmann::json;
-		std::ifstream file(xmlFile.c_str());
+		std::ifstream file(configFile.c_str());
 		assert(file.good());
 
 		json jsonFile;
@@ -87,7 +87,7 @@ namespace SGA {
 		tagAtlasImage atlas;
 		atlas.source = new BitmapImage();
 		assert(atlas.source != NULL);
-		atlas.source->init(imageFile.c_str(), true, RGB(255,0,255));
+		assert(atlas.source->init(imageFile.c_str(), true, RGB(255, 0, 255)) == S_OK);
 		atlas.sourceFlipped = BitmapImage::createMirroredImage(*atlas.source);
 		auto result = _atlasImageMap.insert(std::make_pair(imageFile, atlas));
 		assert(result.second == true);
@@ -96,6 +96,7 @@ namespace SGA {
 
 	void SpriteManager::insertSprite(const std::string & key, Sprite * sprite)
 	{
+		assert(sprite != NULL);
 		auto result = _spriteMap.insert(std::make_pair(key, sprite));
 		assert(result.second == true);
 	}

@@ -143,12 +143,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AnimationManager.h" />
     <ClInclude Include="BitmapImage.h" />
     <ClInclude Include="SpriteManager.h" />
     <ClInclude Include="Sprite.h" />
     <ClInclude Include="SpritesAnimation.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AnimationManager.cpp" />
     <ClCompile Include="BitmapImage.cpp" />
     <ClCompile Include="SpriteManager.cpp" />
     <ClCompile Include="Sprite.cpp" />
