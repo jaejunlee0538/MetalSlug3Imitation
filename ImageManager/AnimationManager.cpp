@@ -34,7 +34,6 @@ namespace SGA {
 			std::string animationName = (*it)["name"];
 			int duration = (*it)["duration"];
 			int maxReplayCount = (*it)["maxReplayCount"];
-			bool mirrored = (*it)["mirrored"];
 			std::vector<const Sprite*> sprites;
 			sprites.reserve((*it)["sprites"].size());
 			for (auto spriteName = (*it)["sprites"].begin(); spriteName != (*it)["sprites"].end(); ++spriteName) {
@@ -42,7 +41,7 @@ namespace SGA {
 				assert(sprite != NULL);
 				sprites.push_back(sprite);
 			}
-			addAnimation(animationName, new SpritesAnimation(sprites, duration, maxReplayCount, mirrored));
+			addAnimation(animationName, new SpritesAnimation(sprites, duration, maxReplayCount));
 		}
 	}
 
@@ -62,6 +61,6 @@ namespace SGA {
 		if (it == _animationMap.end()) {
 			return NULL;
 		}
-		return it->second;
+		return it->second->clone();
 	}
 }

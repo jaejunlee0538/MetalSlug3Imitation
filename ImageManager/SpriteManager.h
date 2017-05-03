@@ -30,6 +30,10 @@ namespace SGA {
 		void addSprite(const std::string& imageFile, const std::string& spriteName);
 		void addSprite(const std::string& imageFile, const std::string& spriteName, int clipX, int clipY, int clipW, int clipH);
 		void addSprite(const std::string& imageFile, const std::string& spriteName, int clipX, int clipY, int clipW, int clipH, int pivotX, int pivotY);
+		/*
+		key 스프라이트의 원본 객체 포인터를 반환한다.
+		스프라이트 객체는 SpriteManager객체 소멸시에 삭제된다.
+		*/
 		const Sprite* findSprite(const std::string& key);
 	private:
 		tagAtlasImage loadAtlasImage(const std::string& imageFile);

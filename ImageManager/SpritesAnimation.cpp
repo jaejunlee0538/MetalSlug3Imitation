@@ -5,8 +5,8 @@
 #include <algorithm>
 namespace SGA {
 	SpritesAnimation::SpritesAnimation(const std::vector<const SGA::Sprite*>& sprites, 
-		int durationMilli, int maxReplayCount, bool mirrored)
-		:_sprites(sprites), _durationMs(durationMilli), _maxReplayCount(maxReplayCount), _isMirrored(mirrored)
+		int durationMilli, int maxReplayCount)
+		:_sprites(sprites), _durationMs(durationMilli), _maxReplayCount(maxReplayCount)
 	{
 		assert(std::all_of(sprites.begin(), sprites.end(),
 			[](const SGA::Sprite* sprite) {return sprite != NULL; }));
@@ -15,6 +15,13 @@ namespace SGA {
 
 	SpritesAnimation::~SpritesAnimation()
 	{
+	}
+
+	SpritesAnimation * SpritesAnimation::clone() const
+	{
+		SpritesAnimation* newAnimation = new SpritesAnimation(*this);
+		newAnimation->restart();
+		return newAnimation;
 	}
 
 	void SpritesAnimation::update()
@@ -41,9 +48,9 @@ namespace SGA {
 		}
 	}
 
-	void SpritesAnimation::render(HDC hdc, int drawPosX, int drawPosY)
+	void SpritesAnimation::render(HDC hdc, int drawPosX, int drawPosY) const
 	{
-		_sprites[_currentSprite]->render(hdc, drawPosX, drawPosY, _isMirrored);
+		_sprites[_currentSprite]->render(hdc, drawPosX, drawPosY);
 	}
 
 	void SpritesAnimation::restart()

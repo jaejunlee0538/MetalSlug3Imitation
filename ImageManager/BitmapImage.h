@@ -38,6 +38,14 @@ namespace SGA {
 		void render(HDC hdc, int destX, int destY, int srcX, int srcY, int srcWidth, int srcHeight) const;
 		void render(HDC hdc, int destX, int destY, int destWidth, int destHeight, int srcX, int srcY, int srcWidth, int srcHeight) const;
 
+		/*
+		이미지를 color색으로 칠한다.
+		*/
+		void clearImage(COLORREF color);
+
+		inline HDC getDC() const{
+			return _imageInfo->hMemDC;
+		}
 		inline BOOL isInitialized() const {
 			return _imageInfo != NULL;
 		}

@@ -1,16 +1,21 @@
 #pragma once
 #include <vector>
 #include <Windows.h>
-
+#include "SpriteIface.h"
 namespace SGA {
 	class Sprite;
 
-	class SpritesAnimation
+	class SpritesAnimation : public SpriteIface
 	{
 	public:
-		SpritesAnimation(const std::vector<const SGA::Sprite*>& sprites, int durationMilli, int maxReplayCount = 0, bool mirrored=false);
+		SpritesAnimation(const std::vector<const SGA::Sprite*>& sprites, int durationMilli, int maxReplayCount = 0);
 
-		~SpritesAnimation();
+		virtual ~SpritesAnimation();
+
+		/*
+		this를 복사한 객체를 반환한다.
+		*/
+		SpritesAnimation* clone() const;
 
 		/*
 		마지막 스프라이트 교체 시각이후로 _durationMs만큼의 시간이 지나면
@@ -21,7 +26,7 @@ namespace SGA {
 		/*
 		현재 스프라이트를 drawPosX, drawPosY에 렌더링한다.
 		*/
-		void render(HDC hdc, int drawPosX, int drawPosY);
+		virtual void render(HDC hdc, int drawPosX, int drawPosY) const;
 
 		/*
 		누적 데이터를 리셋하고 첫번재 스프라이트부터 재생한다.
@@ -38,13 +43,6 @@ namespace SGA {
 		*/
 		inline void setDuration(int durationMillis) {
 			_durationMs = durationMillis;
-		}
-
-		/*
-		true로 세팅하면 스프라이트의 좌우가 전환되어 출력된다.
-		*/
-		inline void enableMirrored(bool enable) {
-			_isMirrored = enable;
 		}
 
 		/*
@@ -81,7 +79,5 @@ namespace SGA {
 		int _durationMs;
 		//스프라이트를 다시 재생하는 횟수
 		int _maxReplayCount;
-		//스프라이트를 좌우 전환하여 그린다
-		bool _isMirrored;
 	};
 }

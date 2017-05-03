@@ -84,7 +84,8 @@ namespace SGA {
 	}
 
 	HRESULT BitmapImage::init(const TCHAR * fileName, int width, int height, BOOL tran, COLORREF transColor)
-	{//경로값이 없으면
+	{
+		//경로값이 없으면
 		if (fileName == NULL) return E_FAIL;
 
 		//재할당 방지
@@ -175,9 +176,7 @@ namespace SGA {
 	void BitmapImage::render(HDC hdc, int destX, int destY) const
 	{
 		if (_isTransparentEnabled) {
-
 			//TransparentBlt()
-
 			//TransparentBlt와 차이점은 거의 없다.
 			GdiTransparentBlt(
 				hdc,				//복사할 대상이 되는 곳(주로 화면 DC)
@@ -235,9 +234,7 @@ namespace SGA {
 	void BitmapImage::render(HDC hdc, int destX, int destY, int srcX, int srcY, int srcWidth, int srcHeight) const
 	{
 		if (_isTransparentEnabled) {
-
 			//TransparentBlt()
-
 			//TransparentBlt와 차이점은 거의 없다.
 			GdiTransparentBlt(
 				hdc,				//복사할 대상이 되는 곳(주로 화면 DC)
@@ -291,5 +288,16 @@ namespace SGA {
 				srcX, srcY,
 				srcWidth, srcHeight, SRCCOPY);
 		}
+	}
+
+	void BitmapImage::clearImage(COLORREF color)
+	{
+		SelectObject(_imageInfo->hMemDC, GetStockObject(DC_PEN));
+		COLORREF colorOldPen = SetDCPenColor(_imageInfo->hMemDC, color);
+		SelectObject(_imageInfo->hMemDC, GetStockObject(DC_BRUSH));
+		COLORREF colorOld = SetDCBrushColor(_imageInfo->hMemDC, color);
+		Rectangle(_imageInfo->hMemDC, 0, 0, getWidth(), getHeight());
+		SetDCBrushColor(_imageInfo->hMemDC, colorOld);
+		SetDCPenColor(_imageInfo->hMemDC, colorOldPen);
 	}
 }
