@@ -11,7 +11,6 @@
         "CharacterTarmaWithPistol/UpperJumpingStayStill_5"
       ],
       "duration": 200,
-      "mirrored": false,
       "maxReplayCount": 0
     },
     {
@@ -25,35 +24,32 @@
         "CharacterTarmaWithPistol/LowerJumpingStayStill_5"
       ],
       "duration": 200,
-      "mirrored": false,
       "maxReplayCount": 0
     },
      {
       "name": "JumpingStayStill_UpperLeft",
       "sprites": [
-        "CharacterTarmaWithPistol/UpperJumpingStayStill_0",
-        "CharacterTarmaWithPistol/UpperJumpingStayStill_1",
-        "CharacterTarmaWithPistol/UpperJumpingStayStill_2",
-        "CharacterTarmaWithPistol/UpperJumpingStayStill_3",
-        "CharacterTarmaWithPistol/UpperJumpingStayStill_4",
-        "CharacterTarmaWithPistol/UpperJumpingStayStill_5"
+        "CharacterTarmaWithPistol/UpperJumpingStayStill_0_mirror",
+        "CharacterTarmaWithPistol/UpperJumpingStayStill_1_mirror",
+        "CharacterTarmaWithPistol/UpperJumpingStayStill_2_mirror",
+        "CharacterTarmaWithPistol/UpperJumpingStayStill_3_mirror",
+        "CharacterTarmaWithPistol/UpperJumpingStayStill_4_mirror",
+        "CharacterTarmaWithPistol/UpperJumpingStayStill_5_mirror"
       ],
       "duration": 200,
-      "mirrored": true,
       "maxReplayCount": 0
     },
     {
       "name": "JumpingStayStill_LowerLeft",
       "sprites": [
-        "CharacterTarmaWithPistol/LowerJumpingStayStill_0",
-        "CharacterTarmaWithPistol/LowerJumpingStayStill_1",
-        "CharacterTarmaWithPistol/LowerJumpingStayStill_2",
-        "CharacterTarmaWithPistol/LowerJumpingStayStill_3",
-        "CharacterTarmaWithPistol/LowerJumpingStayStill_4",
-        "CharacterTarmaWithPistol/LowerJumpingStayStill_5"
+        "CharacterTarmaWithPistol/LowerJumpingStayStill_0_mirror",
+        "CharacterTarmaWithPistol/LowerJumpingStayStill_1_mirror",
+        "CharacterTarmaWithPistol/LowerJumpingStayStill_2_mirror",
+        "CharacterTarmaWithPistol/LowerJumpingStayStill_3_mirror",
+        "CharacterTarmaWithPistol/LowerJumpingStayStill_4_mirror",
+        "CharacterTarmaWithPistol/LowerJumpingStayStill_5_mirror"
       ],
       "duration": 200,
-      "mirrored": true,
       "maxReplayCount": 0
     }
   ]

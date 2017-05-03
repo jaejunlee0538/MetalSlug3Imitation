@@ -7,10 +7,9 @@
 #include <memory.h>
 #include <string>
 #include <tchar.h>
-#include "RandomFunction.h"
 #include "SpriteManager.h"
+#include <RandomFunction.h>
 #include "WorldClock.h"
-#include "KeyManager.h"
 #include "GameWorld.h"
 #define WIN_NAME	(TEXT("APIWindow"))
 #define WIN_START_X	0
@@ -24,7 +23,7 @@
 typedef std::basic_string<TCHAR> String;
 
 #define RND		SGA::RandomFunction::getSingleton()
-#define KEY_MANAGER	SGA::KeyManager::getSingleton()
+//#define KEY_MANAGER	SGA::KeyManager::getSingleton()
 //#define IMAGE_MANAGER	ImageManager::getSingleton()
 #define SPRITE_MANAGER	SGA::SpriteManager::getSingleton()
 

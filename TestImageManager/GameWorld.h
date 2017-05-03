@@ -2,9 +2,16 @@
 #include <Windows.h>
 #include "GameNode.h"
 #include <vector>
-#include "Player.h"
+namespace SGA {
+	class Sprite;
+	class SpritesAnimation;
+}
 class GameWorld : public GameNode
 {
+	struct tagAnimation {
+		SGA::SpritesAnimation* animation;
+		POINT drawPos;
+	};
 public:
 	GameWorld();
 
@@ -12,14 +19,14 @@ public:
 
 	virtual HRESULT init();
 
-	void processKeyInput();
-
 	virtual void release(void);
 
 	virtual void update(float dt);
 
 	virtual void render(HDC hdc);
 private:
-	SGA::Player *_player;
+	//std::vector<const SGA::Sprite*> _animation;
+	std::vector<tagAnimation> _animation;
+
 };
 

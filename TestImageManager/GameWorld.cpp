@@ -5,6 +5,7 @@
 #include "SpriteManager.h"
 #include "WorldClock.h"
 #include <AnimationManager.h>
+#include <SpritesAnimation.h>
 GameWorld::GameWorld()
 {
 	GAME_WORLD = this;
@@ -12,7 +13,9 @@ GameWorld::GameWorld()
 
 GameWorld::~GameWorld()
 {
-
+	for (auto it = _animation.begin(); it != _animation.end(); ++it) {
+		delete it->animation;
+	}
 }
 
 HRESULT GameWorld::init() {
@@ -20,15 +23,14 @@ HRESULT GameWorld::init() {
 	SGA::BitmapImage::setHWND(_hWnd);
 	SPRITE_MANAGER->loadFromJSON("TestSprite.json");
 	SGA::AnimationManager::getSingleton()->loadFromJSON("TestAnimation.json");
-	_player = new SGA::Player();
-	_player->setPosition(300, 300);
+	_animation.push_back({ SGA::AnimationManager::getSingleton()->findAnimation("JumpingStayStill_UpperRight"), {100, 100} });
+	_animation.push_back({ SGA::AnimationManager::getSingleton()->findAnimation("JumpingStayStill_LowerRight"),{ 100, 100 } });
+
+	_animation.push_back({ SGA::AnimationManager::getSingleton()->findAnimation("JumpingStayStill_UpperLeft"),{ 150, 100 } });
+	_animation.push_back({ SGA::AnimationManager::getSingleton()->findAnimation("JumpingStayStill_LowerLeft"),{ 150, 100 } });
 	return S_OK;
 }
 
-void GameWorld::processKeyInput()
-{
-
-}
 
 void GameWorld::release(void) {
 
@@ -38,13 +40,23 @@ void GameWorld::release(void) {
 void GameWorld::update(float dt) {
 	GameNode::update(dt);
 	SGA::WorldClock::getSingleton()->updateClock();
-	
-	_player->update();
-	processKeyInput();
+	if (SGA::WorldClock::getSingleton()->getCurrentTimeSec() > 0.4f) {
+		static bool first_run = true;
+		if (first_run) {
+			first_run = false;
+			_animation.push_back({ SGA::AnimationManager::getSingleton()->findAnimation("JumpingStayStill_UpperRight"),{ 100, 150 } });
+			_animation.push_back({ SGA::AnimationManager::getSingleton()->findAnimation("JumpingStayStill_LowerRight"),{ 100, 150 } });
+		}
+	}
+	for (auto it = _animation.begin(); it != _animation.end(); ++it) {
+		it->animation->update();
+	}
 }
 
 void GameWorld::render(HDC hdc)
 {
 	GameNode::clearScreen(RGB(255, 255, 255));
-	_player->render(hdc);
+	for (auto it = _animation.begin(); it != _animation.end(); ++it) {
+		it->animation->render(hdc, it->drawPos.x, it->drawPos.y);
+	}
 }

@@ -150,29 +150,12 @@
   <ItemGroup>
     <ClCompile Include="GameNode.cpp" />
     <ClCompile Include="GameWorld.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="PlayerStateCrawling.cpp" />
-    <ClCompile Include="PlayerStateJumping.cpp" />
-    <ClCompile Include="PlayerStateJumpingForward.cpp" />
-    <ClCompile Include="PlayerStateKneeing.cpp" />
-    <ClCompile Include="PlayerStateStanding.cpp" />
-    <ClCompile Include="PlayerStateWalking.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Stdafx.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameNode.h" />
     <ClInclude Include="GameWorld.h" />
-    <ClInclude Include="InputManager.h" />
-    <ClInclude Include="KeyManager.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="PlayerState.h" />
-    <ClInclude Include="PlayerStateCrawling.h" />
-    <ClInclude Include="PlayerStateJumping.h" />
-    <ClInclude Include="PlayerStateJumpingForward.h" />
-    <ClInclude Include="PlayerStateKneeing.h" />
-    <ClInclude Include="PlayerStateStanding.h" />
-    <ClInclude Include="PlayerStateWalking.h" />
     <ClInclude Include="Stdafx.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
