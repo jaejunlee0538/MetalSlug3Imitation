@@ -49,4 +49,5 @@ namespace SGA {
 			return getInt(50) % 2 == 0;
 		}
 	};
+#define GET_RANDOM_FUNCTION()	SGA::RandomFunction::getSingleton()
 }

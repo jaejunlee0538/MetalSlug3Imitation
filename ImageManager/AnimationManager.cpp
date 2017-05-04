@@ -7,11 +7,13 @@
 namespace SGA {
 	AnimationManager::AnimationManager()
 	{
+
 	}
 
 
 	AnimationManager::~AnimationManager()
 	{
+
 	}
 
 	void AnimationManager::clearAll()
@@ -47,20 +49,34 @@ namespace SGA {
 
 	void AnimationManager::addAnimation(const std::string& name, SpritesAnimation * animation)
 	{
-		std::pair<AnimationMap::iterator, bool> result = 
-			_animationMap.insert(std::make_pair(name, animation));
-		if (result.second == false) {
-			//이미 동일한 이름의 애니메이션이 등록되어 있어서 삽입할 수 없음
-			assert(false);
+		AnimationMap::iterator it = _animationMap.find(name);
+		assert(it == _animationMap.end());
+		AnimationPool* pool = new AnimationPool;
+		(*pool)[0] = animation;
+		for (int i = 1; i < pool->size(); ++i) {
+			(*pool)[i] = animation->clone();
 		}
+		_animationMap.insert(std::make_pair(name, pool));
 	}
 
 	SpritesAnimation * AnimationManager::findAnimation(const std::string& name)
 	{
 		AnimationMap::iterator it = _animationMap.find(name);
-		if (it == _animationMap.end()) {
-			return NULL;
+		assert(it != _animationMap.end());
+
+		SpritesAnimation * animation = findInactiveAnimation(*(it->second));
+		assert(animation != NULL);
+		animation->restart();
+		animation->setActive();
+		return animation;
+	}
+
+	SpritesAnimation * AnimationManager::findInactiveAnimation(AnimationPool & animationPool)
+	{
+		for (int i = 0; i < animationPool.size(); ++i) {
+			if (animationPool[i]->isActive() == false)
+				return animationPool[i];
 		}
-		return it->second->clone();
+		return NULL;
 	}
 }

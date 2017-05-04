@@ -8,8 +8,10 @@ namespace SGA {
 		int durationMilli, int maxReplayCount)
 		:_sprites(sprites), _durationMs(durationMilli), _maxReplayCount(maxReplayCount)
 	{
+		setClock(GET_GAME_WORLD_CLOCK());
 		assert(std::all_of(sprites.begin(), sprites.end(),
 			[](const SGA::Sprite* sprite) {return sprite != NULL; }));
+		_active = false;
 		restart();
 	}
 
@@ -26,7 +28,7 @@ namespace SGA {
 
 	void SpritesAnimation::update()
 	{
-		DWORD t = SGA::WorldClock::getSingleton()->getCurrentTimeMillis();
+		DWORD t = _clock->getCurrentTimeMillis();
 		if (_maxReplayCount != 0 && _replayCount == _maxReplayCount) {
 			//무한 반복하지 않고, replayCount가 max에 도달하면
 			return;
@@ -57,7 +59,7 @@ namespace SGA {
 	{
 		_currentSprite = 0;
 		_replayCount = 0;
-		_lastSwitchTime = SGA::WorldClock::getSingleton()->getCurrentTimeMillis();
+		_lastSwitchTime = _clock->getCurrentTimeMillis();
 	}
 
 	void SpritesAnimation::setCurrentSprite(int spriteIdx) {
@@ -65,6 +67,6 @@ namespace SGA {
 			spriteIdx = getNSprites() - 1;
 		}
 		_currentSprite = spriteIdx;
-		_lastSwitchTime = SGA::WorldClock::getSingleton()->getCurrentTimeMillis();
+		_lastSwitchTime = _clock->getCurrentTimeMillis();
 	}
 }

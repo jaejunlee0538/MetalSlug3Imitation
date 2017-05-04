@@ -42,4 +42,5 @@ namespace SGA {
 		SpriteMap _spriteMap;
 		AtlasImageMap _atlasImageMap;
 	};
+#define GET_SPRITE_MANAGER	SGA::SpriteManager::getSingleton()
 }

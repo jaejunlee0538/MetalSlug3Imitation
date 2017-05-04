@@ -145,6 +145,7 @@
     <ClInclude Include="CommomMacro.h" />
     <ClInclude Include="DoubleBuffering.h" />
     <ClInclude Include="json.hpp" />
+    <ClInclude Include="KeyManager.h" />
     <ClInclude Include="RandomFunction.h" />
     <ClInclude Include="SingletonBase.h" />
     <ClInclude Include="WorldClock.h" />

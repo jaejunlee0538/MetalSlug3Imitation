@@ -28,6 +28,7 @@ HRESULT GameWorld::init() {
 
 	_animation.push_back({ SGA::AnimationManager::getSingleton()->findAnimation("JumpingStayStill_UpperLeft"),{ 150, 100 } });
 	_animation.push_back({ SGA::AnimationManager::getSingleton()->findAnimation("JumpingStayStill_LowerLeft"),{ 150, 100 } });
+
 	return S_OK;
 }
 
@@ -39,8 +40,8 @@ void GameWorld::release(void) {
 
 void GameWorld::update(float dt) {
 	GameNode::update(dt);
-	SGA::WorldClock::getSingleton()->updateClock();
-	if (SGA::WorldClock::getSingleton()->getCurrentTimeSec() > 0.4f) {
+	GET_GAME_WORLD_CLOCK()->updateClock(dt*1000);
+	if (GET_GAME_WORLD_CLOCK()->getCurrentTimeMillis() > 400) {
 		static bool first_run = true;
 		if (first_run) {
 			first_run = false;

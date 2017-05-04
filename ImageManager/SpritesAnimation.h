@@ -4,7 +4,7 @@
 #include "SpriteIface.h"
 namespace SGA {
 	class Sprite;
-
+	class ClockIface;
 	class SpritesAnimation : public SpriteIface
 	{
 	public:
@@ -32,6 +32,14 @@ namespace SGA {
 		누적 데이터를 리셋하고 첫번재 스프라이트부터 재생한다.
 		*/
 		void restart();
+
+		/*
+		애니메이션에 사용할 시계를 설정한다.
+		초기값 : GameWorldClock
+		*/
+		inline void setClock(const ClockIface* clock) {
+			_clock = clock;
+		}
 
 		/*
 		재생을 시작할 스프라이트의 인덱스를 설정한다.
@@ -67,6 +75,18 @@ namespace SGA {
 		inline int getNSprites() const {
 			return _sprites.size();
 		}
+
+		inline void setActive() {
+			_active = true;
+		}
+
+		inline void clearActive() {
+			_active = false;
+		}
+
+		inline bool isActive() const {
+			return _active;
+		}
 	private:
 		std::vector<const SGA::Sprite*> _sprites;
 		//현재 재생중인 스프라이트
@@ -79,5 +99,10 @@ namespace SGA {
 		int _durationMs;
 		//스프라이트를 다시 재생하는 횟수
 		int _maxReplayCount;
+		//애니메이션 재생에 사용할 시계
+		//default : GameWorldClock
+		const ClockIface* _clock;
+
+		bool _active;
 	};
 }

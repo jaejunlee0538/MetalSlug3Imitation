@@ -3,11 +3,12 @@
 #include "SpritesAnimation.h"
 #include <unordered_map>
 #include <string>
-
+#include <array>
 namespace SGA {
 	class AnimationManager : public SingletonBase<AnimationManager>
 	{
-		typedef std::unordered_map<std::string, SpritesAnimation*> AnimationMap;
+		typedef std::array<SpritesAnimation*, 20> AnimationPool;
+		typedef std::unordered_map<std::string, AnimationPool*> AnimationMap;
 	public:
 		AnimationManager();
 		~AnimationManager();
@@ -19,12 +20,14 @@ namespace SGA {
 		void loadFromJSON(const std::string& configFile);
 		void addAnimation(const std::string& name, SpritesAnimation* animation);
 		/*
-		name 애니메이션 객체의 복사본 포인터를 반환한다.
-		반환된 복사본은 사용 후 반드시 직접 삭제해주어야 한다.
+		name 애니메이션 객체의 포인터를 반환한다.
+		사용이 끝난 애니메이션 객체는 반드시 clearActive를 호출해주어야 한다.
 		*/
 		SpritesAnimation* findAnimation(const std::string& name);
 	private:
+		SpritesAnimation* findInactiveAnimation(AnimationPool& animationPool);
+	private:
 		AnimationMap _animationMap;
 	};
-
+#define GET_ANIMATION_MANAGER()	SGA::AnimationManager::getSingleton()
 }

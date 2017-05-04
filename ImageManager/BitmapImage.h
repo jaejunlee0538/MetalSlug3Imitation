@@ -64,7 +64,11 @@ namespace SGA {
 		inline const TCHAR* getFileName() const {
 			return _fileName;
 		}
+		inline COLORREF getKeyColor() const {
+			return _transparentColor;
+		}
 	private:
+		//복사 방지
 		BitmapImage(const BitmapImage& other){}
 		
 	private:
