@@ -3,10 +3,6 @@
 #include <string>
 #include "CollisionComponent.h"
 namespace SGA {
-	enum ColliderTypes {
-		COLLIDER_TYPE_RECT,
-		COLLIDER_TYPE_CIRCLE
-	};
 
 	class GameObject
 	{
@@ -16,8 +12,10 @@ namespace SGA {
 			setPosition(0, 0);
 			setInactive();
 		}
+
 		virtual ~GameObject()
 		{
+
 		}
 
 		virtual std::string getTag() const = 0;

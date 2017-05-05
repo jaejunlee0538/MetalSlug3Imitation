@@ -29,7 +29,7 @@ HRESULT GameLoop::init() {
 	GET_SPRITE_MANAGER()->addSprite("TriggerBoxTriggered.bmp", "TriggerBoxTriggered");
 	GET_SPRITE_MANAGER()->addSprite("CollisionBoxIdle.bmp", "CollisionBoxIdle");
 	GET_SPRITE_MANAGER()->addSprite("CollisionBoxCollided.bmp", "CollisionBoxCollided");
-
+	SGA::CollisionComponent::disableCollisionBetweenLayers(SGA::COLLISION_LAYER1, SGA::COLLISION_LAYER2);
 	_gameObjects.push_back(new SGA::TestBoxObject({ -50,-50,50,50 }, { 100.0f,100.0f }, false, SGA::COLLISION_LAYER1, true));
 	_gameObjects.push_back(new SGA::TestBoxObject({ -50,-50,50,50 }, { 250.0f,100.0f }, false, SGA::COLLISION_LAYER1, false));
 	_gameObjects.push_back(new SGA::TestBoxObject({ -50,-50,50,50 }, { 100.0f,250.0f }, true, SGA::COLLISION_LAYER1, false));

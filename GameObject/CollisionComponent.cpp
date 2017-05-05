@@ -1,15 +1,29 @@
 #include "CollisionComponent.h"
 #include "GameObject.h"
+namespace {
+	class CollisionLayerInitializer {
+	public:
+		CollisionLayerInitializer() {
+			SGA::CollisionComponent::enableCollisionsBetweenAllLayers();
+		}
+	};
+	CollisionLayerInitializer initializeCollisionLayer;
+}
 namespace SGA {
-	CollisionComponent::CollisionComponent(GameObject & owner, bool isTrigger, uint8_t collisionMask)
-		:_owner(owner), _isTrigger(isTrigger), _collisionMask(collisionMask)
+
+	bool CollisionComponent::_layerInteraction[NUM_COLLISION_LAYER][NUM_COLLISION_LAYER] = { {true,},{true,}, };
+
+	CollisionComponent::CollisionComponent(GameObject & owner, bool isTrigger, CollisionLayers collisionLayer)
+		:_owner(owner), _isTrigger(isTrigger), _collisionLayer(collisionLayer)
 	{
 		setOffset(0, 0);
 	}
+
 	void CollisionComponent::setOffset(float offsetX, float offsetY) {
 		_offset.x = offsetX;
 		_offset.y = offsetY;
 	}
+
 	void CollisionComponent::handleCollision(CollisionComponent * other) {
 		if (_collisionMemory.find(other) == _collisionMemory.end()) {
 			_collisionMemory.insert(other);
@@ -27,6 +41,7 @@ namespace SGA {
 			_owner.onColliding(other->getOwner());
 		}
 	}
+
 	void CollisionComponent::handleNoneCollision(CollisionComponent * other) {
 		if (_collisionMemory.find(other) != _collisionMemory.end()) {
 			_collisionMemory.erase(other);
@@ -35,6 +50,27 @@ namespace SGA {
 			}
 			else {
 				_owner.onCollidingExit(other->getOwner());
+			}
+		}
+	}
+
+	void CollisionComponent::enableCollisionBetweenLayers(CollisionLayers layer1, CollisionLayers layer2)
+	{
+		_layerInteraction[layer1][layer2] = true;
+		_layerInteraction[layer2][layer1] = true;
+	}
+
+	void CollisionComponent::disableCollisionBetweenLayers(CollisionLayers layer1, CollisionLayers layer2)
+	{
+		_layerInteraction[layer1][layer2] = false;
+		_layerInteraction[layer2][layer1] = false;
+	}
+
+	void CollisionComponent::enableCollisionsBetweenAllLayers()
+	{
+		for (int i = 0; i < NUM_COLLISION_LAYER; ++i) {
+			for (int k = 0; k < NUM_COLLISION_LAYER; ++k) {
+				_layerInteraction[i][k] = true;
 			}
 		}
 	}

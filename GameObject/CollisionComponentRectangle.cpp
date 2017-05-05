@@ -3,8 +3,8 @@
 #include "GameObject.h"
 
 namespace SGA {
-	CollisionComponentRectangle::CollisionComponentRectangle(GameObject& owner, RECT rect, bool isTrigger, uint8_t collisionMask)
-		:CollisionComponent(owner, isTrigger, collisionMask) {
+	CollisionComponentRectangle::CollisionComponentRectangle(GameObject& owner, RECT rect, bool isTrigger, CollisionLayers collisionLayer)
+		:CollisionComponent(owner, isTrigger, collisionLayer) {
 		setRECT(rect);
 	}
 

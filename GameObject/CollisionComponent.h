@@ -3,22 +3,25 @@
 #include <algorithm>
 #include <Windows.h>
 namespace SGA {
+
 	enum CollisionLayers {
-		COLLISION_LAYER1=0x01,
+		COLLISION_LAYER1 = 0,
 		COLLISION_LAYER2,
 		COLLISION_LAYER3,
 		COLLISION_LAYER4,
 		COLLISION_LAYER5,
 		COLLISION_LAYER6,
 		COLLISION_LAYER7,
-		COLLISION_LAYER8
+		COLLISION_LAYER8,
+
+		NUM_COLLISION_LAYER
 	};
 	class GameObject;
 	class CollisionComponentCircle;
 	class CollisionComponentRectangle;
 	class CollisionComponent {
 	public:
-		CollisionComponent(GameObject& owner, bool isTrigger, uint8_t collisionMask);
+		CollisionComponent(GameObject& owner, bool isTrigger, CollisionLayers collisionLayer);
 
 		virtual ~CollisionComponent() {}
 
@@ -38,22 +41,18 @@ namespace SGA {
 
 		//other의 충돌 레이어 마스크를 비교하여 충돌 체크 수행 여부를 반환한다.
 		bool isCollidableWith(const CollisionComponent* other) {
-			return _collisionMask & other->_collisionMask;
+			//return _collisionMask & other->_collisionMask;
+			return _layerInteraction[_collisionLayer][other->_collisionLayer];
 		}
 
-		//충돌 레이어 마스크를 설정한다.
-		void setCollisionLayer (uint8_t mask) {
-			_collisionMask = mask;
+		//충돌 레이어를 설정한다.
+		void setCollisionLayer (CollisionLayers layer) {
+			_collisionLayer = layer;
 		}
 
-		//layer 레이어 마스크를 활성화한다.
-		void enableCollisionLayer(CollisionLayers layer) {
-			_collisionMask |= COLLISION_LAYER1;
-		}
-
-		//layer 레이어 마으스를 비활성화 한다.
-		void disableCollisionLayer(CollisionLayers layer) {
-			_collisionMask &= ~COLLISION_LAYER1;
+		//현재 충돌 레이어를 반환한다.
+		CollisionLayers getCollisionLayer() const {
+			return _collisionLayer;
 		}
 
 		//충돌 컴포넌트를 소유하고 있는 GameObject의 참조를 반환한다.
@@ -65,13 +64,20 @@ namespace SGA {
 		bool isTrigger() const { 
 			return _isTrigger;
 		}
+		
+		static void enableCollisionBetweenLayers(CollisionLayers layer1, CollisionLayers layer2);
+		static void disableCollisionBetweenLayers(CollisionLayers layer1, CollisionLayers layer2);
+		static void enableCollisionsBetweenAllLayers();
 	protected:
 		//Owner의 위치에 대한 충돌 컴포넌트의 상대 위치
 		//기본값을 (0,0)이다.
 		POINTFLOAT _offset;
 		std::unordered_set<CollisionComponent*> _collisionMemory;
-		uint8_t _collisionMask;
+		//기본값 : COLLISION_LAYER1
+		CollisionLayers _collisionLayer;
 		GameObject& _owner;
 		bool _isTrigger;
+	private:
+		static bool _layerInteraction[NUM_COLLISION_LAYER][NUM_COLLISION_LAYER];
 	};
 }

@@ -6,7 +6,7 @@ namespace SGA {
 	class CollisionComponentRectangle;
 	class CollisionComponentCircle : public CollisionComponent {
 	public:
-		CollisionComponentCircle(GameObject & owner, RECT circle, bool isTrigger, uint8_t collisionMask);
+		CollisionComponentCircle(GameObject & owner, RECT circle, bool isTrigger, CollisionLayers collisionLayer);
 
 		virtual bool isCollideWith(const CollisionComponent* other) const;
 		virtual bool implCollisionCheck(const CollisionComponentRectangle* other) const;

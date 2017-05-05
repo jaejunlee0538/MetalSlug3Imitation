@@ -9,7 +9,7 @@ namespace SGA {
 		public GameObject
 	{
 	public:
-		TestBoxObject(RECT rect, POINTFLOAT pos, bool trigger, uint8_t collisionLayers, bool controlled) {
+		TestBoxObject(RECT rect, POINTFLOAT pos, bool trigger, CollisionLayers collisionLayers, bool controlled) {
 			setPosition(pos.x, pos.y);
 			_controlled = controlled;
 			_rectCollision = new CollisionComponentRectangle(*this, rect, trigger, collisionLayers);

@@ -3,8 +3,8 @@
 #include "GameObject.h"
 
 namespace SGA {
-	CollisionComponentCircle::CollisionComponentCircle(GameObject & owner, RECT circle, bool isTrigger, uint8_t collisionMask)
-		:CollisionComponent(owner, isTrigger, collisionMask) {
+	CollisionComponentCircle::CollisionComponentCircle(GameObject & owner, RECT circle, bool isTrigger, CollisionLayers collisionLayer)
+		:CollisionComponent(owner, isTrigger, collisionLayer) {
 		setRECT(circle);
 	}
 
