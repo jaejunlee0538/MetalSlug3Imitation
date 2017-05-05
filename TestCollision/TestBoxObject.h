@@ -40,16 +40,16 @@ namespace SGA {
 			if (_controlled) {
 				POINTFLOAT pos = getPosition();
 				if (GET_KEY_MANAGER()->isStayKeyDown(VK_RIGHT)) {
-					pos.x += 1;
+					pos.x += 4;
 				}
 				if (GET_KEY_MANAGER()->isStayKeyDown(VK_LEFT)) {
-					pos.x -= 1;
+					pos.x -= 4;
 				}
 				if (GET_KEY_MANAGER()->isStayKeyDown(VK_UP)) {
-					pos.y -= 1;
+					pos.y -= 4;
 				}
 				if (GET_KEY_MANAGER()->isStayKeyDown(VK_DOWN)) {
-					pos.y += 1;
+					pos.y += 4;
 				}
 				setPosition(pos.x, pos.y);
 			}

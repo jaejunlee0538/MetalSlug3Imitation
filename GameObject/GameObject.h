@@ -2,6 +2,7 @@
 #include <Windows.h>
 #include <string>
 #include "CollisionComponent.h"
+#include <list>
 namespace SGA {
 
 	class GameObject
@@ -19,6 +20,19 @@ namespace SGA {
 		}
 
 		virtual std::string getTag() const = 0;
+		//////////////////////////////////////////////////////////////
+		void addChild(GameObject* child) {
+			_childs.push_back(child);
+			child->_parent = this;
+		}
+		
+		inline std::list<GameObject*>::iterator beginChilds() {
+			return _childs.begin();
+		}
+
+		inline std::list<GameObject*>::iterator endChilds() {
+			return _childs.end();
+		}
 		//////////////////////////////////////////////////////////////
 		virtual void update() = 0;
 		//////////////////////////////////////////////////////////////
@@ -48,8 +62,14 @@ namespace SGA {
 			_position.y = y;
 		}
 
-		inline const POINTFLOAT& getPosition() const {
-			return _position;
+		inline POINTFLOAT getPosition() const {
+			POINTFLOAT pos= _position;
+			if (_parent) {
+				POINTFLOAT parentPos = _parent->getPosition();
+				pos.x += parentPos.x;
+				pos.y += parentPos.y;
+			}
+			return pos;
 		}
 
 		void setActive() {
@@ -65,5 +85,7 @@ namespace SGA {
 		bool _isActive;
 		POINTFLOAT _position;
 		CollisionComponent * _collisionComponent = NULL;
+		GameObject* _parent = NULL;
+		std::list<GameObject*> _childs;
 	};
 }

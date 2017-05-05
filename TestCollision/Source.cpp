@@ -66,4 +66,3 @@ void setWindowSize(HWND hWnd, int x, int y, int width, int height) {
 	SetWindowPos(hWnd, NULL, x, y, rect.right - rect.left,
 		rect.bottom - rect.top, SWP_NOZORDER | SWP_NOMOVE);
 }
-
