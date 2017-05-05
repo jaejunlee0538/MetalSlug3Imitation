@@ -5,11 +5,11 @@
   <PropertyGroup />
   <ItemDefinitionGroup>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(SolutionDir)\ImageManager;$(SolutionDir)\GameLevelTool;$(SolutionDir)\CommonUtils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\ImageManager;$(SolutionDir)\CommonUtils;$(SolutionDir)\GameObject;$(SolutionDir)\LayerManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>ImageManager.lib;GameLevelTool.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ImageManager.lib;GameObject.lib;LayerManager.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup />

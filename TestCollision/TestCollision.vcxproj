@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{CF527A3B-69E4-44E2-97C0-7D9B6F304737}</ProjectGuid>
+    <ProjectGuid>{13D6C48E-47FB-42C9-9AD3-F618C8478769}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>MetalSlug3Imitation</RootNamespace>
+    <RootNamespace>TestCollision</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -42,7 +42,7 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
+    <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
@@ -92,12 +92,10 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>$(SolutionDir)\GameObject;$(SolutionDir)\LayerManager;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>GameObject.lib;LayerManager.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -148,22 +146,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Text Include="ReadMe.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="GameNode.cpp" />
     <ClCompile Include="GameLoop.cpp" />
+    <ClCompile Include="GameNode.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Stdafx.cpp" />
+    <ClCompile Include="TestBoxObject.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameNode.h" />
     <ClInclude Include="GameLoop.h" />
+    <ClInclude Include="GameNode.h" />
     <ClInclude Include="Stdafx.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Resource\Sprites\Animation_Tarma.json" />
-    <None Include="..\Resource\Sprites\Sprite_Tarma.json" />
+    <ClInclude Include="TestBoxObject.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

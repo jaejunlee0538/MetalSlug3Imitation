@@ -6,6 +6,7 @@ namespace SGA {
 	public:
 		virtual ~ClockIface(){}
 		virtual DWORD getCurrentTimeMillis() const = 0;
+		virtual DWORD getDeltaTimeMillis() const = 0;
 		virtual void reset() = 0;
 	};
 
@@ -17,18 +18,25 @@ namespace SGA {
 		}
 
 		DWORD getCurrentTimeMillis() const {
-			return _currentClock;
+			return _currentTime;
+		}
+
+		DWORD getDeltaTimeMillis() const {
+			return _deltaTime;
 		}
 
 		void updateClock(DWORD dt) {
-			_currentClock += dt;
+			_deltaTime = dt;
+			_currentTime += dt;
 		}
 
 		void reset() {
-			_currentClock = 0;
+			_deltaTime = 0;
+			_currentTime = 0;
 		}
 	private:
-		DWORD _currentClock;
+		DWORD _deltaTime;
+		DWORD _currentTime;
 	};
 
 	class RealTimeClock : public ClockIface,public SingletonBase<RealTimeClock>
@@ -39,19 +47,26 @@ namespace SGA {
 		}
 
 		DWORD getCurrentTimeMillis() const {
-			return _currentClock;
+			return _currentTime;
+		}
+
+		DWORD getDeltaTimeMillis() const {
+			return _deltaTime;
 		}
 
 		void updateClock() {
-			_currentClock = GetTickCount() - _t0;
+			_deltaTime = (GetTickCount() - _t0) - _currentTime;
+			_currentTime += _deltaTime;
 		}
 
 		void reset() {
 			_t0 = GetTickCount();
-			_currentClock = 0;
+			_currentTime = 0;
+			_deltaTime = 0;
 		}
 	private:
-		DWORD _currentClock;
+		DWORD _deltaTime;
+		DWORD _currentTime;
 		DWORD _t0;
 	};
 

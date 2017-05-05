@@ -13,53 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="GameLoop">
-      <UniqueIdentifier>{8c670be2-e624-47b5-bb04-1389aec950c3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Global">
-      <UniqueIdentifier>{f8d536a4-53c8-4f68-bca0-8d3ebda9bd2b}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\SpriteList">
-      <UniqueIdentifier>{4db78151-3ef9-4ea6-b093-1cbc1fada751}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files\AnimationList">
-      <UniqueIdentifier>{563956e9-3810-4443-9fd4-3242a7332d90}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameLoop.cpp">
-      <Filter>GameLoop</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="GameNode.cpp">
-      <Filter>GameLoop</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Source.cpp">
-      <Filter>GameLoop</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Stdafx.cpp">
-      <Filter>Global</Filter>
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestBoxObject.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameLoop.h">
-      <Filter>GameLoop</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GameNode.h">
-      <Filter>GameLoop</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Stdafx.h">
-      <Filter>Global</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Resource\Sprites\Sprite_Tarma.json">
-      <Filter>Resource Files\SpriteList</Filter>
-    </None>
-    <None Include="..\Resource\Sprites\Animation_Tarma.json">
-      <Filter>Resource Files\AnimationList</Filter>
-    </None>
+    <ClInclude Include="TestBoxObject.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

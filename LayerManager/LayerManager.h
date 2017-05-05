@@ -22,6 +22,7 @@ namespace SGA {
 		LayerManager();
 
 		virtual ~LayerManager();
+
 		/*
 		width X height크기의 레이어 nLayer개를 만든다.
 		*/
@@ -31,6 +32,8 @@ namespace SGA {
 		가장 아래 레이어부터 순서대로 화면에 그린다.
 		*/
 		void render(HDC hdc);
+
+		void clearAllLayers();
 
 		/*
 		레이어를 모두 삭제한다.

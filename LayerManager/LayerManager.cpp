@@ -33,6 +33,14 @@ namespace SGA {
 		}
 	}
 
+	void LayerManager::clearAllLayers()
+	{
+		assert(isInitialized());
+		for (int i = 0; i < NUMBER_OF_LAYERS; ++i) {
+			_layer[i]->clearLayer();
+		}
+	}
+
 	void LayerManager::release()
 	{
 		for (int i = 0; i < NUMBER_OF_LAYERS; ++i) {

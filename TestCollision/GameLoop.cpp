@@ -8,6 +8,7 @@
 #include <SpritesAnimation.h>
 #include <LayerManager.h>
 #include <GameObject.h>
+#include "TestBoxObject.h"
 GameLoop::GameLoop()
 {
 	
@@ -24,6 +25,15 @@ HRESULT GameLoop::init() {
 	GET_REALTIME_CLOCK()->reset();
 	SGA::BitmapImage::setHWND(_hWnd);
 	GET_LAYER_MANAGER()->init(WIN_SIZE_X, WIN_SIZE_Y);
+	GET_SPRITE_MANAGER()->addSprite("TriggerBoxIdle.bmp", "TriggerBoxIdle");
+	GET_SPRITE_MANAGER()->addSprite("TriggerBoxTriggered.bmp", "TriggerBoxTriggered");
+	GET_SPRITE_MANAGER()->addSprite("CollisionBoxIdle.bmp", "CollisionBoxIdle");
+	GET_SPRITE_MANAGER()->addSprite("CollisionBoxCollided.bmp", "CollisionBoxCollided");
+
+	_gameObjects.push_back(new SGA::TestBoxObject({ -50,-50,50,50 }, { 100.0f,100.0f }, false, SGA::COLLISION_LAYER1, true));
+	_gameObjects.push_back(new SGA::TestBoxObject({ -50,-50,50,50 }, { 250.0f,100.0f }, false, SGA::COLLISION_LAYER1, false));
+	_gameObjects.push_back(new SGA::TestBoxObject({ -50,-50,50,50 }, { 100.0f,250.0f }, true, SGA::COLLISION_LAYER1, false));
+	_gameObjects.push_back(new SGA::TestBoxObject({ -50,-50,50,50 }, { 250.0f,250.0f }, true, SGA::COLLISION_LAYER2, false));
 	return S_OK;
 }
 
@@ -46,6 +56,7 @@ void GameLoop::update(void) {
 void GameLoop::render(HDC hdc)
 {
 	GameNode::clearScreen(RGB(255, 255, 255));
+	GET_LAYER_MANAGER()->clearAllLayers();
 	for (int i = 0; i < _gameObjects.size(); ++i) {
 		if (_gameObjects[i]->isActive() && _gameObjects[i]->isRenderable()) {
 			_gameObjects[i]->render();
