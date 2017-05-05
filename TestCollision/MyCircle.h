@@ -1,29 +1,29 @@
 #pragma once
 #include <GameObject.h>
-#include <CollisionComponentRectangle.h>
+#include <CollisionComponentCircle.h>
 #include <LayerManager.h>
 #include <SpriteManager.h>
 #include <KeyManager.h>
 namespace SGA {
-	class TestBoxObject :
+	class MyCircle :
 		public GameObject
 	{
 	public:
-		TestBoxObject(RECT rect, POINTFLOAT pos, bool trigger, CollisionLayers collisionLayers, bool controlled,
+		MyCircle(RECT rect, POINTFLOAT pos, bool trigger, CollisionLayers collisionLayers, bool controlled,
 			std::string sprite1, std::string sprite2) {
 			setPosition(pos.x, pos.y);
 			_controlled = controlled;
-			_circleCollision = new CollisionComponentRectangle(*this, rect, trigger, collisionLayers);
+			_circleCollision = new CollisionComponentCircle(*this, rect, trigger, collisionLayers);
 			setCollisionComponent(_circleCollision);
 			_spriteIdle = GET_SPRITE_MANAGER()->findSprite(sprite1);
 			_spriteActive = GET_SPRITE_MANAGER()->findSprite(sprite2);
-			
+
 			_rect = rect;
 			setActive();
 			_collided = false;
 		}
 
-		virtual ~TestBoxObject() {
+		virtual ~MyCircle() {
 			delete _circleCollision;
 		}
 
@@ -60,7 +60,7 @@ namespace SGA {
 			}
 		}
 
-		virtual bool isRenderable() const{
+		virtual bool isRenderable() const {
 			return true;
 		}
 
@@ -81,7 +81,7 @@ namespace SGA {
 			_collided = false;
 		}
 	protected:
-		CollisionComponentRectangle *_circleCollision;
+		CollisionComponent *_circleCollision;
 		const Sprite* _spriteIdle;
 		const Sprite* _spriteActive;
 		RECT _rect;

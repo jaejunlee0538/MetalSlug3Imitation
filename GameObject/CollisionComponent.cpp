@@ -74,4 +74,13 @@ namespace SGA {
 			}
 		}
 	}
+
+	void CollisionComponent::disableCollisionsBetweenAllLayers()
+	{
+		for (int i = 0; i < NUM_COLLISION_LAYER; ++i) {
+			for (int k = 0; k < NUM_COLLISION_LAYER; ++k) {
+				_layerInteraction[i][k] = false;
+			}
+		}
+	}
 }

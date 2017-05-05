@@ -135,12 +135,14 @@
     <ClInclude Include="CollisionComponentCircle.h" />
     <ClInclude Include="CollisionComponentRectangle.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GameObjectLoop.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CollisionComponent.cpp" />
     <ClCompile Include="CollisionComponentCircle.cpp" />
     <ClCompile Include="CollisionComponentRectangle.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GameObjectLoop.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -11,6 +11,9 @@ namespace SGA {
 		virtual bool isCollideWith(const CollisionComponent* other) const;
 		virtual bool implCollisionCheck(const CollisionComponentRectangle* other) const;
 		virtual bool implCollisionCheck(const CollisionComponentCircle* other) const;
+		virtual void resolveCollisionWith(CollisionComponent* other) const;
+		virtual void resolveCollisionBy(const CollisionComponentRectangle* other);
+		virtual void resolveCollisionBy(const CollisionComponentCircle* other);
 
 		RECT getCollisionRECT() const;
 

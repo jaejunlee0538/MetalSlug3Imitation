@@ -25,6 +25,34 @@ namespace SGA {
 		return SGA::isCollideRectCircle(rect, circle);
 	}
 
+	void CollisionComponentRectangle::resolveCollisionWith(CollisionComponent * other) const
+	{
+		other->resolveCollisionBy(this);
+	}
+
+	void CollisionComponentRectangle::resolveCollisionBy(const CollisionComponentRectangle * other)
+	{
+		RECT myRect = getCollisionRECT();
+		RECT otherRect = other->getCollisionRECT();
+		POINTFLOAT vec = SGA::getCollisionVectorRectRect<RECT, POINTFLOAT>(myRect, otherRect);
+		POINTFLOAT vv = getOwner().getDeltaPosition();
+		if (std::abs(getOwner().getDeltaPosition().x) < 0.01) {
+			vec.x = 0;
+		}
+		if (std::abs(getOwner().getDeltaPosition().y) < 0.01) {
+			vec.y = 0;
+		}
+		getOwner().movePosition(vec.x, vec.y);
+	}
+
+	void CollisionComponentRectangle::resolveCollisionBy(const CollisionComponentCircle * other)
+	{
+		RECT myRect = getCollisionRECT();
+		RECT otherCircle = other->getCollisionRECT();
+		POINTFLOAT vecInv = SGA::getCollisionVectorCircleRect<RECT, POINTFLOAT>(otherCircle, myRect);
+		getOwner().movePosition(-vecInv.x, -vecInv.y);
+	}
+
 	RECT CollisionComponentRectangle::getCollisionRECT() const
 	{
 		RECT collisionRect;

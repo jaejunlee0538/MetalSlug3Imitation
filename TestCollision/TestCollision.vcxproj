@@ -148,6 +148,7 @@
   <ItemGroup>
     <ClCompile Include="GameLoop.cpp" />
     <ClCompile Include="GameNode.cpp" />
+    <ClCompile Include="MyCircle.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Stdafx.cpp" />
     <ClCompile Include="TestBoxObject.cpp" />
@@ -155,6 +156,7 @@
   <ItemGroup>
     <ClInclude Include="GameLoop.h" />
     <ClInclude Include="GameNode.h" />
+    <ClInclude Include="MyCircle.h" />
     <ClInclude Include="Stdafx.h" />
     <ClInclude Include="TestBoxObject.h" />
   </ItemGroup>

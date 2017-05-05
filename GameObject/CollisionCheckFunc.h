@@ -127,6 +127,21 @@ namespace SGA {
 		return rect1.left < rect2.right && rect1.right > rect2.left && rect1.top < rect2.bottom && rect1.bottom > rect2.top;
 	}
 
+	/*
+	rect1을 이동시켜 rect2와의 충돌을 해제시키기 위해 필요한 이동량을 반환한다.
+	*/
+	template <typename RECTType, typename PointType>
+	PointType getCollisionVectorRectRect(const RECTType& rect1, const RECTType& rect2) {
+		PointType ret;
+		float dx1 = rect2.right - rect1.left;
+		float dx2 = rect2.left - rect1.right;
+		float dy1 = rect2.top - rect1.bottom;
+		float dy2 = rect2.bottom - rect1.top;
+		ret.x = std::abs(dx1) > std::abs(dx2) ? dx2 : dx1;
+		ret.y = std::abs(dy1) > std::abs(dy2) ? dy2 : dy1;
+		return ret;
+	}
+
 	///////////////사각형과 원 사이의 충돌///////////////////////////////////////////////////////////////
 	/*
 	rect와 중심이 center이고 반지름이 R인 원과 충돌한다면(완전히 또는 조금이라도 겹친다면) true를 반환한다.
@@ -167,7 +182,53 @@ namespace SGA {
 		return isCollideRectCircle(rect, c, r);
 	}
 
-
+	/*
+	circle을 이동시켜 충돌을 해제할 수 있도록하는 이동 벡터를 반환한다.
+	*/
+	template <typename RECTType, typename PointType>
+	PointType getCollisionVectorCircleRect(const RECTType& circle, const RECTType& rect) {
+		POINTFLOAT center{ (circle.left + circle.right) / 2.0f, (circle.bottom + circle.top) / 2.0f };
+		float R = (circle.right - circle.left) / 2;
+		if (center.x >= rect.left && center.x <= rect.right || center.y >= rect.top && center.y <= rect.bottom) {
+			PointType ret = getCollisionVectorRectRect<RECTType, PointType>(circle, rect);
+			if (std::abs(ret.x) > std::abs(ret.y)) {
+				ret.x = 0;
+			}
+			else {
+				ret.y = 0;
+			}
+			return ret;
+		}
+		else {
+			POINTFLOAT p;
+			POINTFLOAT ret;
+			p.x = rect.left; p.y = rect.top;
+			if (isPointInCircle(center, R, p)) {
+				goto return_result;
+			}
+			p.x = rect.right;
+			if (isPointInCircle(center, R, p)) {
+				goto return_result;
+			}
+			p.y = rect.bottom;
+			if (isPointInCircle(center, R, p)) {
+				goto return_result;
+			}
+			p.x = rect.left;
+			if (isPointInCircle(center, R, p)) {
+				goto return_result;
+			}
+			ret.x = ret.y = 0;
+			return ret;
+			return_result:
+			ret.x = center.x - p.x;
+			ret.y = center.y - p.y;
+			float len = sqrt(ret.x*ret.x + ret.y*ret.y);
+			ret.x = ret.x * (R - len) / len;
+			ret.y = ret.y * (R - len) / len;
+			return ret;
+		}
+	}
 	///////////////사각형과 타원 사이의 충돌///////////////////////////////////////////////////////////////
 	/*
 	

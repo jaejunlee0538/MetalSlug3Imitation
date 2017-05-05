@@ -39,6 +39,9 @@
     <ClInclude Include="CollisionCheckFunc.h">
       <Filter>Collision</Filter>
     </ClInclude>
+    <ClInclude Include="GameObjectLoop.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="GameObject.cpp">
@@ -52,6 +55,9 @@
     </ClCompile>
     <ClCompile Include="CollisionComponent.cpp">
       <Filter>Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObjectLoop.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
