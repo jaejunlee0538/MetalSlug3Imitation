@@ -13,8 +13,8 @@ namespace SGA {
 			std::string sprite1, std::string sprite2) {
 			setPosition(pos.x, pos.y);
 			_controlled = controlled;
-			_circleCollision = new CollisionComponentRectangle(*this, rect, trigger, collisionLayers);
-			setCollisionComponent(_circleCollision);
+			_collision = new CollisionComponentRectangle(*this, rect, trigger, collisionLayers);
+			setCollisionComponent(_collision);
 			_spriteIdle = GET_SPRITE_MANAGER()->findSprite(sprite1);
 			_spriteActive = GET_SPRITE_MANAGER()->findSprite(sprite2);
 			
@@ -24,7 +24,7 @@ namespace SGA {
 		}
 
 		virtual ~TestBoxObject() {
-			delete _circleCollision;
+			delete _collision;
 		}
 
 		std::string getTag() const {
@@ -81,7 +81,7 @@ namespace SGA {
 			_collided = false;
 		}
 	protected:
-		CollisionComponentRectangle *_circleCollision;
+		CollisionComponentRectangle *_collision;
 		const Sprite* _spriteIdle;
 		const Sprite* _spriteActive;
 		RECT _rect;

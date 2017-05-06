@@ -153,13 +153,17 @@
   <ItemGroup>
     <ClCompile Include="GameNode.cpp" />
     <ClCompile Include="GameLoop.cpp" />
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Stdafx.cpp" />
+    <ClCompile Include="WalkerFootCircle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameNode.h" />
     <ClInclude Include="GameLoop.h" />
+    <ClInclude Include="Player.h" />
     <ClInclude Include="Stdafx.h" />
+    <ClInclude Include="WalkerFootCircle.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Resource\Sprites\Animation_Tarma.json" />

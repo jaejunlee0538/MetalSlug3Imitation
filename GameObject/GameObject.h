@@ -14,6 +14,7 @@ namespace SGA {
 
 		virtual std::string getTag() const = 0;
 		//////////////////////////////////////////////////////////////
+		GameObject* getParent();
 		void addChild(GameObject* child);
 		
 		inline std::list<GameObject*>::iterator beginChilds() {
@@ -24,7 +25,7 @@ namespace SGA {
 			return _childs.end();
 		}
 		//////////////////////////////////////////////////////////////
-		virtual void update() = 0;
+		virtual void update() {}
 		//////////////////////////////////////////////////////////////
 		virtual bool isRenderable() const = 0;
 		virtual void render() {}
@@ -83,7 +84,7 @@ namespace SGA {
 			return _isActive;
 		}
 	private:
-		bool _isActive;//기본값 : false
+		bool _isActive;//기본값 : true
 		bool _useGravity;//기본값 : true
 		bool _isKinematic;//기본값 : false
 		POINTFLOAT _position;

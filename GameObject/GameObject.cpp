@@ -4,14 +4,26 @@ namespace SGA {
 	GameObject::GameObject()
 	{
 		setPosition(0, 0);
-		setInactive();
+		setActive();
 		enableGravity();
 		disableKinamatic();
 	}
 
 	GameObject::~GameObject()
 	{
+		if (_collisionComponent) {
+			delete _collisionComponent;
+		}
+		for (auto it = _childs.begin(); it != _childs.end(); ++it) {
+			delete *it;
+		}
+	}
 
+
+	//////////////////////////////////////////////////////////////
+
+	GameObject * GameObject::getParent() {
+		return _parent;
 	}
 
 	void GameObject::addChild(GameObject * child) {
@@ -25,9 +37,7 @@ namespace SGA {
 		return old;
 	}
 
-
 	///////////////////////////////////////////////////////////////////
-
 	void GameObject::movePosition(float dx, float dy)
 	{
 		setPosition(_position.x+dx, _position.y+dy);

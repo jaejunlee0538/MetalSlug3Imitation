@@ -1,5 +1,6 @@
 #include "CollisionComponent.h"
 #include "GameObject.h"
+#include <assert.h>
 namespace {
 	class CollisionLayerInitializer {
 	public:
@@ -11,7 +12,7 @@ namespace {
 }
 namespace SGA {
 
-	bool CollisionComponent::_layerInteraction[NUM_COLLISION_LAYER][NUM_COLLISION_LAYER] = { {true,},{true,}, };
+	bool CollisionComponent::_layerInteraction[NUM_COLLISION_LAYER][NUM_COLLISION_LAYER];
 
 	CollisionComponent::CollisionComponent(GameObject & owner, bool isTrigger, CollisionLayers collisionLayer)
 		:_owner(owner), _isTrigger(isTrigger), _collisionLayer(collisionLayer)
@@ -82,5 +83,16 @@ namespace SGA {
 				_layerInteraction[i][k] = false;
 			}
 		}
+	}
+
+	void CollisionComponent::moveCollidingObject(GameObject * object, float dx, float dy)
+	{
+		assert(object);
+		GameObject* prev;
+		while (object != NULL) {
+			prev = object;
+			object = object->getParent();
+		}
+		prev->movePosition(dx, dy);
 	}
 }

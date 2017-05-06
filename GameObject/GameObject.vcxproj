@@ -29,7 +29,7 @@
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v140</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
+    <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
@@ -77,6 +77,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\CommonUtils;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -130,19 +131,60 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AnimationManager.h" />
+    <ClInclude Include="BitmapImage.h" />
+    <ClInclude Include="Camera.h" />
     <ClInclude Include="CollisionCheckFunc.h" />
     <ClInclude Include="CollisionComponent.h" />
     <ClInclude Include="CollisionComponentCircle.h" />
     <ClInclude Include="CollisionComponentRectangle.h" />
+    <ClInclude Include="CollisionComponentRectangleRotated.h" />
+    <ClInclude Include="CollisionConfig.h" />
+    <ClInclude Include="CollisionTriggerBox.h" />
+    <ClInclude Include="CommomMacro.h" />
+    <ClInclude Include="CommonMacroHeader.h" />
+    <ClInclude Include="DoubleBuffering.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameObjectLoop.h" />
+    <ClInclude Include="GroundRectangle.h" />
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="json.hpp" />
+    <ClInclude Include="KeyManager.h" />
+    <ClInclude Include="Layer.h" />
+    <ClInclude Include="LayerManager.h" />
+    <ClInclude Include="Line2D.h" />
+    <ClInclude Include="MathUtils.h" />
+    <ClInclude Include="RandomFunction.h" />
+    <ClInclude Include="ScrollingScene.h" />
+    <ClInclude Include="SingletonBase.h" />
+    <ClInclude Include="Sprite.h" />
+    <ClInclude Include="SpriteIface.h" />
+    <ClInclude Include="SpriteManager.h" />
+    <ClInclude Include="SpritesAnimation.h" />
+    <ClInclude Include="WorldClock.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AnimationManager.cpp" />
+    <ClCompile Include="BitmapImage.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="CollisionCheckFunc.cpp" />
     <ClCompile Include="CollisionComponent.cpp" />
     <ClCompile Include="CollisionComponentCircle.cpp" />
     <ClCompile Include="CollisionComponentRectangle.cpp" />
+    <ClCompile Include="CollisionComponentRectangleRotated.cpp" />
+    <ClCompile Include="CollisionConfig.cpp" />
+    <ClCompile Include="CollisionTriggerBox.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameObjectLoop.cpp" />
+    <ClCompile Include="GroundRectangle.cpp" />
+    <ClCompile Include="Layer.cpp" />
+    <ClCompile Include="LayerManager.cpp" />
+    <ClCompile Include="Line2D.cpp" />
+    <ClCompile Include="MathUtils.cpp" />
+    <ClCompile Include="ScrollingScene.cpp" />
+    <ClCompile Include="Sprite.cpp" />
+    <ClCompile Include="SpriteManager.cpp" />
+    <ClCompile Include="SpritesAnimation.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

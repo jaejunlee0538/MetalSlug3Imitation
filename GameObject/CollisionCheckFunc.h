@@ -3,6 +3,7 @@
 #include <math.h>
 #include <assert.h>
 #include <utility>
+#include "MathUtils.h"
 namespace SGA {
 	/*
 	p가 rect의 표면 내에 있다면 true를 반환한다. 
@@ -255,6 +256,179 @@ namespace SGA {
 		centerEllipse.y = 0.0f;
 		return isCollideRectCircle(rect, centerEllipse, (ellipse.bottom - ellipse.top) / 2.0f);
 	}
+	///////////////기울어진 사각형의 충돌///////////////////////////////////////////////////////////////
+
+	template <typename RECTType>
+	bool isCollideCircleRotatedRect(RECTType circle, RECTType rect, float angle) {
+		SGA::Point2D pt[4];
+		pt[0].x = rect.left;	pt[1].x = rect.right;	pt[2].x = rect.right;		pt[3].x = rect.left;
+		pt[0].y = rect.top;		pt[1].y = rect.top;		pt[2].y = rect.bottom;		pt[3].y = rect.bottom;
+		SGA::Point2D rectCenter;
+		rectCenter.x = (rect.right + rect.left) / 2;
+		rectCenter.y = (rect.top + rect.bottom) / 2;
+		for (int i = 0; i < 4; i++) {
+			rotate2D(pt[i], angle, rectCenter);
+		}
+
+		SGA::Point2D circleCenter;
+		float R = (circle.right - circle.left) / 2.0;
+		circleCenter.x = circle.left + R;
+		circleCenter.y = circle.top + R;
+		for (int i = 0; i < 4; i++) {
+			rotate2D(pt[i], -angle, circleCenter);
+		}
+
+		RECTType unrotatedRect;
+		if (pt[0].x < pt[2].x) {
+			unrotatedRect.left = pt[0].x;
+			unrotatedRect.right = pt[2].x;
+		}
+		else {
+			unrotatedRect.left = pt[2].x;
+			unrotatedRect.right = pt[0].x;
+		}
+		if (pt[0].y < pt[2].y) {
+			unrotatedRect.top = pt[0].y;
+			unrotatedRect.bottom = pt[2].y;
+		}
+		else {
+			unrotatedRect.top = pt[2].y;
+			unrotatedRect.bottom = pt[0].y;
+		}
+		return isCollideRectCircle<RECTType>(unrotatedRect, circle);
+	}
+
+	template <typename RECTType, typename POINTType>
+	POINTType getCollisionVectorCircleRotatedRect(RECTType circle, RECTType rect, float angle) {
+		SGA::Point2D pt[4];
+		pt[0].x = rect.left;	pt[1].x = rect.right;	pt[2].x = rect.right;		pt[3].x = rect.left;
+		pt[0].y = rect.top;		pt[1].y = rect.top;		pt[2].y = rect.bottom;		pt[3].y = rect.bottom;
+		SGA::Point2D rectCenter;
+		rectCenter.x = (rect.right + rect.left) / 2;
+		rectCenter.y = (rect.top + rect.bottom) / 2;
+		for (int i = 0; i < 4; i++) {
+			rotate2D(pt[i], angle, rectCenter);
+		}
+
+		SGA::Point2D circleCenter;
+		float R = (circle.right - circle.left) / 2.0;
+		circleCenter.x = circle.left + R;
+		circleCenter.y = circle.top + R;
+		for (int i = 0; i < 4; i++) {
+			rotate2D(pt[i], -angle, circleCenter);
+		}
+
+		RECTType unrotatedRect;
+		if (pt[0].x < pt[2].x) {
+			unrotatedRect.left = pt[0].x;
+			unrotatedRect.right = pt[2].x;
+		}
+		else {
+			unrotatedRect.left = pt[2].x;
+			unrotatedRect.right = pt[0].x;
+		}
+		if (pt[0].y < pt[2].y) {
+			unrotatedRect.top = pt[0].y;
+			unrotatedRect.bottom = pt[2].y;
+		}
+		else {
+			unrotatedRect.top = pt[2].y;
+			unrotatedRect.bottom = pt[0].y;
+		}
+
+		Point2D vec = getCollisionVectorCircleRect<RECTType, Point2D>(circle, unrotatedRect);
+		vec = SGA::rotate2D(vec, angle);
+
+		POINTType result;
+		result.x = vec.x;
+		result.y = vec.y;
+		return result;
+	}
+
+	/*template <typename RECTType>
+	bool isCollideCircleRotatedRect(RECTType circle, RECTType rect, float angle) {
+		Point2D pt[4];
+		Point2D rectCenter;
+		pt[0].x = rect.left;	pt[1].x = rect.right;	pt[2].x = rect.right;		pt[3].x = rect.left;
+		pt[0].y = rect.top;		pt[1].y = rect.top;		pt[2].y = rect.bottom;		pt[3].y = rect.bottom;
+		rectCenter.x = (rect.right + rect.left) / 2;
+		rectCenter.y = (rect.top + rect.bottom) / 2;
+
+		for (int i = 0; i < 4; i++) {
+			rotate2D(pt[i], angle, rectCenter);
+		}
+		Point2D center;
+		float R = (circle.right - circle.left) / 2.0;
+		center.x = circle.left + R;
+		center.y = circle.top + R;
+
+		Line2D line;
+		float dist;
+		for (int i = 0,k = 1; i < 4; i++,k++) {
+			if (k == 4) {
+				k = 0;
+			}
+			line = Line2D::fromTwoPoints(pt[i].x, pt[i].y, pt[k].x, pt[k].y);
+			dist = getDistancePointLine(center, line);
+			if (dist <= R) {
+				return true;
+			}
+		}
+		return false;
+	}*/
+
+	/*
+	circle의 위치를 수정하여 충돌을 해제하기 위한 벡터를 반환한다.
+	*/
+	//template <typename RECTType, typename POINTType>
+	//POINTType getCollisionVectorCircleRotatedRect(RECTType circle, RECTType rect, float angle) {
+	//	Point2D pt[4];
+	//	Point2D rectCenter;
+	//	pt[0].x = rect.left;	pt[1].x = rect.right;	pt[2].x = rect.right;		pt[3].x = rect.left;
+	//	pt[0].y = rect.top;		pt[1].y = rect.top;		pt[2].y = rect.bottom;		pt[3].y = rect.bottom;
+	//	rectCenter.x = (rect.right + rect.left) / 2;
+	//	rectCenter.y = (rect.top + rect.bottom) / 2;
+
+	//	for (int i = 0; i < 4; i++) {
+	//		rotate2D(pt[i], angle, rectCenter);
+	//	}
+	//	Point2D center;
+	//	float R = (circle.right - circle.left) / 2.0;
+	//	center.x = circle.left + R;
+	//	center.y = circle.top + R;
+
+	//	POINTType result; 
+	//	result.x = 0; result.y = 0;
+	//	Line2D line;
+	//	bool colliding = false;
+	//	float minDis = 10000000.0f;
+	//	Point2D intersect;
+	//	for (int i = 0, k = 1; i < 4; i++, k++) {
+	//		if (k == 4) {
+	//			k = 0;
+	//		}
+	//		line = Line2D::fromTwoPoints(pt[i].x, pt[i].y, pt[k].x, pt[k].y);
+	//		float dist = getDistancePointLine(center, line);
+	//		if (dist <= R) {
+	//			if (minDis > dist) {
+	//				minDis = dist;
+	//				colliding = true;
+	//				intersect = SGA::getIntersectingPointPointLine(center, line);
+	//			}
+	//			//Point2D intersect = SGA::getIntersectingPointPointLine(center, line);
+	//			//Point2D vec =(R - dist) / dist *  (center - intersect);
+	//			//result.x = vec.x;
+	//			//result.y = vec.y;
+	//		}
+	//	}
+	//	if (colliding) {
+	//		Point2D vec =(R - minDis) / minDis *  (center - intersect);
+	//		result.x = vec.x;
+	//		result.y = vec.y;
+	//	}
+	//	return result;
+	//}
+
 	///////////////원과 원 사이의 충돌///////////////////////////////////////////////////////////////
 	/*
 	circle1과 circle2가 충돌하면 true를 반환한다.

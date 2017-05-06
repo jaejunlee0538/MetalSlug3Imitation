@@ -1,9 +1,8 @@
 #include "AnimationManager.h"
 #include <assert.h>
-#include <json.hpp>
+#include "json.hpp"
 #include "SpriteManager.h"
 #include <fstream>
-#include "SpriteManager.h"
 namespace SGA {
 	AnimationManager::AnimationManager()
 	{
@@ -39,7 +38,7 @@ namespace SGA {
 			std::vector<const Sprite*> sprites;
 			sprites.reserve((*it)["sprites"].size());
 			for (auto spriteName = (*it)["sprites"].begin(); spriteName != (*it)["sprites"].end(); ++spriteName) {
-				const Sprite* sprite = SpriteManager::getSingleton()->findSprite(*spriteName);
+				const Sprite* sprite = GET_SPRITE_MANAGER()->findSprite(*spriteName);
 				assert(sprite != NULL);
 				sprites.push_back(sprite);
 			}

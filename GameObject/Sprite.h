@@ -30,6 +30,14 @@ namespace SGA {
 		inline const TCHAR* getName() const {
 			return _spriteName;
 		}
+
+		inline int getWidth() const {
+			return _clip.w;
+		}
+
+		inline int getHeight() const {
+			return _clip.h;
+		}
 	private:
 		//아틀라스 이미지내에서의 위치와 크기
 		tagClippingInfo _clip;

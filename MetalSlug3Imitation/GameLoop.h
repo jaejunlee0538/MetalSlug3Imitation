@@ -2,9 +2,9 @@
 #include <Windows.h>
 #include "GameNode.h"
 #include <vector>
-namespace SGA {
-	class GameObject;
-}
+#include "Player.h"
+#include <GameObject.h>
+
 class GameLoop : public GameNode
 {
 public:
@@ -19,8 +19,8 @@ public:
 	virtual void update(void);
 
 	virtual void render(HDC hdc);
-private:
-	void collisionCheck();
+	
 private:
 	std::vector<SGA::GameObject*> _gameObjects;
+	SGA::Player* _player;
 };

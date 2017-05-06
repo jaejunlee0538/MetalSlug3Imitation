@@ -1,0 +1,17 @@
+#pragma once
+#define CAMERA_SIZE_X	304
+#define CAMERA_SIZE_Y	208
+#define CAMERA_INIT_POS_X	152
+#define CAMERA_INIT_POS_Y	185
+#define WIN_STYLE	CS_HREDRAW | CS_VREDRAW | WS_SYSMENU | WS_CAPTION | WS_THICKFRAME
+
+#define SPRITE_RESOURCE_PATH	"C:\\Users\\jaeju\\Desktop\\MetalSlug3Imitation\\Resource\\Sprites\\"
+
+#define UPDATE_DELTA_TIME	30
+
+#define TRANSPARENT_COLOR	RGB(255,0,255)
+
+#define DEBUG_ENABLE_DRAW_GROUND	1
+#define DEBUG_ENABLE_DRAW_PLAYER_HIDDEN_COMPONENT	1
+
+

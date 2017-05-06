@@ -1,8 +1,9 @@
 #include "SpriteManager.h"
-#include <json.hpp>
+#include "json.hpp"
 #include <stdio.h>
 #include <tchar.h>
 #include <fstream>
+#include <sstream>
 namespace SGA {
 	SpriteManager::SpriteManager()
 	{
@@ -83,6 +84,21 @@ namespace SGA {
 	void SpriteManager::addSprite(const std::string & imageFile, const std::string & spriteName, int clipX, int clipY, int clipW, int clipH, int pivotX, int pivotY)
 	{
 		assert(false);
+	}
+
+	void SpriteManager::findSpriteList(std::string namePrefix, std::vector<const Sprite*>& sprites)
+	{
+		std::ostringstream oss;
+		int count = 0;
+		while (true) {
+			std::string name = namePrefix + std::to_string(count);
+			const Sprite * sprite = findSprite(name);
+			if (sprite == NULL) {
+				break;
+			}
+			sprites.push_back(sprite);
+			count++;
+		}
 	}
 
 	const Sprite * SpriteManager::findSprite(const std::string & key)

@@ -1,7 +1,9 @@
 #pragma once
-#include <BitmapImage.h>
+#include "BitmapImage.h"
+
 namespace SGA {
 	class SpriteIface;
+	class Camera;
 	class Layer{
 	public:
 		/*
@@ -30,6 +32,8 @@ namespace SGA {
 		*/
 		void clearLayer();
 
+		HDC getDC();
+
 		/*
 		sprite를 World의 (x,y) 좌표에 렌더링한다.
 		화면 밖의 sprite는 렌더링되지 않는다.
@@ -39,8 +43,16 @@ namespace SGA {
 		sprite를 화면의 (x,y)좌표에 렌더링한다.
 		*/
 		virtual void renderOnScreen(const SpriteIface* sprite, int x, int y);
+
+		virtual void drawRectangleInWorld(float x, float y, int w, int h);
+
+		virtual void drawCircleInWorld(float x, float y, int R);
+
+		virtual void drawPolygon(const POINT* pts, int n);
+		virtual void drawPolygon(const POINTFLOAT* pts, int n);
 	private:
 		BitmapImage _canvas;
 		COLORREF _bkColor;
+		const Camera* _camera;
 	};
 }

@@ -4,6 +4,7 @@
 #include "Sprite.h"
 #include "BitmapImage.h"
 #include "SingletonBase.h"
+#include <vector>
 namespace SGA {
 	/*
 	아틀라스 이미지와 스프라이트 조각들을 생성/초기화/삭제/검색하는 기능을 제공한다.
@@ -30,6 +31,11 @@ namespace SGA {
 		void addSprite(const std::string& imageFile, const std::string& spriteName);
 		void addSprite(const std::string& imageFile, const std::string& spriteName, int clipX, int clipY, int clipW, int clipH);
 		void addSprite(const std::string& imageFile, const std::string& spriteName, int clipX, int clipY, int clipW, int clipH, int pivotX, int pivotY);
+		
+		/*
+		namePrefix+"숫자"의 이름을 가진 모든 스프라이트를 sprites 컨테이너에 담아준다.
+		*/
+		void findSpriteList(std::string namePrefix, std::vector<const Sprite*>& sprites);
 		/*
 		key 스프라이트의 원본 객체 포인터를 반환한다.
 		스프라이트 객체는 SpriteManager객체 소멸시에 삭제된다.

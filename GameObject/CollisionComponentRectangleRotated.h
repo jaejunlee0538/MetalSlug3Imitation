@@ -1,11 +1,11 @@
 #pragma once
 #include "CollisionComponent.h"
-#include "CollisionCheckFunc.h"
 namespace SGA {
-	class CollisionComponentCircle;
-	class CollisionComponentRectangle : public CollisionComponent {
+	class CollisionComponentRectangleRotated : public CollisionComponent
+	{
 	public:
-		CollisionComponentRectangle(GameObject& owner, RECT rect, bool isTrigger, CollisionLayers collisionLayer);
+		CollisionComponentRectangleRotated(GameObject& owner, RECT rect, float angleRad, bool isTrigger, CollisionLayers collisionLayer);
+		virtual ~CollisionComponentRectangleRotated();
 
 		virtual bool isCollideWith(const CollisionComponent* other) const;
 		virtual bool implCollisionCheck(const CollisionComponentRectangle* other)const;
@@ -16,12 +16,18 @@ namespace SGA {
 		virtual void resolveCollisionBy(const CollisionComponentRectangle* other);
 		virtual void resolveCollisionBy(const CollisionComponentCircle* other);
 		virtual void resolveCollisionBy(const CollisionComponentRectangleRotated* other);
-		RECT getCollisionRECT() const;
 
-		void setRECT(const RECT& rect) {
-			_rect = rect;
+		void rotate(float dAngleRad);
+		void setAngle(float angleRad);
+		void setRECT(const RECT& rect);
+		float getAngle() const {
+			return _angleRad;
 		}
+
+		RECT getUnrotatedRECT() const;
 	private:
 		RECT _rect;
+		float _angleRad;
 	};
+
 }

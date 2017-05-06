@@ -1,7 +1,10 @@
 #include "Stdafx.h"
 #include <stdio.h>
+
 HWND _hWnd;
 HINSTANCE _hInstance;
+
+
 
 void LogDebugMessage(const TCHAR* fmt, ...) {
 

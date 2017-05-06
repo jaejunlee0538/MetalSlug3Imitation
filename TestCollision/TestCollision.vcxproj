@@ -152,6 +152,7 @@
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Stdafx.cpp" />
     <ClCompile Include="TestBoxObject.cpp" />
+    <ClCompile Include="TestRotatedBoxObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameLoop.h" />
@@ -159,6 +160,7 @@
     <ClInclude Include="MyCircle.h" />
     <ClInclude Include="Stdafx.h" />
     <ClInclude Include="TestBoxObject.h" />
+    <ClInclude Include="TestRotatedBoxObject.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

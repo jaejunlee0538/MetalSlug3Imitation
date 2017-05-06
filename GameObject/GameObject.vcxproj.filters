@@ -16,17 +16,23 @@
     <Filter Include="Collision">
       <UniqueIdentifier>{79d0c07a-869e-4357-b0d5-78f372cbf332}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Render">
-      <UniqueIdentifier>{2f21e6d5-a9f4-4179-b8d2-77c5633fe782}</UniqueIdentifier>
+    <Filter Include="Sprites">
+      <UniqueIdentifier>{15c21931-77b8-4207-9724-260ea5483639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utils">
+      <UniqueIdentifier>{fbcf064d-a6da-4621-a2fa-4935bc59e487}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Layer">
+      <UniqueIdentifier>{427560b1-b8a2-4a3d-b7bd-877505f6a3e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameObject">
+      <UniqueIdentifier>{267fb09b-0ed2-4970-8b59-3b21fe300709}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameObject.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="CollisionComponentRectangle.h">
       <Filter>Collision</Filter>
     </ClInclude>
@@ -39,14 +45,89 @@
     <ClInclude Include="CollisionCheckFunc.h">
       <Filter>Collision</Filter>
     </ClInclude>
+    <ClInclude Include="CollisionComponentRectangleRotated.h">
+      <Filter>Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationManager.h">
+      <Filter>Sprites</Filter>
+    </ClInclude>
+    <ClInclude Include="BitmapImage.h">
+      <Filter>Sprites</Filter>
+    </ClInclude>
+    <ClInclude Include="SpritesAnimation.h">
+      <Filter>Sprites</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteManager.h">
+      <Filter>Sprites</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Sprites</Filter>
+    </ClInclude>
+    <ClInclude Include="SpriteIface.h">
+      <Filter>Sprites</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldClock.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="SingletonBase.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ScrollingScene.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="RandomFunction.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="MathUtils.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Line2D.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="LayerManager.h">
+      <Filter>Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="Layer.h">
+      <Filter>Layer</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyManager.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="json.hpp">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="GroundRectangle.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
     <ClInclude Include="GameObjectLoop.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="DoubleBuffering.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonMacroHeader.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="CommomMacro.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionTriggerBox.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionConfig.h">
+      <Filter>Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="GameObject.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="CollisionComponentCircle.cpp">
       <Filter>Collision</Filter>
     </ClCompile>
@@ -56,8 +137,59 @@
     <ClCompile Include="CollisionComponent.cpp">
       <Filter>Collision</Filter>
     </ClCompile>
+    <ClCompile Include="CollisionCheckFunc.cpp">
+      <Filter>Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionComponentRectangleRotated.cpp">
+      <Filter>Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationManager.cpp">
+      <Filter>Sprites</Filter>
+    </ClCompile>
+    <ClCompile Include="BitmapImage.cpp">
+      <Filter>Sprites</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Sprites</Filter>
+    </ClCompile>
+    <ClCompile Include="SpriteManager.cpp">
+      <Filter>Sprites</Filter>
+    </ClCompile>
+    <ClCompile Include="SpritesAnimation.cpp">
+      <Filter>Sprites</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionTriggerBox.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionConfig.cpp">
+      <Filter>Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
     <ClCompile Include="GameObjectLoop.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="GroundRectangle.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Layer.cpp">
+      <Filter>Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="LayerManager.cpp">
+      <Filter>Layer</Filter>
+    </ClCompile>
+    <ClCompile Include="Line2D.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="MathUtils.cpp">
+      <Filter>Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="ScrollingScene.cpp">
+      <Filter>GameObject</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

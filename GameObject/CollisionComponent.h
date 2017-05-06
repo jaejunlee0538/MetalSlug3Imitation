@@ -19,6 +19,7 @@ namespace SGA {
 	class GameObject;
 	class CollisionComponentCircle;
 	class CollisionComponentRectangle;
+	class CollisionComponentRectangleRotated;
 	class CollisionComponent {
 	public:
 		CollisionComponent(GameObject& owner, bool isTrigger, CollisionLayers collisionLayer);
@@ -30,11 +31,14 @@ namespace SGA {
 		//더블 디스패치를 위한 오버로딩 메서드
 		virtual bool implCollisionCheck(const CollisionComponentRectangle* other) const = 0;
 		virtual bool implCollisionCheck(const CollisionComponentCircle* other) const = 0;
+		virtual bool implCollisionCheck(const CollisionComponentRectangleRotated* other) const = 0;
+
 		//other의 위치를 수정하여 충돌을 해제시킨다.
 		virtual void resolveCollisionWith(CollisionComponent* other) const = 0;
 		//더블 디스패치를 위한 오버로딩 메서드
 		virtual void resolveCollisionBy(const CollisionComponentRectangle* other) = 0;
 		virtual void resolveCollisionBy(const CollisionComponentCircle* other) = 0;
+		virtual void resolveCollisionBy(const CollisionComponentRectangleRotated* other) = 0;
 
 		//Owner의 위치에 대한 충돌 컴포넌트의 상대 위치를 설정한다.
 		//충돌 검출 시에 onwer의 현재 위치를 오프셋시켜 충돌 컴포넌트의 위치를 결정한다.
@@ -76,6 +80,8 @@ namespace SGA {
 		static void disableCollisionBetweenLayers(CollisionLayers layer1, CollisionLayers layer2);
 		static void enableCollisionsBetweenAllLayers();
 		static void disableCollisionsBetweenAllLayers();
+	protected:
+		void moveCollidingObject(GameObject* object, float dx, float dy);
 	protected:
 		//Owner의 위치에 대한 충돌 컴포넌트의 상대 위치
 		//기본값을 (0,0)이다.
