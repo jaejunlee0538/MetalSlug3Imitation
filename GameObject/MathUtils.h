@@ -22,6 +22,8 @@ namespace SGA {
 	POINT POINTFLOAT2POINT(const POINTFLOAT& pt);
 	POINTFLOAT POINT2POINTFLOAT(const POINT& pt);
 
+	float deg2rad(float deg);
+	float rad2deg(float rad);
 
 	bool isEqualFloat(const float& num1, const float& num2, const float& epsilon = 0.001f);
 
@@ -51,7 +53,7 @@ namespace SGA {
 	void rotate2D(Point2D& p, const float& angle, const Point2D& anchor);
 
 	void getRotatedRECT(const RECT& rect, const float& angle, POINTFLOAT * points);
-
+	void getRotatedRECT(const RECT& rect, const float& angle, POINT * points);
 	/*
 	return true if two lines,L1 and L2, are (exactly or almost) parallel.
 	return false otherwise.

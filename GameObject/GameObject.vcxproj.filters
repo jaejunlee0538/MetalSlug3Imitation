@@ -126,6 +126,12 @@
     <ClInclude Include="Global.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MapManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GroundRectangleRotated.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CollisionComponentCircle.cpp">
@@ -189,6 +195,12 @@
       <Filter>Utils</Filter>
     </ClCompile>
     <ClCompile Include="ScrollingScene.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="MapManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GroundRectangleRotated.cpp">
       <Filter>GameObject</Filter>
     </ClCompile>
   </ItemGroup>

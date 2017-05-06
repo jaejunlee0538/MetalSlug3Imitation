@@ -55,6 +55,16 @@ namespace SGA {
 		return{ (float)pt.x, (float)pt.y };
 	}
 
+	float deg2rad(float deg)
+	{
+		return deg * 0.01745329252f;
+	}
+
+	float rad2deg(float rad)
+	{
+		return rad * 57.295779513f;
+	}
+
 	float norm(const Point2D& p) {
 		return sqrt(p.x*p.x + p.y*p.y);
 	}
@@ -85,6 +95,15 @@ namespace SGA {
 
 		for (int i = 0; i < 4; i++) {
 			rotate2D(pt[i], angle, center);
+		}
+	}
+
+	void getRotatedRECT(const RECT & rect, const float & angle, POINT * points)
+	{
+		POINTFLOAT pt[4];
+		getRotatedRECT(rect, angle, pt);
+		for (int i = 0; i < 4; i++) {
+			points[i] = POINTFLOAT2POINT(pt[i]);
 		}
 	}
 

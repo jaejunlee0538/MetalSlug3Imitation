@@ -12,8 +12,6 @@ namespace SGA {
 		}
 		_bkColor = bkColor;
 		_camera = GET_CAMERA();
-
-		SelectObject(_canvas.getDC(), GetStockObject(HOLLOW_BRUSH));
 	}
 
 	Layer::~Layer()
@@ -24,6 +22,7 @@ namespace SGA {
 	void Layer::resize(int width, int height)
 	{
 		assert(_canvas.init(width, height) == S_OK);
+		
 	}
 
 	void Layer::renderThisLayer(HDC hdc)
@@ -57,31 +56,33 @@ namespace SGA {
 	void Layer::drawRectangleInWorld(float x, float y, int w, int h)
 	{
 		_camera->transformWorldToScreen(x, y);
+		//HBRUSH oldBrush = (HBRUSH)SelectObject(_canvas.getDC(), GetStockObject(HOLLOW_BRUSH));
 		Rectangle(_canvas.getDC(), x - w / 2, y - h / 2, x + w / 2, y + h / 2);
+		//SelectObject(_canvas.getDC(), oldBrush);
 	}
 
 	void Layer::drawCircleInWorld(float x, float y, int R)
 	{
 		_camera->transformWorldToScreen(x, y);
+		//HBRUSH oldBrush = (HBRUSH)SelectObject(_canvas.getDC(), GetStockObject(HOLLOW_BRUSH));
 		Ellipse(_canvas.getDC(), x -  R, y - R, x + R, y + R);
+		//SelectObject(_canvas.getDC(), oldBrush);
 	}
 
-	void Layer::drawPolygon(const POINT * pts, int n)
+	void Layer::drawPolygonInWorld(const POINTFLOAT* pts, int n)
 	{
-		Polygon(_canvas.getDC(), pts, n);
-	}
-
-	void Layer::drawPolygon(const POINTFLOAT* pts, int n)
-	{
-		POINT* p = new POINT[n+1];
+		POINT* p = new POINT[n];
+		float x, y;
 		for (int i = 0; i < n; i++) {
-			p[i].x = pts[i].x;
-			p[i].x = pts[i].x;
+			x = pts[i].x;
+			y = pts[i].y;
+			_camera->transformWorldToScreen(x, y);
+			p[i].x = x;
+			p[i].y = y;
 		}
-		p[n].x = pts[0].x;
-		p[n].y = pts[0].y;
-
-		drawPolygon( p, n+1);
+		//HBRUSH oldBrush = (HBRUSH)SelectObject(_canvas.getDC(), GetStockObject(HOLLOW_BRUSH));
+		Polygon(_canvas.getDC(), p, n);
+		//SelectObject(_canvas.getDC(), oldBrush);
 		delete[] p;
 	}
 }

@@ -48,8 +48,7 @@ namespace SGA {
 
 		virtual void drawCircleInWorld(float x, float y, int R);
 
-		virtual void drawPolygon(const POINT* pts, int n);
-		virtual void drawPolygon(const POINTFLOAT* pts, int n);
+		virtual void drawPolygonInWorld(const POINTFLOAT* pts, int n);
 	private:
 		BitmapImage _canvas;
 		COLORREF _bkColor;

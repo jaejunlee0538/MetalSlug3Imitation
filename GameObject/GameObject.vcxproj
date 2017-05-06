@@ -148,11 +148,13 @@
     <ClInclude Include="GameObjectLoop.h" />
     <ClInclude Include="GroundRectangle.h" />
     <ClInclude Include="Global.h" />
+    <ClInclude Include="GroundRectangleRotated.h" />
     <ClInclude Include="json.hpp" />
     <ClInclude Include="KeyManager.h" />
     <ClInclude Include="Layer.h" />
     <ClInclude Include="LayerManager.h" />
     <ClInclude Include="Line2D.h" />
+    <ClInclude Include="MapManager.h" />
     <ClInclude Include="MathUtils.h" />
     <ClInclude Include="RandomFunction.h" />
     <ClInclude Include="ScrollingScene.h" />
@@ -177,9 +179,11 @@
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameObjectLoop.cpp" />
     <ClCompile Include="GroundRectangle.cpp" />
+    <ClCompile Include="GroundRectangleRotated.cpp" />
     <ClCompile Include="Layer.cpp" />
     <ClCompile Include="LayerManager.cpp" />
     <ClCompile Include="Line2D.cpp" />
+    <ClCompile Include="MapManager.cpp" />
     <ClCompile Include="MathUtils.cpp" />
     <ClCompile Include="ScrollingScene.cpp" />
     <ClCompile Include="Sprite.cpp" />

@@ -18,6 +18,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestCollision", "TestCollis
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MapTool", "MapTool\MapTool.vcxproj", "{81A292C7-123C-422D-B692-CDF9C9BD42AA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FF9A1539-B9B2-4ACE-8107-EED90193E15C} = {FF9A1539-B9B2-4ACE-8107-EED90193E15C}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

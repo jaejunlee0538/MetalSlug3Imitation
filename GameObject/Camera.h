@@ -18,7 +18,9 @@ namespace SGA {
 				if (targetPos.x < getCameraWidth() / 2) {
 					targetPos.x = getCameraWidth() / 2;
 				}
-				setPosition(targetPos.x, getPosition().y);
+				//setPosition(targetPos.x, getPosition().y);
+				setPosition(targetPos.x, targetPos.y);
+
 			}
 		}
 
