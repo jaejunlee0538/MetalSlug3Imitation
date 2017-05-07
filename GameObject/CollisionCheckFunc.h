@@ -258,6 +258,31 @@ namespace SGA {
 	}
 	///////////////기울어진 사각형의 충돌///////////////////////////////////////////////////////////////
 
+	/*
+	두 사각형을 이루는 선분들이 서로 하나라도 교차하면 true를 반환한다.
+	*/
+	template <typename RECTType>
+	bool isCollideRotatedRectRotatedRect(RECTType rect1, float angle1, RECTType rect2, float angle2) {
+		POINTFLOAT rc1Pt[4], rc2Pt[4];
+		SGA::getRotatedRECT(rect1, angle1, rc1Pt);
+		SGA::getRotatedRECT(rect2, angle2, rc2Pt);
+		for (int i = 0, k = 1; i < 4; i++, k++) {
+			if (k == 4) {
+				k = 0;
+			}
+			for (int i2 = 0, k2 = 1; i2 < 4; i2++, k2++) {
+				if (k2 == 4) {
+					k2 = 0;
+				}
+
+				if (SGA::isSegmentsIntersect(rc1Pt[i], rc1Pt[k], rc2Pt[i2], rc2Pt[k2])) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+
 	template <typename RECTType>
 	bool isCollideCircleRotatedRect(RECTType circle, RECTType rect, float angle) {
 		SGA::Point2D pt[4];

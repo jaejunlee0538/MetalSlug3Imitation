@@ -61,6 +61,17 @@ namespace SGA {
 		//SelectObject(_canvas.getDC(), oldBrush);
 	}
 
+	void Layer::drawRectangleInWorld(RECT rect)
+	{
+		float x = 0, y = 0;
+		_camera->transformWorldToScreen(x, y);
+		rect.left += x;
+		rect.right += x;
+		rect.top += y;
+		rect.bottom += y;
+		Rectangle(_canvas.getDC(), rect.left, rect.top, rect.right, rect.bottom);
+	}
+
 	void Layer::drawCircleInWorld(float x, float y, int R)
 	{
 		_camera->transformWorldToScreen(x, y);

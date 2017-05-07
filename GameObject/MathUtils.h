@@ -46,6 +46,11 @@ namespace SGA {
 	float dotProduct(const Point2D& p1, const Point2D& p2);
 
 	/*
+	v1과 v2사이의 외적을 반환한다.
+	*/
+	float crossProduct(const Point2D& v1, const Point2D& v2);
+
+	/*
 	점 p를 원점(0,0)에 대하여 angle만큼 회전시킨 점을 반환한다.
 	*/
 	Point2D rotate2D(const Point2D& p, const float& angle);
@@ -64,6 +69,11 @@ namespace SGA {
 	return true, if 'line' is (almost) vertical.
 	*/
 	bool isVertical(const Line2D& line);
+
+	/*
+	a1->a2, b1->b2인 두 선분이 교차하면 true를 반환한다.
+	*/
+	bool isSegmentsIntersect(const Point2D& a1, const Point2D& a2, const Point2D& b1, const Point2D& b2);
 
 	/*
 	두 직선의 방정식 line1과 line2가 만나는 교점을 반환한다.

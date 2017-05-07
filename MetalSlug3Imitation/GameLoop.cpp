@@ -14,6 +14,7 @@
 #include <CollisionConfig.h>
 #include <AnimationManager.h>
 #include <GroundRectangle.h>
+#include <MapManager.h>
 GameLoop::GameLoop()
 {
 	
@@ -27,39 +28,28 @@ GameLoop::~GameLoop()
 HRESULT GameLoop::init() {
 	GameNode::init();
 	initCollisionLayer();
-
+	SGA::BitmapImage::setHWND(_hWnd);
 	GET_GAME_WORLD_CLOCK()->reset();
 	GET_REALTIME_CLOCK()->reset();
+
+	GET_SPRITE_MANAGER()->loadFromJSON(SPRITE_RESOURCE_PATH"SpriteTarma.json");
+	GET_ANIMATION_MANAGER()->loadFromJSON(SPRITE_RESOURCE_PATH"AnimationTarma.json");
+
 	SGA::BitmapImage::setHWND(_hWnd);
-	GET_LAYER_MANAGER()->init(CAMERA_SIZE_X, CAMERA_SIZE_Y);
-	GET_SPRITE_MANAGER()->loadFromJSON(SPRITE_RESOURCE_PATH"MapMission1.json");
-	GET_SPRITE_MANAGER()->loadFromJSON(SPRITE_RESOURCE_PATH"TarmaSprite.json");
-	//GET_ANIMATION_MANAGER()->loadFromJSON(SPRITE_RESOURCE_PATH"TarmaAnimation.json");
-	GET_CAMERA()->init(CAMERA_SIZE_X, CAMERA_SIZE_Y, CAMERA_INIT_POS_X, CAMERA_INIT_POS_Y);
-	
-	std::vector<const SGA::Sprite*> backGroundSprites;
-	GET_SPRITE_MANAGER()->findSpriteList("BackgroundScene", backGroundSprites);
-	assert(backGroundSprites.empty() == false);
-	SGA::ScrollingScene * background = new SGA::ScrollingScene(backGroundSprites,
-		GET_LAYER_MANAGER()->findLayer(SGA::LayerManager::LAYER_IDDEX_SCENE_BACKGROUND), 0.5088471f, 1.0f);
-	std::vector<const SGA::Sprite*> foregroundSprites;
-	GET_SPRITE_MANAGER()->findSpriteList("ForegroundScene", foregroundSprites);
-	assert(foregroundSprites.empty() == false);
-	SGA::ScrollingScene * foreground = new SGA::ScrollingScene(foregroundSprites,
-		GET_LAYER_MANAGER()->findLayer(SGA::LayerManager::LAYER_INDEX_SCENE_WORLD), 1.0f, 1.0f);
-	background->setCameraInitPos(GET_CAMERA()->getPosition().x, GET_CAMERA()->getPosition().y);
-	foreground->setCameraInitPos(GET_CAMERA()->getPosition().x, GET_CAMERA()->getPosition().y);
+	SGA::ScrollingScene * farScroll, *closeScroll;
+	std::vector<SGA::GameObject*> grounds;
+	std::vector<SGA::GameObject*> gameObjects;
+	GET_MAP_MANAGER()->loadFromJSON("MapMission1Config.json", &farScroll, &closeScroll, grounds, gameObjects);
 
 	_player = new SGA::Player();
-	_player->setPosition(CAMERA_INIT_POS_X, CAMERA_INIT_POS_Y);
+	_player->setPosition(GET_CAMERA()->getPosition().x, GET_CAMERA()->getPosition().y);
 
-	SGA::GroundRectangle * ground = new SGA::GroundRectangle(CAMERA_INIT_POS_X, CAMERA_INIT_POS_Y + 50, 250, 20);
-
-	_gameObjects.push_back(ground);
-	_gameObjects.push_back(background);
-	_gameObjects.push_back(foreground);
 	_gameObjects.push_back(GET_CAMERA());
 	_gameObjects.push_back(_player);
+	_gameObjects.push_back(farScroll);
+	_gameObjects.push_back(closeScroll);
+	_gameObjects.insert(_gameObjects.end(), grounds.begin(), grounds.end());
+	_gameObjects.insert(_gameObjects.end(), gameObjects.begin(), gameObjects.end());
 
 	GET_CAMERA()->setTarget(_player);
 	return S_OK;
@@ -73,8 +63,8 @@ void GameLoop::update(void) {
 	GameNode::update();
 	GET_REALTIME_CLOCK()->updateClock();
 	GET_GAME_WORLD_CLOCK()->updateClock(UPDATE_DELTA_TIME);
+	SGA::GameObjectLoop::gravityLoop(_gameObjects, { 0.0f, 4.0f }, GET_GAME_WORLD_CLOCK()->getDeltaTimeMillis()*0.001f);
 	SGA::GameObjectLoop::updateLoop(_gameObjects);
-	SGA::GameObjectLoop::gravityLoop(_gameObjects, { 0.0f, 50.0f }, GET_GAME_WORLD_CLOCK()->getDeltaTimeMillis()*0.001f);
 	SGA::GameObjectLoop::collisionCheckLoop(_gameObjects);
 }
 

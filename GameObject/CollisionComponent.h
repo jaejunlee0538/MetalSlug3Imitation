@@ -2,6 +2,7 @@
 #include <unordered_set>
 #include <algorithm>
 #include <Windows.h>
+#include <unordered_map>
 namespace SGA {
 
 	enum CollisionLayers {
@@ -48,7 +49,9 @@ namespace SGA {
 		void handleCollision(CollisionComponent* other);
 
 		//other와 충돌이 일어나고 있지 않을 때 호출해야 한다.
-		void handleNoneCollision(CollisionComponent* other);
+		//void handleNoneCollision(CollisionComponent* other);
+		void beginCollisionCheck();
+		void endCollisionCheck();
 
 		//other의 충돌 레이어 마스크를 비교하여 충돌 체크 수행 여부를 반환한다.
 		bool isCollidableWith(const CollisionComponent* other) {
@@ -86,7 +89,7 @@ namespace SGA {
 		//Owner의 위치에 대한 충돌 컴포넌트의 상대 위치
 		//기본값을 (0,0)이다.
 		POINTFLOAT _offset;
-		std::unordered_set<CollisionComponent*> _collisionMemory;
+		std::unordered_map<CollisionComponent*, bool> _collisionMemory;
 		//기본값 : COLLISION_LAYER1
 		CollisionLayers _collisionLayer;
 		GameObject& _owner;

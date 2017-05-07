@@ -68,4 +68,12 @@ namespace SGA {
 	bool LayerManager::isInitialized() const {
 		return _layer[0] != NULL;
 	}
+	LayerManager::LayersIndex LayerManager::getLayerIndexFrom(int layer)
+	{
+		if (layer < 0 || layer >= NUMBER_OF_LAYERS) {
+			assert(false);
+		}
+
+		return (LayersIndex)layer;
+	}
 }

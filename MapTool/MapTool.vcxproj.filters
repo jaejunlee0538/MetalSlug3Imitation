@@ -46,7 +46,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Mission1Map.json">
+    <None Include="..\MapMission1Config.json">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

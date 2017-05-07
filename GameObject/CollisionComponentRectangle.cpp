@@ -1,5 +1,6 @@
 #include "CollisionComponentRectangle.h"
 #include "CollisionComponentCircle.h"
+#include "CollisionComponentRectangleRotated.h"
 #include "GameObject.h"
 
 namespace SGA {
@@ -27,7 +28,7 @@ namespace SGA {
 
 	bool CollisionComponentRectangle::implCollisionCheck(const CollisionComponentRectangleRotated * other) const
 	{
-		return false;
+		return SGA::isCollideRotatedRectRotatedRect(getCollisionRECT(), 0.0f, other->getUnrotatedRECT(), other->getAngle());
 	}
 
 	void CollisionComponentRectangle::resolveCollisionWith(CollisionComponent * other) const

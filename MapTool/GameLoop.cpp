@@ -32,6 +32,7 @@ HRESULT GameLoop::init() {
 
 	GET_GAME_WORLD_CLOCK()->reset();
 	GET_REALTIME_CLOCK()->reset();
+
 	SGA::BitmapImage::setHWND(_hWnd);
 	SGA::ScrollingScene * farScroll, *closeScroll;
 	std::vector<SGA::GameObject*> grounds;
@@ -60,9 +61,11 @@ void GameLoop::update(void) {
 	GameNode::update();
 	GET_REALTIME_CLOCK()->updateClock();
 	GET_GAME_WORLD_CLOCK()->updateClock(UPDATE_DELTA_TIME);
-	SGA::GameObjectLoop::updateLoop(_gameObjects);
+	//SGA::GameObjectLoop::updateLoop(_gameObjects);
 
-	
+	SGA::GameObjectLoop::gravityLoop(_gameObjects, { 0.0f, 50.0f }, GET_GAME_WORLD_CLOCK()->getDeltaTimeMillis()*0.001f);
+	SGA::GameObjectLoop::updateLoop(_gameObjects);
+	SGA::GameObjectLoop::collisionCheckLoop(_gameObjects);
 }
 
 void GameLoop::render(HDC hdc)

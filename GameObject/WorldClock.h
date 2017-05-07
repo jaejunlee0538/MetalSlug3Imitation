@@ -70,6 +70,33 @@ namespace SGA {
 		DWORD _t0;
 	};
 
+	class TimeoutChecker {
+	public:
+		TimeoutChecker(ClockIface* clock, int duration)
+		:_clock(clock), _duration(duration){
+			_lastTimeout = _clock->getCurrentTimeMillis();
+		}
+
+		void reset() {
+			_lastTimeout = _clock->getCurrentTimeMillis();
+		}
+
+		bool isTimeout() {
+			bool ret;
+			DWORD currentTime = _clock->getCurrentTimeMillis();
+			if ((currentTime - _lastTimeout) >= _duration) {
+				_lastTimeout = currentTime;
+				return true;
+			}
+			return false;
+		}
+	private:
+		ClockIface* _clock;
+		DWORD _lastTimeout;
+		int _duration;
+		bool _isTimeout;
+	};
+
 #define GET_GAME_WORLD_CLOCK()	SGA::GameWorldClock::getSingleton()
 #define GET_REALTIME_CLOCK()	SGA::RealTimeClock::getSingleton()
 }

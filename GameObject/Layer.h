@@ -46,6 +46,8 @@ namespace SGA {
 
 		virtual void drawRectangleInWorld(float x, float y, int w, int h);
 
+		virtual void drawRectangleInWorld(RECT rect);
+
 		virtual void drawCircleInWorld(float x, float y, int R);
 
 		virtual void drawPolygonInWorld(const POINTFLOAT* pts, int n);

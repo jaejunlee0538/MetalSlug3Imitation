@@ -133,6 +133,8 @@
   <ItemGroup>
     <ClInclude Include="AnimationManager.h" />
     <ClInclude Include="BitmapImage.h" />
+    <ClInclude Include="BulletIface.h" />
+    <ClInclude Include="BulletPistolNormal.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CollisionCheckFunc.h" />
     <ClInclude Include="CollisionComponent.h" />
@@ -143,12 +145,16 @@
     <ClInclude Include="CollisionTriggerBox.h" />
     <ClInclude Include="CommomMacro.h" />
     <ClInclude Include="CommonMacroHeader.h" />
+    <ClInclude Include="CommonUtil.h" />
     <ClInclude Include="DoubleBuffering.h" />
+    <ClInclude Include="FrontSprite.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="GameObjectFactory.h" />
     <ClInclude Include="GameObjectLoop.h" />
     <ClInclude Include="GroundRectangle.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="GroundRectangleRotated.h" />
+    <ClInclude Include="GunIface.h" />
     <ClInclude Include="json.hpp" />
     <ClInclude Include="KeyManager.h" />
     <ClInclude Include="Layer.h" />
@@ -168,6 +174,8 @@
   <ItemGroup>
     <ClCompile Include="AnimationManager.cpp" />
     <ClCompile Include="BitmapImage.cpp" />
+    <ClCompile Include="BulletIface.cpp" />
+    <ClCompile Include="BulletPistolNormal.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CollisionCheckFunc.cpp" />
     <ClCompile Include="CollisionComponent.cpp" />
@@ -176,10 +184,15 @@
     <ClCompile Include="CollisionComponentRectangleRotated.cpp" />
     <ClCompile Include="CollisionConfig.cpp" />
     <ClCompile Include="CollisionTriggerBox.cpp" />
+    <ClCompile Include="CommonUtil.cpp" />
+    <ClCompile Include="FrontSprite.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="GameObjectFactory.cpp" />
     <ClCompile Include="GameObjectLoop.cpp" />
+    <ClCompile Include="Global.cpp" />
     <ClCompile Include="GroundRectangle.cpp" />
     <ClCompile Include="GroundRectangleRotated.cpp" />
+    <ClCompile Include="GunIface.cpp" />
     <ClCompile Include="Layer.cpp" />
     <ClCompile Include="LayerManager.cpp" />
     <ClCompile Include="Line2D.cpp" />

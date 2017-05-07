@@ -54,6 +54,8 @@ namespace SGA {
 		레이어가 초기화 되었으면 true를 반환한다.
 		*/
 		bool isInitialized()const;
+
+		static LayersIndex getLayerIndexFrom(int layer);
 	private:
 		Layer* _layer[NUMBER_OF_LAYERS];
 	};

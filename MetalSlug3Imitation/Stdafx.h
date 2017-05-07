@@ -8,7 +8,7 @@
 #include <string>
 #include <tchar.h>
 #include <Global.h>
-
+#include <CollisionConfig.h>
 #define WIN_NAME	(TEXT("APIWindow"))
 #define WIN_START_X	2200
 #define WIN_START_Y	100

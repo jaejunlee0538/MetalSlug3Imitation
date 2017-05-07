@@ -13,6 +13,7 @@ namespace SGA {
 		virtual ~GameObject();
 
 		virtual std::string getTag() const = 0;
+		virtual GameObject* clone() { return NULL; }
 		//////////////////////////////////////////////////////////////
 		GameObject* getParent();
 		void addChild(GameObject* child);
@@ -30,7 +31,7 @@ namespace SGA {
 		virtual bool isRenderable() const = 0;
 		virtual void render() {}
 		///////////////////충돌 관련////////////////////////////////////
-		inline bool isCollidable() const {
+		virtual bool isCollidable() const {
 			return _collisionComponent != NULL;
 		}
 
@@ -45,8 +46,8 @@ namespace SGA {
 		virtual void onTrigerring(GameObject& other) {}
 		virtual void onTrigerringExit(GameObject& other) {}
 		///////////////////////////////////////////////////////////////////
-		void movePosition(float dx, float dy);
-		void setPosition(float x, float y);
+		virtual void movePosition(float dx, float dy);
+		virtual void setPosition(float x, float y);
 		POINTFLOAT getPosition() const;
 		POINTFLOAT getDeltaPosition() const;
 
@@ -83,6 +84,17 @@ namespace SGA {
 		bool isActive() const {
 			return _isActive;
 		}
+		
+		//////////
+		//자신과 자식 오브젝트들의 모든 충돌 컴포넌트에 대해 beginCollisionCheck를 호출한다.
+		void beginCollisionCheck();
+		//자신과 자식 오브젝트들의 모든 충돌 컴포넌트에 대해 endCollisionCheck를 호출한다.
+		void endCollisionCheck();
+		//this와 this의 모든 자식과 other와 other의 모든 자식 사이의 충돌체크를 수행한다.
+		void checkCollisionWith(GameObject* other);
+	private:
+		void __resolveCollision(GameObject* other);
+		void __collisionCheckInternal(GameObject* other, bool ccc);
 	private:
 		bool _isActive;//기본값 : true
 		bool _useGravity;//기본값 : true

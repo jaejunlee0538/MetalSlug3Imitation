@@ -4,7 +4,9 @@
 #include <tchar.h>
 #include <fstream>
 #include <sstream>
+#include "CommonUtil.h"
 namespace SGA {
+
 	SpriteManager::SpriteManager()
 	{
 	}
@@ -52,14 +54,16 @@ namespace SGA {
 			px = (*it)["pivot"]["x"];
 			py = (*it)["pivot"]["y"];
 			insertSprite(spriteName, new Sprite(atlas.source, spriteName.c_str(), x, y, w, h, px, py));
-			
-			std::string spriteNameFlip = spriteName + "_mirror";
-			insertSprite(spriteNameFlip, 
-				new Sprite(atlas.sourceFlipped, 
-					spriteNameFlip.c_str(),
-					atlas.sourceFlipped->getWidth()-(x+w), y, 
-					w, h, 
-					1.0f - px, py));
+
+			std::string spriteNameFlip = spriteName;
+			if (replaceLastString(spriteNameFlip, "Right", "Left") || replaceLastString(spriteNameFlip, "Left", "Right")) {
+				insertSprite(spriteNameFlip,
+					new Sprite(atlas.sourceFlipped,
+						spriteNameFlip.c_str(),
+						atlas.sourceFlipped->getWidth() - (x + w), y,
+						w, h,
+						1.0f - px, py));
+			}
 			//std::cout << x << " " << y << " " << w << " " << h << " " << px << " " << py << std::endl;
 		}
 	}
@@ -69,11 +73,14 @@ namespace SGA {
 		tagAtlasImage atlas = loadAtlasImage(imageFile);
 		Sprite* sprite = new Sprite(atlas.source, spriteName.c_str(), 0, 0,
 			atlas.source->getWidth(), atlas.source->getHeight(), 0.5f, 0.5f);
-		std::string spriteNameFlip = spriteName + "_mirror";
-		Sprite* spriteFlip = new Sprite(atlas.sourceFlipped, spriteNameFlip.c_str(), 0, 0,
-			atlas.sourceFlipped->getWidth(), atlas.sourceFlipped->getHeight(), 0.5f, 0.5f);
 		insertSprite(spriteName, sprite);
-		insertSprite(spriteNameFlip, spriteFlip);
+
+		std::string spriteNameFlip = spriteName;
+		if (replaceLastString(spriteNameFlip, "Right", "Left") || replaceLastString(spriteNameFlip, "Left", "Right")) {
+			Sprite* spriteFlip = new Sprite(atlas.sourceFlipped, spriteNameFlip.c_str(), 0, 0,
+				atlas.sourceFlipped->getWidth(), atlas.sourceFlipped->getHeight(), 0.5f, 0.5f);
+			insertSprite(spriteNameFlip, spriteFlip);
+		}
 	}
 
 	void SpriteManager::addSprite(const std::string & imageFile, const std::string & spriteName, int clipX, int clipY, int clipW, int clipH)

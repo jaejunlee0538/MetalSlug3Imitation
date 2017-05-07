@@ -9,7 +9,8 @@ void initCollisionLayer()
 	SGA::CollisionComponent::enableCollisionBetweenLayers(COLLISION_LAYER_GROUND, COLLISION_LAYER_ENEMY_BULLET);
 	SGA::CollisionComponent::enableCollisionBetweenLayers(COLLISION_LAYER_GROUND, COLLISION_LAYER_PLAYER_BODY);
 	SGA::CollisionComponent::enableCollisionBetweenLayers(COLLISION_LAYER_GROUND, COLLISION_LAYER_PLAYER_BULLET);
-
+	
+	SGA::CollisionComponent::enableCollisionBetweenLayers(COLLISION_LAYER_TRIGGER_BOX, COLLISION_LAYER_GROUND);
 	SGA::CollisionComponent::enableCollisionBetweenLayers(COLLISION_LAYER_TRIGGER_BOX, COLLISION_LAYER_PLAYER_BODY);
 	SGA::CollisionComponent::enableCollisionBetweenLayers(COLLISION_LAYER_TRIGGER_BOX, COLLISION_LAYER_ENEMY_BODY);
 

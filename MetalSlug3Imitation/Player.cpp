@@ -11,14 +11,18 @@
 #include <CollisionConfig.h>
 namespace SGA {
 	Player::Player()
+		:_currentState(NULL)
 	{
+
 		//disableGravity();
-		WalkerFootCircle* footCircle = new WalkerFootCircle(0, 11, 7);
-		_groundCheckBox = new CollisionTriggerBox(0,18,17,4);
+		setLookingUp(false);
+		setLookingLeft(false);
 
-		_rightKnifeTrigger	= new CollisionTriggerBox(10, -3,21,14);
-		_leftKnifeTrigger = new CollisionTriggerBox(-10, -3, 21, 14);
-
+		///////////////////////////////////////////////////////////
+		WalkerFootCircle* footCircle = new WalkerFootCircle(0, 7, 8);
+		_groundCheckBox = new CollisionTriggerBox(0,16,9, 3, "PlayerGNDCheck");
+		_rightKnifeTrigger	= new CollisionTriggerBox(10, -3,21,14,"PlayerRightKnife");
+		_leftKnifeTrigger = new CollisionTriggerBox(-10, -3, 21, 14,"PlayerLeftKnife");
 		CollisionComponentRectangle *body = new CollisionComponentRectangle(*this,
 			SGA::makeRectCenter<RECT, int>(0, 0, 10, 30), false, COLLISION_LAYER_PLAYER_BODY);
 		setCollisionComponent(body);
@@ -26,19 +30,12 @@ namespace SGA {
 		addChild(_groundCheckBox);
 		addChild(_leftKnifeTrigger);
 		addChild(_rightKnifeTrigger);
-
-		_tarmaRight[0] = GET_SPRITE_MANAGER()->findSprite("Tarma/Pistol/UpperStandStill_0");
-		_tarmaRight[1] = GET_SPRITE_MANAGER()->findSprite("Tarma/Pistol/LowerStandStill_0");
-		_tarmaLeft[0] = GET_SPRITE_MANAGER()->findSprite("Tarma/Pistol/UpperStandStill_0_mirror");
-		_tarmaLeft[1] = GET_SPRITE_MANAGER()->findSprite("Tarma/Pistol/LowerStandStill_0_mirror");
-		_left = false;
-	/*	_tarmaWalkingRightUpper = GET_ANIMATION_MANAGER()->findAnimation("JumpingStayStill_UpperRight");
-		_tarmaWalkingRightLower = GET_ANIMATION_MANAGER()->findAnimation("JumpingStayStill_LowerRight");
-
-		_tarmaWalkingLeftUpper = GET_ANIMATION_MANAGER()->findAnimation("JumpingStayStill_UpperLeft");
-		_tarmaWalkingLeftLower = GET_ANIMATION_MANAGER()->findAnimation("JumpingStayStill_LowerLeft");*/
-
-
+		///////////////////////////////////////////////////////////
+		_layer = GET_LAYER_MANAGER()->findLayer(SGA::LayerManager::LAYER_INDEX_GAME_OBJECT);
+		///////////////////////////////////////////////////////////
+		_stateMap = PlayerStateIface::createPlayerStateMap(*this);
+		setPlayerState(_stateMap[PlayerStates::STANDING]);
+		///////////////////////////////////////////////////////////
 	}
 
 	Player::~Player()
@@ -46,15 +43,14 @@ namespace SGA {
 	}
 
 	void Player::update() {
-		if (GET_KEY_MANAGER()->isStayKeyDown(VK_LEFT)) {
-			_left = true;
-			movePosition(-4, 0);
+		if (isGrounded()) {
+			disableGravity();
 		}
-		
-		if (GET_KEY_MANAGER()->isStayKeyDown(VK_RIGHT)) {
-			_left = false;
-			movePosition(4, 0);
+		else {
+			enableGravity();
 		}
+
+		_currentState->update();
 
 		POINTFLOAT pos = getPosition();
 		RECT clamp = GET_CAMERA()->getScreenRECT();
@@ -67,14 +63,6 @@ namespace SGA {
 	}
 
 	void Player::render() {
-		Layer* layer = GET_LAYER_MANAGER()->findLayer(SGA::LayerManager::LAYER_INDEX_GAME_OBJECT);
-		if (_left) {
-			layer->renderInWrold(_tarmaLeft[0], getPosition().x, getPosition().y);
-			layer->renderInWrold(_tarmaLeft[1], getPosition().x, getPosition().y);
-		}
-		else {
-			layer->renderInWrold(_tarmaRight[0], getPosition().x, getPosition().y);
-			layer->renderInWrold(_tarmaRight[1], getPosition().x, getPosition().y);
-		}
+		_currentState->render();
 	}
 }

@@ -26,16 +26,21 @@ namespace SGA {
 	}
 
 	void CollisionComponent::handleCollision(CollisionComponent * other) {
-		if (_collisionMemory.find(other) == _collisionMemory.end()) {
-			_collisionMemory.insert(other);
-			if (other->isTrigger()) {
+		auto it = _collisionMemory.find(other);
+		if (it == _collisionMemory.end()) {
+			//새로운 충돌 물체
+			_collisionMemory.insert(std::make_pair(other, true));
+			if (isTrigger()) {
 				_owner.onTrigerringEnter(other->getOwner());
 			}
 			else {
 				_owner.onCollidingEnter(other->getOwner());
 			}
 		}
-		if (other->isTrigger()) {
+		else {
+			it->second = true;
+		}
+		if (isTrigger()) {
 			_owner.onTrigerring(other->getOwner());
 		}
 		else {
@@ -43,17 +48,42 @@ namespace SGA {
 		}
 	}
 
-	void CollisionComponent::handleNoneCollision(CollisionComponent * other) {
-		if (_collisionMemory.find(other) != _collisionMemory.end()) {
-			_collisionMemory.erase(other);
-			if (other->isTrigger()) {
-				_owner.onTrigerringExit(other->getOwner());
+	void CollisionComponent::beginCollisionCheck()
+	{
+		for (auto it = _collisionMemory.begin(); it != _collisionMemory.end(); ++it) {
+			it->second = false;
+		}
+	}
+
+	void CollisionComponent::endCollisionCheck()
+	{
+		for (auto it = _collisionMemory.begin(); it != _collisionMemory.end(); ) {
+			if (it->second == false) {
+				if (isTrigger()) {
+					_owner.onTrigerringExit(it->first->getOwner());
+				}
+				else {
+					_owner.onCollidingExit(it->first->getOwner());
+				}
+				it = _collisionMemory.erase(it);
 			}
 			else {
-				_owner.onCollidingExit(other->getOwner());
+				++it;
 			}
 		}
 	}
+
+	//void CollisionComponent::handleNoneCollision(CollisionComponent * other) {
+	//	if (_collisionMemory.find(other) != _collisionMemory.end()) {
+	//		_collisionMemory.erase(other);
+	//		if (isTrigger()) {
+	//			_owner.onTrigerringExit(other->getOwner());
+	//		}
+	//		else {
+	//			_owner.onCollidingExit(other->getOwner());
+	//		}
+	//	}
+	//}
 
 	void CollisionComponent::enableCollisionBetweenLayers(CollisionLayers layer1, CollisionLayers layer2)
 	{

@@ -73,6 +73,11 @@ namespace SGA {
 		return p1.x*p2.x + p1.y*p2.y;
 	}
 
+	float crossProduct(const Point2D & v1, const Point2D & v2)
+	{
+		return v1.x*v2.y - v1.y*v2.x;
+	}
+
 	Point2D rotate2D(const Point2D& p, const float& angle) {
 		float c = cos(angle), s = sin(angle);
 		return{ c*p.x - s*p.y, s*p.x + c*p.y };
@@ -119,6 +124,17 @@ namespace SGA {
 			return true;
 		}
 		return false;
+	}
+
+	bool isSegmentsIntersect(const Point2D & a1, const Point2D & a2, const Point2D & b1, const Point2D & b2)
+	{
+		if (crossProduct(a2 - a1, b1 - a1)*crossProduct(a2 - a1, b2 - a1) >= 0) {
+			return false;
+		}
+		if (crossProduct(b2 - b1, a1 - b1) * crossProduct(b2 - b1, a2 - b1) >= 0) {
+			return false;
+		}
+		return true;
 	}
 
 	Point2D getIntersectingPointLineLine(const Line2D& line1, const Line2D& line2) {

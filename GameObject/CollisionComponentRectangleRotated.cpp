@@ -25,7 +25,7 @@ namespace SGA {
 
 	bool CollisionComponentRectangleRotated::implCollisionCheck(const CollisionComponentRectangle * other) const
 	{
-		return false;//TODO
+		return SGA::isCollideRotatedRectRotatedRect(other->getCollisionRECT(), 0.0f, getUnrotatedRECT(), getAngle());
 	}
 
 	bool CollisionComponentRectangleRotated::implCollisionCheck(const CollisionComponentCircle * other) const
@@ -36,7 +36,7 @@ namespace SGA {
 
 	bool CollisionComponentRectangleRotated::implCollisionCheck(const CollisionComponentRectangleRotated * other) const
 	{
-		return false;
+		return SGA::isCollideRotatedRectRotatedRect(getUnrotatedRECT(), getAngle(), other->getUnrotatedRECT(), other->getAngle());
 	}
 
 	void CollisionComponentRectangleRotated::resolveCollisionWith(CollisionComponent * other) const

@@ -9,7 +9,7 @@ namespace SGA {
 		:_R(radius)
 	{
 		disableGravity();
-		disableKinamatic();
+		//disableKinamatic();
 		setPosition(posX, posY);
 		CollisionComponentCircle* footCircle
 			= new CollisionComponentCircle(*this, 

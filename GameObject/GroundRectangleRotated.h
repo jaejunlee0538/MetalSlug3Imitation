@@ -9,7 +9,7 @@ namespace SGA {
 		~GroundRectangleRotated();
 
 		std::string getTag() const {
-			return "GroundRect";
+			return "Ground";
 		}
 		void render();
 		bool isRenderable() const;

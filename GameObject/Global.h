@@ -14,4 +14,5 @@
 #define DEBUG_ENABLE_DRAW_GROUND	1
 #define DEBUG_ENABLE_DRAW_PLAYER_HIDDEN_COMPONENT	1
 
-
+#define DEBUG_ENABLE_DRAW_COLLISION_TRIGGER_BOX	1
+void LogDebugMessage(const char* fmt, ...);
