@@ -41,6 +41,9 @@ namespace SGA {
 		스프라이트 객체는 SpriteManager객체 소멸시에 삭제된다.
 		*/
 		const Sprite* findSprite(const std::string& key);
+		SpriteMap& getSpriteMap() {
+			return _spriteMap;
+		}
 	private:
 		tagAtlasImage loadAtlasImage(const std::string& imageFile);
 		void insertSprite(const std::string& key, Sprite* sprite);

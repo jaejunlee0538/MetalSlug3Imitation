@@ -24,11 +24,12 @@ namespace SGA {
 		}
 
 		virtual void update() = 0;
-		virtual void render() = 0;
-		virtual void enterState() = 0;
+		virtual void enterState(PlayerStateIface * prev) = 0;
 		virtual void exitState() = 0;
-
 		static PlayerStateMap createPlayerStateMap(Player& player);
+
+		void setUpperAnimation(SpritesAnimation* animation);
+		void setLowerAnimation(SpritesAnimation* animation);
 	protected:
 		Player& _player;
 	};

@@ -23,7 +23,6 @@ namespace SGA {
 		}
 		virtual void setPosition(float x, float y) {
 			GameObject::setPosition(x,y);
-
 		}
 
 		void update();
@@ -42,19 +41,18 @@ namespace SGA {
 			return 100;
 		}
 
-		template <typename PlayerStateT>
-		PlayerStateT* getPlayerState(PlayerStates state) {
+		PlayerStateIface* getPlayerState(PlayerStates state) {
 			PlayerStateIface::PlayerStateMap::iterator it = _stateMap.find(state);
 			assert(it != _stateMap.end());
-			return dynamic_cast<PlayerStateT*>(it->second);
+			return it->second;
 		}
 
 		void setPlayerState(PlayerStateIface* currentState) {
 			if (_currentState) {
 				_currentState->exitState();
 			}
+			currentState->enterState(_currentState);
 			_currentState = currentState;
-			_currentState->enterState();
 		}
 
 		inline void setLookingUp(bool lookingUp) {
@@ -84,13 +82,27 @@ namespace SGA {
 		inline bool isGrounded() const {
 			return _groundCheckBox->isCollisionTriggered();
 		}
+
+		void setUpperAnimation(SpritesAnimation* animUpper) {
+			_animUpper = animUpper;
+		}
+		void setLowerAnimation(SpritesAnimation* animLower) {
+			_animLower = animLower;
+		}
+		SpritesAnimation* getUpperAnimation() {
+			return _animUpper;
+		}
+		SpritesAnimation* getLowerAnimation() {
+			return _animLower;
+		}
+		
 	protected:
 		CollisionTriggerBox * _groundCheckBox;
 		CollisionTriggerBox* _rightKnifeTrigger;
 		CollisionTriggerBox* _leftKnifeTrigger;
 
-		SpritesAnimation* _tarmaRight[2];
-		SpritesAnimation* _tarmaLeft[2];
+		SpritesAnimation* _animUpper;
+		SpritesAnimation* _animLower;
 
 		PlayerStateIface::PlayerStateMap _stateMap;
 		PlayerStateIface* _currentState;

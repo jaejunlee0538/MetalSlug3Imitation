@@ -92,6 +92,32 @@ namespace SGA {
 		_animationMap.insert(std::make_pair(name, pool));
 	}
 
+	void AnimationManager::saveToJSON(const std::string & outputConfigFile)
+	{
+		std::ofstream fileOut(outputConfigFile.c_str());
+		assert(fileOut.good());
+		nlohmann::json json;
+		std::string prevName;
+		for (auto it = _animationMap.begin(); it != _animationMap.end(); ++it) {
+			if (isLRPair(prevName, it->first) == false) {
+				nlohmann::json anim;
+				anim["name"] = it->first;
+				anim["sprites"]["prefix"] = it->first;
+				anim["sprites"]["count"] = it->second->at(0)->getNSprites();
+				anim["duration"] = it->second->at(0)->getDuration();
+				anim["maxReplayCount"] = it->second->at(0)->getMaxReplayCount();
+				json["animation"].push_back(anim);
+			}
+			prevName = it->first;
+		}
+		fileOut << json << std::endl;
+		fileOut.close();
+	}
+
+	bool AnimationManager::hasAnimation(const std::string& name) {
+		return _animationMap.count(name) == 1;
+	}
+
 	SpritesAnimation * AnimationManager::findAnimation(const std::string& name)
 	{
 		AnimationMap::iterator it = _animationMap.find(name);
@@ -111,5 +137,20 @@ namespace SGA {
 				return animationPool[i];
 		}
 		return NULL;
+	}
+	bool AnimationManager::isLRPair(std::string name1, std::string name2)
+	{
+		if (isEndWidthString(name1, "Left")) {
+			if (isEndWidthString(name2, "Right")) {
+				return name1.substr(0, name1.size() - 4) == name2.substr(0, name2.size() - 5);
+			}
+			return false;
+		}
+		else {
+			if (isEndWidthString(name2, "Left")) {
+				return name1.substr(0, name1.size() - 5) == name2.substr(0, name2.size() - 4);
+			}
+			return false;
+		}
 	}
 }

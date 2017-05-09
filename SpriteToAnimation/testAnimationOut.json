@@ -1,0 +1,382 @@
+{
+  "animation": [
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_All_Board_Left",
+      "sprites": {
+        "count": 6,
+        "prefix": "Tarma_Normal_Pistol_All_Board_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_All_Brake_Left",
+      "sprites": {
+        "count": 4,
+        "prefix": "Tarma_Normal_Pistol_All_Brake_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_All_Fall_Left",
+      "sprites": {
+        "count": 5,
+        "prefix": "Tarma_Normal_Pistol_All_Fall_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_All_FunMotionCigar_Left",
+      "sprites": {
+        "count": 22,
+        "prefix": "Tarma_Normal_Pistol_All_FunMotionCigar_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_All_FunMotionOnEdge_Left",
+      "sprites": {
+        "count": 18,
+        "prefix": "Tarma_Normal_Pistol_All_FunMotionOnEdge_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_All_KneeAfterGrenade_Left",
+      "sprites": {
+        "count": 4,
+        "prefix": "Tarma_Normal_Pistol_All_KneeAfterGrenade_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_All_KneeFire_Left",
+      "sprites": {
+        "count": 10,
+        "prefix": "Tarma_Normal_Pistol_All_KneeFire_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_All_KneeGrenade_Left",
+      "sprites": {
+        "count": 6,
+        "prefix": "Tarma_Normal_Pistol_All_KneeGrenade_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_All_KneeIdle_Left",
+      "sprites": {
+        "count": 4,
+        "prefix": "Tarma_Normal_Pistol_All_KneeIdle_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_All_KneeKnifeA_Left",
+      "sprites": {
+        "count": 4,
+        "prefix": "Tarma_Normal_Pistol_All_KneeKnifeA_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_All_KneeKnifeB_Left",
+      "sprites": {
+        "count": 6,
+        "prefix": "Tarma_Normal_Pistol_All_KneeKnifeB_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_All_KneeSwitchToPistol_Left",
+      "sprites": {
+        "count": 8,
+        "prefix": "Tarma_Normal_Pistol_All_KneeSwitchToPistol_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_All_Rebirth_Left",
+      "sprites": {
+        "count": 7,
+        "prefix": "Tarma_Normal_Pistol_All_Rebirth_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_All_Teleport_Left",
+      "sprites": {
+        "count": 4,
+        "prefix": "Tarma_Normal_Pistol_All_Teleport_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_All_ToKnee_Left",
+      "sprites": {
+        "count": 3,
+        "prefix": "Tarma_Normal_Pistol_All_ToKnee_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_All_Turn_Left",
+      "sprites": {
+        "count": 1,
+        "prefix": "Tarma_Normal_Pistol_All_Turn_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_All_Victory_Left",
+      "sprites": {
+        "count": 4,
+        "prefix": "Tarma_Normal_Pistol_All_Victory_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_All_WatchUpTurn_Left",
+      "sprites": {
+        "count": 1,
+        "prefix": "Tarma_Normal_Pistol_All_WatchUpTurn_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Lower_FunMotionShiver_Left",
+      "sprites": {
+        "count": 4,
+        "prefix": "Tarma_Normal_Pistol_Lower_FunMotionShiver_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Lower_Jump_Left",
+      "sprites": {
+        "count": 12,
+        "prefix": "Tarma_Normal_Pistol_Lower_Jump_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Lower_StandIdle_Left",
+      "sprites": {
+        "count": 1,
+        "prefix": "Tarma_Normal_Pistol_Lower_StandIdle_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Lower_WalkJump_Left",
+      "sprites": {
+        "count": 6,
+        "prefix": "Tarma_Normal_Pistol_Lower_WalkJump_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Lower_Walk_Left",
+      "sprites": {
+        "count": 12,
+        "prefix": "Tarma_Normal_Pistol_Lower_Walk_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Upper_FromWatchUp_Left",
+      "sprites": {
+        "count": 2,
+        "prefix": "Tarma_Normal_Pistol_Upper_FromWatchUp_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Upper_FunMotionDrink_Left",
+      "sprites": {
+        "count": 17,
+        "prefix": "Tarma_Normal_Pistol_Upper_FunMotionDrink_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Upper_FunMotionSleep_Left",
+      "sprites": {
+        "count": 8,
+        "prefix": "Tarma_Normal_Pistol_Upper_FunMotionSleep_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Upper_JumpGrenade_Left",
+      "sprites": {
+        "count": 6,
+        "prefix": "Tarma_Normal_Pistol_Upper_JumpGrenade_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Upper_JumpWatchDownFire_Left",
+      "sprites": {
+        "count": 8,
+        "prefix": "Tarma_Normal_Pistol_Upper_JumpWatchDownFire_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Upper_JumpWatchDown_Left",
+      "sprites": {
+        "count": 1,
+        "prefix": "Tarma_Normal_Pistol_Upper_JumpWatchDown_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Upper_Jump_Left",
+      "sprites": {
+        "count": 12,
+        "prefix": "Tarma_Normal_Pistol_Upper_Jump_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Upper_StandFire_Left",
+      "sprites": {
+        "count": 10,
+        "prefix": "Tarma_Normal_Pistol_Upper_StandFire_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Upper_StandGrenade_Left",
+      "sprites": {
+        "count": 6,
+        "prefix": "Tarma_Normal_Pistol_Upper_StandGrenade_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Upper_StandIdle_Left",
+      "sprites": {
+        "count": 4,
+        "prefix": "Tarma_Normal_Pistol_Upper_StandIdle_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Upper_StandKnifeA_Left",
+      "sprites": {
+        "count": 6,
+        "prefix": "Tarma_Normal_Pistol_Upper_StandKnifeA_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Upper_StandKnifeB_Left",
+      "sprites": {
+        "count": 6,
+        "prefix": "Tarma_Normal_Pistol_Upper_StandKnifeB_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Upper_StandReload_Left",
+      "sprites": {
+        "count": 19,
+        "prefix": "Tarma_Normal_Pistol_Upper_StandReload_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Upper_SwitchToPistol_Left",
+      "sprites": {
+        "count": 8,
+        "prefix": "Tarma_Normal_Pistol_Upper_SwitchToPistol_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Upper_ToWatchUp_Left",
+      "sprites": {
+        "count": 2,
+        "prefix": "Tarma_Normal_Pistol_Upper_ToWatchUp_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Upper_WalkJump_Left",
+      "sprites": {
+        "count": 6,
+        "prefix": "Tarma_Normal_Pistol_Upper_WalkJump_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Upper_Walk_Left",
+      "sprites": {
+        "count": 12,
+        "prefix": "Tarma_Normal_Pistol_Upper_Walk_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Upper_WatchUpFire_Left",
+      "sprites": {
+        "count": 10,
+        "prefix": "Tarma_Normal_Pistol_Upper_WatchUpFire_Left"
+      }
+    },
+    {
+      "duration": 200,
+      "maxReplayCount": 0,
+      "name": "Tarma_Normal_Pistol_Upper_WatchUpIdle_Left",
+      "sprites": {
+        "count": 4,
+        "prefix": "Tarma_Normal_Pistol_Upper_WatchUpIdle_Left"
+      }
+    }
+  ]
+}

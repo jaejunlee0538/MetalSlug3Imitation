@@ -50,8 +50,16 @@ namespace SGA {
 			enableGravity();
 		}
 
+		if (_animLower) {
+			_animLower->update();
+		}
+		if (_animUpper) {
+			_animUpper->update();
+		}
+
 		_currentState->update();
 
+		//플레이어 위치 클램핑
 		POINTFLOAT pos = getPosition();
 		RECT clamp = GET_CAMERA()->getScreenRECT();
 		if (pos.x < clamp.left) {
@@ -63,6 +71,14 @@ namespace SGA {
 	}
 
 	void Player::render() {
-		_currentState->render();
+		//_currentState->render();
+		if (_animLower) {
+			_layer->renderInWrold(_animLower, getPosition().x, getPosition().y);
+		}
+		if (_animUpper) {
+			_layer->renderInWrold(_animUpper, getPosition().x, getPosition().y);
+		}
 	}
+
+
 }

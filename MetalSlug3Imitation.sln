@@ -17,7 +17,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestCollision", "TestCollis
 		{FF9A1539-B9B2-4ACE-8107-EED90193E15C} = {FF9A1539-B9B2-4ACE-8107-EED90193E15C}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MapTool", "MapTool\MapTool.vcxproj", "{81A292C7-123C-422D-B692-CDF9C9BD42AA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MapViewer", "MapTool\MapTool.vcxproj", "{81A292C7-123C-422D-B692-CDF9C9BD42AA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{FF9A1539-B9B2-4ACE-8107-EED90193E15C} = {FF9A1539-B9B2-4ACE-8107-EED90193E15C}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpriteToAnimation", "SpriteToAnimation\SpriteToAnimation.vcxproj", "{DD4385A8-8D02-4443-AF41-AEA847AA15A3}"
 	ProjectSection(ProjectDependencies) = postProject
 		{FF9A1539-B9B2-4ACE-8107-EED90193E15C} = {FF9A1539-B9B2-4ACE-8107-EED90193E15C}
 	EndProjectSection
@@ -70,6 +75,14 @@ Global
 		{81A292C7-123C-422D-B692-CDF9C9BD42AA}.Release|x64.Build.0 = Release|x64
 		{81A292C7-123C-422D-B692-CDF9C9BD42AA}.Release|x86.ActiveCfg = Release|Win32
 		{81A292C7-123C-422D-B692-CDF9C9BD42AA}.Release|x86.Build.0 = Release|Win32
+		{DD4385A8-8D02-4443-AF41-AEA847AA15A3}.Debug|x64.ActiveCfg = Debug|x64
+		{DD4385A8-8D02-4443-AF41-AEA847AA15A3}.Debug|x64.Build.0 = Debug|x64
+		{DD4385A8-8D02-4443-AF41-AEA847AA15A3}.Debug|x86.ActiveCfg = Debug|Win32
+		{DD4385A8-8D02-4443-AF41-AEA847AA15A3}.Debug|x86.Build.0 = Debug|Win32
+		{DD4385A8-8D02-4443-AF41-AEA847AA15A3}.Release|x64.ActiveCfg = Release|x64
+		{DD4385A8-8D02-4443-AF41-AEA847AA15A3}.Release|x64.Build.0 = Release|x64
+		{DD4385A8-8D02-4443-AF41-AEA847AA15A3}.Release|x86.ActiveCfg = Release|Win32
+		{DD4385A8-8D02-4443-AF41-AEA847AA15A3}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

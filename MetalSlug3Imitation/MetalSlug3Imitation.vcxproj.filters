@@ -60,26 +60,20 @@
     <ClCompile Include="PlayerStateStanding.cpp">
       <Filter>Player</Filter>
     </ClCompile>
-    <ClCompile Include="PlayerStateCrawling.cpp">
-      <Filter>Player</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerStateJumping.cpp">
-      <Filter>Player</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerStateKneeing.cpp">
-      <Filter>Player</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerStateJumpingForward.cpp">
-      <Filter>Player</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerStateWalking.cpp">
-      <Filter>Player</Filter>
-    </ClCompile>
     <ClCompile Include="Enemy.cpp">
       <Filter>Enemy</Filter>
     </ClCompile>
     <ClCompile Include="ChoumenConga.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationLRPair.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerStateWalking.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerStateJumping.cpp">
+      <Filter>Player</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -104,37 +98,31 @@
     <ClInclude Include="PlayerStateStanding.h">
       <Filter>Player</Filter>
     </ClInclude>
-    <ClInclude Include="PlayerStateCrawling.h">
-      <Filter>Player</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerStateJumping.h">
-      <Filter>Player</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerStateKneeing.h">
-      <Filter>Player</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerStateJumpingForward.h">
-      <Filter>Player</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerStateWalking.h">
-      <Filter>Player</Filter>
-    </ClInclude>
     <ClInclude Include="Enemy.h">
       <Filter>Enemy</Filter>
     </ClInclude>
     <ClInclude Include="ChoumenConga.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="AnimationLRPair.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerStateWalking.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerStateJumping.h">
+      <Filter>Player</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\MapMission1Config.json">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="..\Resource\Sprites\AnimationTarma.json">
-      <Filter>Resource Files\AnimationList</Filter>
-    </None>
     <None Include="..\Resource\Sprites\SpriteTarma.json">
       <Filter>Resource Files\SpriteList</Filter>
+    </None>
+    <None Include="..\Resource\Sprites\AnimationTarma.json">
+      <Filter>Resource Files\AnimationList</Filter>
     </None>
   </ItemGroup>
 </Project>

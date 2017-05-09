@@ -5,8 +5,8 @@
 #include <RandomFunction.h>
 namespace SGA {
 	PlayerStateStanding::PlayerStateStanding(Player & player)
-		:PlayerStateIface(player), _funMotionTimeout(GET_GAME_WORLD_CLOCK(), 5000){
-		findAnimation();
+		:PlayerStateIface(player), _funMotionTimeout(GET_GAME_WORLD_CLOCK(), 5000) {
+		initAnimation();
 		_knifeIdx = 0;
 	}
 
@@ -17,41 +17,20 @@ namespace SGA {
 
 	void PlayerStateStanding::update()
 	{
-		_currentAnimation->update();
+		//애니메이션이 다른 스테이트 객체로 전달될 수도 있기 대문에 update는 Player가 직접 호출하자.
 		stateUpdate();
-		processKeyinput();
 	}
 
-	void PlayerStateStanding::render()
+	void PlayerStateStanding::enterState(PlayerStateIface * prev)
 	{
-		POINTFLOAT pos = _player.getPosition();
-		_player.getRenderLayer()->renderInWrold(_currentAnimation, pos.x, pos.y);
-	}
-
-	void PlayerStateStanding::enterState()
-	{
-		_subState = Substate::NONE;
-		bool left = _player.isLookingLeft();
-		bool lookUp = _player.isLookingUp();
-		if (left) {
-			if (lookUp) {
-				setAnimation(_animationWatchingUpLeft);
-				setSubstate(Substate::NONE);
-			}
-			else {
-				setAnimation(_animationStandingLeft);
-				setSubstate(Substate::NONE);
-			}
+		_subState = IDLE;
+		if (_player.isLookingUp()) {
+			setUpperAnimation(_animUpperWatchUpIdle.get(_player.isLookingLeft()));
+			setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
 		}
 		else {
-			if (lookUp) {
-				setAnimation(_animationWatchingUpRight);
-				setSubstate(Substate::NONE);
-			}
-			else {
-				setAnimation(_animationStandingRight);
-				setSubstate(Substate::NONE);
-			}
+			setUpperAnimation(_animUpperStandIdle.get(_player.isLookingLeft()));
+			setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
 		}
 	}
 
@@ -60,297 +39,219 @@ namespace SGA {
 
 	}
 
-	void PlayerStateStanding::setSubstate(Substate substate)
+	void PlayerStateStanding::initAnimation()
 	{
-		_funMotionTimeout.reset();
-		_subState = substate;
+		_animUpperStandIdle.init("Tarma_Normal_Pistol_Upper_StandIdle");
+		_animLowerStandIdle.init("Tarma_Normal_Pistol_Lower_StandIdle");
+		_animUpperStandFire.init("Tarma_Normal_Pistol_Upper_StandFire");
+		_animAllStandKnifing[0].init("Tarma_Normal_Pistol_Upper_StandKnifeA");
+		_animAllStandKnifing[1].init("Tarma_Normal_Pistol_Upper_StandKnifeB");
+		_animUpperStandGrenade.init("Tarma_Normal_Pistol_Upper_StandGrenade");
+
+		_animUpperWatchUpIdle.init("Tarma_Normal_Pistol_Upper_WatchUpIdle");
+		_animUpperWatchUpFire.init("Tarma_Normal_Pistol_Upper_WatchUpFire");
+
+		_animAllTurn.init("Tarma_Normal_Pistol_All_Turn");
+		_animUpperToWatchUp.init("Tarma_Normal_Pistol_Upper_ToWatchUp");
+		_animUpperFromWatchUp.init("Tarma_Normal_Pistol_Upper_FromWatchUp");
+
+		_animUpperFunMotion[0].init("Tarma_Normal_Pistol_Upper_FunMotionDrink");
+		_animUpperFunMotion[1].init("Tarma_Normal_Pistol_Upper_FunMotionSleep");
+		_animReload.init("Tarma_Normal_Pistol_Upper_StandReload");
+		_animAllBrake.init("Tarma_Normal_Pistol_All_Brake");
 	}
 
-	void PlayerStateStanding::findAnimation()
+
+	void PlayerStateStanding::stateUpdate()
 	{
-		_animationWatchingUpRight = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_StandWatchUp_Right");
-		_animationWatchingUpLeft = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_StandWatchUp_Left");
-
-		_animationToWatchingUpRight = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_ToStandWatchUp_Right");
-		_animationToWatchingUpLeft = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_ToStandWatchUp_Left");
-
-		_animationStandingRight = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_StandIdle_Right");
-		_animationStandingLeft = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_StandIdle_Left");
-
-		_animationFiringRight = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_StandFire_Right");
-		_animationFiringLeft = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_StandFire_Left");
-
-		_animationFiringUpRight = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_StandFireUp_Right");
-		_animationFiringUpLeft = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_StandFireUp_Left");
-
-		_animationKnifingRight[0] = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_StandKnifeA_Right");
-		_animationKnifingLeft[0] = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_StandKnifeA_Left");
-		_animationKnifingRight[1] = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_StandKnifeB_Right");
-		_animationKnifingLeft[1] = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_StandKnifeB_Left");
-
-		_animationGrenadeRight = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_StandGrenade_Right");
-		_animationGrenadeLeft = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_StandGrenade_Left");
-
-		_animationFunMotionRight[0] = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_FunmotionA_Right");
-		_animationFunMotionLeft[0] = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_FunmotionA_Left");
-
-		_animationFunMotionRight[1] = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_FunmotionB_Right");
-		_animationFunMotionLeft[1] = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_FunmotionB_Left");
-
-		_animationTurningRight = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_StandTurnLeft_Right");
-		_animationTurningLeft = GET_ANIMATION_MANAGER()->findAnimation("Tarma_Normal_Pistol_StandTurnLeft_Left");;
-	}
-	void PlayerStateStanding::processKeyinput()
-	{
-		if (GET_KEY_MANAGER()->isStayKeyDown(VK_LEFT)) {
-			if (_player.isLookingLeft()) {
-				//왼쪽으로 이동
+		if (GET_KEY_MANAGER()->isOnceKeyDown(VK_SPACE)) {
+			if (_player.isLookingUp()) {
+				setUpperAnimation(_animUpperWatchUpFire.get(_player.isLookingLeft()));
+				setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
 			}
 			else {
+				if (_player.isLookingLeft()) {
+					if (_player.isLeftKnifeTriggerOn()) {
+						setUpperAnimation(_animAllStandKnifing[_knifeIdx].get(_player.isLookingLeft()));
+						setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
+						_subState = KNIFE;
+						_knifeIdx++;
+					}
+					else {
+						setUpperAnimation(_animUpperStandFire.get(_player.isLookingLeft()));
+						setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
+						_subState = FIRING;
+					}
+				}
+				else {
+					if (_player.isRightKnifeTriggerOn()) {
+						setUpperAnimation(_animAllStandKnifing[_knifeIdx].get(_player.isLookingLeft()));
+						setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
+						_subState = KNIFE;
+						_knifeIdx++;
+					}
+					else {
+						setUpperAnimation(_animUpperStandFire.get(_player.isLookingLeft()));
+						setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
+						_subState = FIRING;
+					}
+				}
+				if (_knifeIdx == 2) {
+					_knifeIdx = 0;
+				}
+			}
+
+		}
+		if (GET_KEY_MANAGER()->isOnceKeyDown(VK_CONTROL)) {
+			setUpperAnimation(_animUpperStandGrenade.get(_player.isLookingLeft()));
+			setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
+			_subState = GRENADE;
+		}
+		if (GET_KEY_MANAGER()->isOnceKeyDown(VK_LSHIFT)) {
+			//점프
+			_player.setPlayerState(_player.getPlayerState(PlayerStates::JUMPING));
+			return;
+		}
+		if (GET_KEY_MANAGER()->isStayKeyDown(VK_LEFT)) {
+			//왼쪽으로 돌기
+			if (_player.isLookingLeft() == false) {
+				setUpperAnimation(_animAllTurn.get(false));
+				setLowerAnimation(NULL);
 				_player.setLookingLeft(true);
-				setSubstate(Substate::TURNING_LEFT);
-				setAnimation(_animationTurningLeft);
+				_subState = TURNING;
+			}
+			else {
+				//걷기 시작
+				_player.setPlayerState(_player.getPlayerState(PlayerStates::WALKING));
+				return;
 			}
 		}
 		if (GET_KEY_MANAGER()->isStayKeyDown(VK_RIGHT)) {
-			if (_player.isLookingLeft()) {
+			//오른쪽으로 돌기
+			if (_player.isLookingLeft() == true) {
+				setUpperAnimation(_animAllTurn.get(true));
+				setLowerAnimation(NULL);
 				_player.setLookingLeft(false);
-				setSubstate(Substate::TURNING_RIGHT);
-				setAnimation(_animationTurningRight);
+				_subState = TURNING;
 			}
 			else {
-				//오른쪽으로 걷기 시작
+				//걷기 시작
+				_player.setPlayerState(_player.getPlayerState(PlayerStates::WALKING));
+				return;
 			}
 		}
-		if (GET_KEY_MANAGER()->isOnceKeyDown(VK_DOWN)) {
-			//__무릎 꿇기
-		}
 		if (GET_KEY_MANAGER()->isStayKeyDown(VK_UP)) {
-			//__위 쳐다보기
 			if (_player.isLookingUp() == false) {
+				setUpperAnimation(_animUpperToWatchUp.get(_player.isLookingLeft()));
+				setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
 				_player.setLookingUp(true);
-				if (_player.isLookingLeft()) {
-					setAnimation(_animationToWatchingUpLeft);
-					setSubstate(Substate::TO_WATCHUP_LEFT);
-				}
-				else {
-					setAnimation(_animationToWatchingUpRight);
-					setSubstate(Substate::TO_WATCHUP_RIGHT);
-				}
+				_subState = LIFTING_HEAD;
 			}
 		}
 		else {
 			if (_player.isLookingUp()) {
+				setUpperAnimation(_animUpperFromWatchUp.get(_player.isLookingLeft()));
+				setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
 				_player.setLookingUp(false);
-				if (_player.isLookingLeft()) {
-					setAnimation(_animationStandingLeft);
-					setSubstate(Substate::NONE);
-				}
-				else {
-					setAnimation(_animationStandingRight);
-					setSubstate(Substate::NONE);
-				}
+				_subState = LIFTING_HEAD;
 			}
+		}
+		if (GET_KEY_MANAGER()->isStayKeyDown(VK_DOWN)) {
+			//앉기 시작
 		}
 
-		if (GET_KEY_MANAGER()->isOnceKeyDown(VK_CONTROL)) {
-			//수류탄
-			if (_player.isLookingLeft()) {
-				setSubstate(Substate::THROWING_GRENADE_LEFT);
-				setAnimation(_animationGrenadeLeft);
-			}
-			else {
-				setSubstate(Substate::THROWING_GRENADE_RIGHT);
-				setAnimation(_animationGrenadeRight);
-			}
-		}
-		if (GET_KEY_MANAGER()->isOnceKeyDown(VK_LSHIFT)) {
-			//점프
-		}
-		if (GET_KEY_MANAGER()->isOnceKeyDown(VK_SPACE)) {
-			//총쏘기
-			if (_player.isLookingUp()) {
-				if (_player.isLookingLeft()) {
-					setSubstate(Substate::FIRING_UP_LEFT);
-					setAnimation(_animationFiringUpLeft);
-				}
-				else {
-					setSubstate(Substate::FIRING_UP_RIGHT);
-					setAnimation(_animationFiringUpRight);
-				}
-			}
-			else {
-				if (_player.isLookingLeft()) {
-					if (!_player.isLeftKnifeTriggerOn()) {
-						if (_subState != Substate::KNIFING_LEFT) {
-							setSubstate(Substate::KNIFING_LEFT);
-							setAnimation(_animationKnifingLeft[_knifeIdx++]);
-						}
-					}
-					else {
-						setSubstate(Substate::FIRING_LEFT);
-						setAnimation(_animationFiringLeft);
-					}
-				}
-				else {
-					if (!_player.isRightKnifeTriggerOn()) {
-						if (_subState != Substate::KNIFING_RIGHT) {
-							setSubstate(Substate::KNIFING_RIGHT);
-							setAnimation(_animationKnifingRight[_knifeIdx++]);
-						}
-					}
-					else {
-						setSubstate(Substate::FIRING_RIGHT);
-						setAnimation(_animationFiringRight);
-					}
-				}
-			}
-
-		}
-		if (_knifeIdx == 2) {
-			_knifeIdx = 0;
-		}
-	}
-	void PlayerStateStanding::setAnimation(SpritesAnimation * newAnimation)
-	{
-		_currentAnimation = newAnimation;
-		_currentAnimation->restart();
-	}
-	void PlayerStateStanding::stateUpdate()
-	{
 		switch (_subState) {
-		case Substate::TO_WATCHUP_LEFT:
+		case IDLE:
 		{
-			if (_currentAnimation->getPlayCount() == 1) {
-				setAnimation(_animationWatchingUpLeft);
-				setSubstate(Substate::NONE);
-			}
-		}
-		break;
-		case Substate::TO_WATCHUP_RIGHT:
-		{
-			if (_currentAnimation->getPlayCount() == 1) {
-				setAnimation(_animationWatchingUpRight);
-				setSubstate(Substate::NONE);
 
-			}
 		}
 		break;
-		case Substate::TURNING_LEFT:
+		case TURNING:
 		{
-			if (_currentAnimation->getPlayCount() == 1) {
-				setAnimation(_animationStandingLeft);
-				setSubstate(Substate::NONE);
-
-			}
-		}
-		break;
-		case Substate::TURNING_RIGHT:
-		{
-			if (_currentAnimation->getPlayCount() == 1) {
-				setAnimation(_animationStandingRight);
-				setSubstate(Substate::NONE);
-			}
-		}
-		break;
-		case Substate::THROWING_GRENADE_LEFT:
-		{
-			if (_currentAnimation->getPlayCount() == 1) {
-				setAnimation(_animationStandingLeft);
-				setSubstate(Substate::NONE);
-			}
-		}
-		break;
-		case Substate::THROWING_GRENADE_RIGHT:
-		{
-			if (_currentAnimation->getPlayCount() == 1) {
-				setAnimation(_animationStandingRight);
-				setSubstate(Substate::NONE);
-			}
-		}
-		break;
-		case Substate::FIRING_LEFT:
-		{
-			if (_currentAnimation->getPlayCount() == 1) {
-				setAnimation(_animationStandingLeft);
-				setSubstate(Substate::NONE);
-			}
-		}
-		break;
-		case Substate::FIRING_RIGHT:
-		{
-			if (_currentAnimation->getPlayCount() == 1) {
-				setAnimation(_animationStandingRight);
-				setSubstate(Substate::NONE);
-			}
-		}
-		break;
-		case Substate::FIRING_UP_LEFT:
-		{
-			if (_currentAnimation->getPlayCount() == 1) {
-				setAnimation(_animationWatchingUpLeft);
-				setSubstate(Substate::NONE);
-			}
-		}
-		break;
-		case Substate::FIRING_UP_RIGHT:
-		{
-			if (_currentAnimation->getPlayCount() == 1) {
-				setAnimation(_animationWatchingUpRight);
-				setSubstate(Substate::NONE);
-			}
-		}
-		break;
-		case Substate::KNIFING_LEFT:
-		{
-			if (_currentAnimation->getPlayCount() == 1) {
-				setAnimation(_animationStandingLeft);
-				setSubstate(Substate::NONE);
-			}
-		}
-		break;
-		case Substate::KNIFING_RIGHT:
-		{
-			if (_currentAnimation->getPlayCount() == 1) {
-				setAnimation(_animationStandingRight);
-				setSubstate(Substate::NONE);
-			}
-		}
-		break;
-		case Substate::FUNMOTION_RIGHT:
-		{
-			if (_currentAnimation->getPlayCount() == 1) {
-				setAnimation(_animationStandingRight);
-				setSubstate(Substate::NONE);
-			}
-		}
-		break;
-		case Substate::FUNMOTION_LEFT:
-		{
-			if (_currentAnimation->getPlayCount() == 1) {
-				setAnimation(_animationStandingLeft);
-				setSubstate(Substate::NONE);
-			}
-		}
-		break;
-		case Substate::NONE:
-		{
-			if (_funMotionTimeout.isTimeout()) {
-				if (_player.isLookingUp() == false) {
-					int idx = GET_RANDOM_FUNCTION()->getInt(1);
-					if (_player.isLookingLeft()) {
-						setAnimation(_animationFunMotionLeft[idx]);
-						setSubstate(Substate::FUNMOTION_LEFT);
-					}
-					else {
-						setAnimation(_animationFunMotionRight[idx]);
-						setSubstate(Substate::FUNMOTION_RIGHT);
-					}
+			if (_player.getUpperAnimation()->getPlayCount() == 1) {
+				if (_player.isLookingUp()) {
+					setUpperAnimation(_animUpperWatchUpIdle.get(_player.isLookingLeft()));
+					setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
 				}
-				
+				else {
+					setUpperAnimation(_animUpperStandIdle.get(_player.isLookingLeft()));
+					setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
+				}
+				_subState = IDLE;
 			}
 		}
-			break;
+		break;
+		case LIFTING_HEAD:
+		{
+			if (_player.getUpperAnimation()->getPlayCount() == 1) {
+				if (_player.isLookingUp()) {
+					setUpperAnimation(_animUpperWatchUpIdle.get(_player.isLookingLeft()));
+					setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
+				}
+				else {
+					setUpperAnimation(_animUpperStandIdle.get(_player.isLookingLeft()));
+					setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
+				}
+
+				_subState = IDLE;
+			}
+		}
+		break;
+		case FIRING:
+		{
+			if (_player.getUpperAnimation()->getPlayCount() == 1) {
+				if (_player.isLookingUp()) {
+					setUpperAnimation(_animUpperWatchUpFire.get(_player.isLookingLeft()));
+					setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
+				}
+				else {
+					setUpperAnimation(_animUpperStandFire.get(_player.isLookingLeft()));
+					setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
+				}
+				_subState = IDLE;
+			}
+		}
+		break;
+		case GRENADE:
+		{
+			if (_player.getUpperAnimation()->getPlayCount() == 1) {
+				if (_player.isLookingUp()) {
+					setUpperAnimation(_animUpperWatchUpIdle.get(_player.isLookingLeft()));
+					setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
+				}
+				else {
+					setUpperAnimation(_animUpperStandIdle.get(_player.isLookingLeft()));
+					setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
+				}
+				_subState = IDLE;
+			}
+		}
+		break;
+		case KNIFE:
+		{
+			if (_player.getUpperAnimation()->getPlayCount() == 1) {
+				if (_player.isLookingUp()) {
+					setUpperAnimation(_animUpperWatchUpIdle.get(_player.isLookingLeft()));
+					setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
+				}
+				else {
+					setUpperAnimation(_animUpperStandIdle.get(_player.isLookingLeft()));
+					setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
+				}
+				_subState = IDLE;
+			}
+		}
+		break;
+		case FUNMOTION:
+		{
+			if (_player.getUpperAnimation()->getPlayCount() == 1) {
+				setUpperAnimation(_animUpperStandIdle.get(_player.isLookingLeft()));
+				setLowerAnimation(_animLowerStandIdle.get(_player.isLookingLeft()));
+				_subState = IDLE;
+			}
+		}
+		break;
 		}
 	}
+
 }

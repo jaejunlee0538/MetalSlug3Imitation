@@ -10,7 +10,7 @@
 #include <Global.h>
 #include <CollisionConfig.h>
 #define WIN_NAME	(TEXT("APIWindow"))
-#define WIN_START_X	2200
+#define WIN_START_X	200
 #define WIN_START_Y	100
 #define WIN_SIZE_X	1200
 #define WIN_SIZE_Y	900

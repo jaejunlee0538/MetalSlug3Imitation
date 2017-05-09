@@ -53,6 +53,10 @@ namespace SGA {
 			_durationMs = durationMillis;
 		}
 
+		inline int getDuration() const {
+			return _durationMs;
+		}
+
 		/*
 		애니메이션 반복 재생 횟수를 설정한다.
 		0으로 설정하면 애니메이션을 무한정 반복한다.
@@ -61,12 +65,32 @@ namespace SGA {
 			_maxReplayCount = maxReplayCount;
 		}
 
+		inline int getMaxReplayCount() const{
+			return _maxReplayCount;
+		}
+
 		/*
 		지금까지 총 애니메이션 반복 횟수를 반환한다.
 		restart()메서드를 호출하면 리셋된다.
 		*/
 		inline int getPlayCount() const {
 			return _replayCount;
+		}
+
+		/*
+		정해진 횟수만큼 애니메이션이 플레이되면 true를 반환.
+		_maxReplayCount가 0이면 무한반복이기 때문에 항상 false를 반환.
+		*/
+		inline bool isPlayDone() const {
+			if (_maxReplayCount == 0)
+				return false;
+			if (_replayCount == _maxReplayCount)
+				return true;
+			return false;
+		}
+
+		inline bool isInfinite() const {
+			return _maxReplayCount == 0;
 		}
 
 		/*

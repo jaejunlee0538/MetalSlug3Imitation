@@ -1,72 +1,61 @@
 #pragma once
 #include "PlayerStateIface.h"
 #include "WorldClock.h"
+#include "AnimationLRPair.h"
 namespace SGA {
 	class PlayerStateStanding :
 		public PlayerStateIface
 	{
-		enum struct Substate {
-			TURNING_LEFT,
-			TURNING_RIGHT,
-			TO_WATCHUP_RIGHT,
-			TO_WATCHUP_LEFT,
-			THROWING_GRENADE_LEFT,
-			THROWING_GRENADE_RIGHT,
-			FIRING_LEFT,
-			FIRING_RIGHT,
-			FIRING_UP_LEFT,
-			FIRING_UP_RIGHT,
-			KNIFING_LEFT,
-			KNIFING_RIGHT,
-			FUNMOTION_LEFT,
-			FUNMOTION_RIGHT,
-			NONE
-		};
 	public:
+		enum SubStates {
+			IDLE,
+			TURNING,
+			LIFTING_HEAD,
+			FIRING,
+			GRENADE,
+			KNIFE,
+			FUNMOTION
+		};
 		PlayerStateStanding(Player & player);
 		virtual ~PlayerStateStanding();
 
 		void update();
-		void render();
-		void enterState();
+		void enterState(PlayerStateIface * prev);
 		void exitState();
 	private:
-		void setSubstate(Substate substate);
-		void findAnimation();
-		void processKeyinput();
-		void setAnimation(SpritesAnimation* newAnimation);
+		void initAnimation();
 		void stateUpdate();
 	private:
+		SubStates _subState;
+		SpritesAnimation * _currentUpperAnimation;
+		SpritesAnimation * _currentLowerAnimation;
+
 		int _knifeIdx;
-		Substate _subState;
-		SpritesAnimation * _currentAnimation;
 
-		SpritesAnimation* _animationTurningRight;
-		SpritesAnimation* _animationTurningLeft;
+		bool _isNextAll;
+		SpritesAnimation * _nextAnimationAll;
+		SpritesAnimation * _nextAnimationUpper;
+		SpritesAnimation * _nextAnimationLower;
 
-		SpritesAnimation* _animationToWatchingUpRight;
-		SpritesAnimation* _animationToWatchingUpLeft;
-
-		SpritesAnimation* _animationWatchingUpRight;
-		SpritesAnimation* _animationWatchingUpLeft;
-
-		SpritesAnimation* _animationStandingRight;
-		SpritesAnimation* _animationStandingLeft;
-
-		SpritesAnimation* _animationFiringRight;
-		SpritesAnimation* _animationFiringLeft;
-
-		SpritesAnimation* _animationFiringUpRight;
-		SpritesAnimation* _animationFiringUpLeft;
-
-		SpritesAnimation* _animationKnifingRight[2];
-		SpritesAnimation* _animationKnifingLeft[2];
-
-		SpritesAnimation* _animationGrenadeRight;
-		SpritesAnimation* _animationGrenadeLeft;
-
-		SpritesAnimation* _animationFunMotionRight[2];
-		SpritesAnimation* _animationFunMotionLeft[2];
+		//가만히 서있을 때
+		AnimationLRPair _animUpperStandIdle;
+		AnimationLRPair _animLowerStandIdle;
+		AnimationLRPair _animUpperStandFire;
+		AnimationLRPair _animAllStandKnifing[2];
+		AnimationLRPair _animUpperStandGrenade;
+		/////////////////////////////////////////
+		//위 쳐다보고 있을 때
+		AnimationLRPair _animUpperWatchUpIdle;
+		AnimationLRPair _animUpperWatchUpFire;
+		/////////////////////////////////////////
+		AnimationLRPair _animAllTurn;
+		AnimationLRPair _animUpperToWatchUp;
+		AnimationLRPair _animUpperFromWatchUp;
+		/////////////////////////////////////////
+		//기타 애니메이션
+		AnimationLRPair _animAllBrake;
+		AnimationLRPair _animUpperFunMotion[2];
+		AnimationLRPair _animReload;
 
 		TimeoutChecker _funMotionTimeout;
 	};
