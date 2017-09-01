@@ -28,6 +28,17 @@
       }
     }
   },
+  "spriteObject": [
+    {
+      "isAnimation": false,
+      "name": "DeadFish1_Front",
+      "pos": {
+        "x": 500,
+        "y": 240
+      },
+      "layer" : 3
+    }
+  ],
   "groundRect": [
     {
       "size": {

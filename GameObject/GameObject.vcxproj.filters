@@ -28,11 +28,17 @@
     <Filter Include="GameObject">
       <UniqueIdentifier>{267fb09b-0ed2-4970-8b59-3b21fe300709}</UniqueIdentifier>
     </Filter>
-    <Filter Include="BulletObject">
+    <Filter Include="Bullet">
+      <UniqueIdentifier>{7753d022-cccd-4a62-a7dd-22b286d22ff9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gun">
       <UniqueIdentifier>{833a0a7c-fdeb-4cd9-a8fb-82841fbcd622}</UniqueIdentifier>
     </Filter>
-    <Filter Include="EnemyObject">
-      <UniqueIdentifier>{f9c8e366-0511-4ac6-a12d-d58b9af8fd30}</UniqueIdentifier>
+    <Filter Include="Player">
+      <UniqueIdentifier>{c381081e-31d0-4530-8cc0-543379052044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Enemy">
+      <UniqueIdentifier>{a0335abd-c6a3-4fec-830b-8d88e9b7d112}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -138,22 +144,55 @@
     <ClInclude Include="GroundRectangleRotated.h">
       <Filter>GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="BulletIface.h">
-      <Filter>BulletObject</Filter>
-    </ClInclude>
-    <ClInclude Include="BulletPistolNormal.h">
-      <Filter>BulletObject</Filter>
-    </ClInclude>
     <ClInclude Include="GunIface.h">
-      <Filter>BulletObject</Filter>
+      <Filter>Gun</Filter>
     </ClInclude>
-    <ClInclude Include="CommonUtil.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="BulletIface.h">
+      <Filter>Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="ChoumenConga.h">
+      <Filter>Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="WalkerFootCircle.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerStateWalking.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerStateIface.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerStateStanding.h">
+      <Filter>Player</Filter>
     </ClInclude>
     <ClInclude Include="FrontSprite.h">
-      <Filter>Header Files</Filter>
+      <Filter>GameObject</Filter>
     </ClInclude>
     <ClInclude Include="GameObjectFactory.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimationLRPair.h">
+      <Filter>Sprites</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonUtil.h">
+      <Filter>Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="BulletPistol.h">
+      <Filter>Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="GunPistol.h">
+      <Filter>Gun</Filter>
+    </ClInclude>
+    <ClInclude Include="playerstatejumping.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="DummyEnemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -230,23 +269,56 @@
     <ClCompile Include="Global.cpp">
       <Filter>Header Files</Filter>
     </ClCompile>
-    <ClCompile Include="BulletPistolNormal.cpp">
-      <Filter>BulletObject</Filter>
+    <ClCompile Include="GunIface.cpp">
+      <Filter>Gun</Filter>
     </ClCompile>
     <ClCompile Include="BulletIface.cpp">
-      <Filter>BulletObject</Filter>
+      <Filter>Bullet</Filter>
     </ClCompile>
-    <ClCompile Include="GunIface.cpp">
-      <Filter>BulletObject</Filter>
+    <ClCompile Include="Player.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerStateIface.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerStateStanding.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerStateWalking.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="ChoumenConga.cpp">
+      <Filter>Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimationLRPair.cpp">
+      <Filter>Sprites</Filter>
     </ClCompile>
     <ClCompile Include="CommonUtil.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Utils</Filter>
     </ClCompile>
     <ClCompile Include="FrontSprite.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>GameObject</Filter>
     </ClCompile>
     <ClCompile Include="GameObjectFactory.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="WalkerFootCircle.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="BulletPistol.cpp">
+      <Filter>Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="GunPistol.cpp">
+      <Filter>Gun</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerStateJumping.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="DummyEnemy.cpp">
+      <Filter>Enemy</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

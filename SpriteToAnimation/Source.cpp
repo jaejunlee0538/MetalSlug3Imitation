@@ -11,8 +11,8 @@ std::string extractSpritePrefix(std::string name) {
 	return name.substr(0, name.rfind('_'));
 }
 int main() {
-	std::string spriteFileName = SPRITE_RESOURCE_PATH"SpriteTarma.json";
-	std::string aimationFileName = SPRITE_RESOURCE_PATH"AnimationTarma.json";
+	std::string spriteFileName = SPRITE_RESOURCE_PATH"SpritePlayerBullet.json";
+	std::string aimationFileName = SPRITE_RESOURCE_PATH"AnimationTarma-.json";
 	std::string aimationOutFileName = "testAnimationOut.json";
 	SGA::BitmapImage::setHWND(GetConsoleWindow());
 	GET_SPRITE_MANAGER()->loadFromJSON(spriteFileName);
@@ -65,6 +65,7 @@ int main() {
 				}
 			}
 		}
+		std::cout << spritePrefix << std::endl;
 		
 	}
 	GET_ANIMATION_MANAGER()->saveToJSON(aimationOutFileName);

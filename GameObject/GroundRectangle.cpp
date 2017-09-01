@@ -3,6 +3,8 @@
 #include "CommonMacroHeader.h"
 #include "CollisionConfig.h"
 #include "LayerManager.h"
+#include "Global.h"
+#include "KeyManager.h"
 namespace SGA {
 	GroundRectangle::GroundRectangle(int posX, int posY, int width, int height)
 		:_width(width), _height(height)
@@ -30,7 +32,7 @@ namespace SGA {
 
 	bool GroundRectangle::isRenderable() const {
 #if DEBUG_ENABLE_DRAW_GROUND
-		return true;
+		return GET_KEY_MANAGER()->isToggleKey('3');
 #else
 		return false;
 #endif

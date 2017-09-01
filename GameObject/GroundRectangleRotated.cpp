@@ -4,6 +4,7 @@
 #include "LayerManager.h"
 #include "Global.h"
 #include "MathUtils.h"
+#include "KeyManager.h"
 namespace SGA {
 	GroundRectangleRotated::GroundRectangleRotated(int posX, int posY, float angle, int width, int height)
 		:_width(width), _height(height), _angle(angle)
@@ -33,7 +34,7 @@ namespace SGA {
 
 	bool GroundRectangleRotated::isRenderable() const {
 #if DEBUG_ENABLE_DRAW_GROUND
-		return true;
+		return GET_KEY_MANAGER()->isToggleKey('3');
 #else
 		return false;
 #endif

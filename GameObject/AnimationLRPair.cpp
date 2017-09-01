@@ -1,5 +1,5 @@
 #include "AnimationLRPair.h"
-#include <AnimationManager.h>
+#include "AnimationManager.h"
 
 namespace SGA {
 	AnimationLRPair::AnimationLRPair() {

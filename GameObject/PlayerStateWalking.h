@@ -1,6 +1,6 @@
 #pragma once
 #include "PlayerStateIface.h"
-#include <SpritesAnimation.h>
+#include "SpritesAnimation.h"
 #include "AnimationLRPair.h"
 namespace SGA {
 	class PlayerStateWalking :
@@ -11,7 +11,8 @@ namespace SGA {
 			LIFTING_HEAD,
 			FIRING,
 			GRENADE,
-			KNIFE
+			KNIFE,
+			KNEEING_DOWN
 		};
 	public:
 		PlayerStateWalking(Player & player);
@@ -21,7 +22,11 @@ namespace SGA {
 		void enterState(PlayerStateIface* prev);
 		void exitState();
 	private:
+		void updateState();
+		void moveUpdate();
+		void processKeyInput();
 		void initAnimation();
+		void fire();
 	private:
 		int _knifeIdx;
 		SubStates _subState;
@@ -36,6 +41,16 @@ namespace SGA {
 		AnimationLRPair _animUpperWatchUpFire;
 		AnimationLRPair _animUpperGrenade;
 		AnimationLRPair _animUpperKnife[2];
+
+		AnimationLRPair _animKneeWalk;
+		AnimationLRPair _animKneeIdle;
+		AnimationLRPair _animAllKneeTurn;
+		AnimationLRPair _animToKnee;
+		AnimationLRPair _animFromKnee;
+		AnimationLRPair _animKneeIdleAfterGrenade;
+		AnimationLRPair _animKneeFire;
+		AnimationLRPair _animKneeGrenade;
+		AnimationLRPair _animKneeKnife[2];
 
 		AnimationLRPair _animUpperReload;
 	};

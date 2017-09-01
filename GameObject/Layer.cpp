@@ -56,9 +56,9 @@ namespace SGA {
 	void Layer::drawRectangleInWorld(float x, float y, int w, int h)
 	{
 		_camera->transformWorldToScreen(x, y);
-		//HBRUSH oldBrush = (HBRUSH)SelectObject(_canvas.getDC(), GetStockObject(HOLLOW_BRUSH));
+		HBRUSH oldBrush = (HBRUSH)SelectObject(_canvas.getDC(), GetStockObject(HOLLOW_BRUSH));
 		Rectangle(_canvas.getDC(), x - w / 2, y - h / 2, x + w / 2, y + h / 2);
-		//SelectObject(_canvas.getDC(), oldBrush);
+		SelectObject(_canvas.getDC(), oldBrush);
 	}
 
 	void Layer::drawRectangleInWorld(RECT rect)
@@ -69,15 +69,17 @@ namespace SGA {
 		rect.right += x;
 		rect.top += y;
 		rect.bottom += y;
+		HBRUSH oldBrush = (HBRUSH)SelectObject(_canvas.getDC(), GetStockObject(HOLLOW_BRUSH));
 		Rectangle(_canvas.getDC(), rect.left, rect.top, rect.right, rect.bottom);
+		SelectObject(_canvas.getDC(), oldBrush);
 	}
 
 	void Layer::drawCircleInWorld(float x, float y, int R)
 	{
 		_camera->transformWorldToScreen(x, y);
-		//HBRUSH oldBrush = (HBRUSH)SelectObject(_canvas.getDC(), GetStockObject(HOLLOW_BRUSH));
+		HBRUSH oldBrush = (HBRUSH)SelectObject(_canvas.getDC(), GetStockObject(HOLLOW_BRUSH));
 		Ellipse(_canvas.getDC(), x -  R, y - R, x + R, y + R);
-		//SelectObject(_canvas.getDC(), oldBrush);
+		SelectObject(_canvas.getDC(), oldBrush);
 	}
 
 	void Layer::drawPolygonInWorld(const POINTFLOAT* pts, int n)
@@ -91,9 +93,9 @@ namespace SGA {
 			p[i].x = x;
 			p[i].y = y;
 		}
-		//HBRUSH oldBrush = (HBRUSH)SelectObject(_canvas.getDC(), GetStockObject(HOLLOW_BRUSH));
+		HBRUSH oldBrush = (HBRUSH)SelectObject(_canvas.getDC(), GetStockObject(HOLLOW_BRUSH));
 		Polygon(_canvas.getDC(), p, n);
-		//SelectObject(_canvas.getDC(), oldBrush);
+		SelectObject(_canvas.getDC(), oldBrush);
 		delete[] p;
 	}
 }

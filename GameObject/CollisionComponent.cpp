@@ -30,7 +30,7 @@ namespace SGA {
 		if (it == _collisionMemory.end()) {
 			//새로운 충돌 물체
 			_collisionMemory.insert(std::make_pair(other, true));
-			if (isTrigger()) {
+			if (other->isTrigger()) {
 				_owner.onTrigerringEnter(other->getOwner());
 			}
 			else {
@@ -40,7 +40,8 @@ namespace SGA {
 		else {
 			it->second = true;
 		}
-		if (isTrigger()) {
+
+		if (other->isTrigger()) {
 			_owner.onTrigerring(other->getOwner());
 		}
 		else {
@@ -121,7 +122,12 @@ namespace SGA {
 		GameObject* prev;
 		while (object != NULL) {
 			prev = object;
-			object = object->getParent();
+			if (object->isLockedToParent()) {
+				object = object->getParent();
+			}
+			else {
+				object = NULL;
+			}
 		}
 		prev->movePosition(dx, dy);
 	}

@@ -4,7 +4,15 @@
 #include "CollisionComponent.h"
 #include <list>
 namespace SGA {
-
+	enum struct GameObjectTypes {
+		UNKNOWN=0,
+		ENEMY,
+		PLAYER,
+		STRUCTURE,
+		PLAYER_BULLET,
+		ENEMY_BULLET,
+		GROUND
+	};
 	class GameObject
 	{
 	public:
@@ -12,7 +20,12 @@ namespace SGA {
 
 		virtual ~GameObject();
 
-		virtual std::string getTag() const = 0;
+		virtual std::string getTag() const {
+			return "Untagged";
+		}
+		virtual GameObjectTypes getTypeID() const{
+			return GameObjectTypes::UNKNOWN;
+		}
 		virtual GameObject* clone() { return NULL; }
 		//////////////////////////////////////////////////////////////
 		GameObject* getParent();
@@ -51,6 +64,10 @@ namespace SGA {
 		POINTFLOAT getPosition() const;
 		POINTFLOAT getDeltaPosition() const;
 
+		void setGravityVelocity(POINTFLOAT gVel);
+		POINTFLOAT getGravityVelocity() const;
+		
+
 		void enableGravity() {
 			_useGravity = true;
 		}
@@ -75,6 +92,16 @@ namespace SGA {
 			return _isKinematic;
 		}
 
+		void setLockedToParent() {
+			_lockedToParent = true;
+		}
+		void setUnlockedToParent() {
+			_lockedToParent = false;
+		}
+		bool isLockedToParent() const {
+			return _lockedToParent;
+		}
+
 		void setActive() {
 			_isActive = true;
 		}
@@ -96,10 +123,12 @@ namespace SGA {
 		void __resolveCollision(GameObject* other);
 		void __collisionCheckInternal(GameObject* other, bool ccc);
 	private:
+		bool _lockedToParent;
 		bool _isActive;//기본값 : true
 		bool _useGravity;//기본값 : true
 		bool _isKinematic;//기본값 : false
 		POINTFLOAT _position;
+		POINTFLOAT _gravityVel;
 		POINTFLOAT _deltaPos;
 		CollisionComponent * _collisionComponent = NULL;
 		GameObject* _parent = NULL;

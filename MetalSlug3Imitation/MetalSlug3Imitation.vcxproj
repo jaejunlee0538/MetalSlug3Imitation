@@ -151,37 +151,24 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AnimationLRPair.cpp" />
-    <ClCompile Include="ChoumenConga.cpp" />
-    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="GameNode.cpp" />
     <ClCompile Include="GameLoop.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="PlayerStateIface.cpp" />
-    <ClCompile Include="PlayerStateJumping.cpp" />
-    <ClCompile Include="PlayerStateStanding.cpp" />
-    <ClCompile Include="PlayerStateWalking.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Stdafx.cpp" />
-    <ClCompile Include="WalkerFootCircle.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AnimationLRPair.h" />
-    <ClInclude Include="ChoumenConga.h" />
-    <ClInclude Include="Enemy.h" />
     <ClInclude Include="GameNode.h" />
     <ClInclude Include="GameLoop.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="PlayerStateIface.h" />
-    <ClInclude Include="PlayerStateJumping.h" />
-    <ClInclude Include="PlayerStateStanding.h" />
-    <ClInclude Include="PlayerStateWalking.h" />
     <ClInclude Include="Stdafx.h" />
-    <ClInclude Include="WalkerFootCircle.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\MapMission1Config.json" />
+    <None Include="..\Resource\Sprites\AnimationEnemyMission1.json" />
+    <None Include="..\Resource\Sprites\AnimationPlayerBullet.json" />
     <None Include="..\Resource\Sprites\AnimationTarma.json" />
+    <None Include="..\Resource\Sprites\SpriteEnemyMission1.json" />
+    <None Include="..\Resource\Sprites\SpritePlayerBullet.json" />
     <None Include="..\Resource\Sprites\SpriteTarma.json" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

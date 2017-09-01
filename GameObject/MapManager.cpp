@@ -8,6 +8,7 @@
 #include "MathUtils.h"
 #include <fstream>
 #include <assert.h>
+#include "FrontSprite.h"
 namespace SGA {
 
 	MapManager::MapManager()
@@ -67,6 +68,12 @@ namespace SGA {
 			grounds.push_back(groundRect);
 		}
 		//일반 게임 오브젝트 로드(적, 구조물 등)
+
+		for (auto it = config["spriteObject"].begin(); it != config["spriteObject"].end(); ++it) {
+			auto ele = *it;
+			SpriteObject* sprite = new SpriteObject(ele["name"], ele["isAnimation"], ele["pos"]["x"], ele["pos"]["y"],LayerManager::getLayerIndexFrom(ele["layer"]));
+			gameObjects.push_back(sprite);
+		}
 		//TODO
 	}
 }

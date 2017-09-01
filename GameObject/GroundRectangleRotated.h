@@ -11,6 +11,9 @@ namespace SGA {
 		std::string getTag() const {
 			return "Ground";
 		}
+		GameObjectTypes getTypeID() const {
+			return GameObjectTypes::GROUND;
+		}
 		void render();
 		bool isRenderable() const;
 		void rotate(float dAngle);

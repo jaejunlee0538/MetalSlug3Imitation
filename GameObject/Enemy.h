@@ -1,8 +1,8 @@
 #pragma once
-#include <GameObject.h>
+#include "GameObject.h"
 #include "WalkerFootCircle.h"
-#include <CollisionTriggerBox.h>
-#include <Layer.h>
+#include "CollisionTriggerBox.h"
+#include "Layer.h"
 
 namespace SGA {
 	class Player;
@@ -21,6 +21,8 @@ namespace SGA {
 
 		virtual void onCollidingEnter(GameObject& other);
 		virtual void onTrigerring(GameObject& other);
+
+		virtual void update();
 
 		bool isGrounded() const;
 

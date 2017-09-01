@@ -1,6 +1,6 @@
 #pragma once
 #include "PlayerStateIface.h"
-#include <SpritesAnimation.h>
+#include "SpritesAnimation.h"
 #include "AnimationLRPair.h"
 namespace SGA {
 	class PlayerStateJumping :
@@ -20,16 +20,13 @@ namespace SGA {
 		void update();
 		void enterState(PlayerStateIface * prev);
 		void exitState();
-		inline void setLookingDown(bool lookDown) {
-			_lookingDown = lookDown;
-		}
-		inline bool isLookingDown() const {
-			return _lookingDown;
-		}
+
 	private:
 		void initAnimation();
+		void processKeyInput();
+		void stateUpdate();
+		void fire();
 	private:
-		bool _lookingDown;
 		SubStates _subState;
 		int _knifeIdx;
 		AnimationLRPair _animLowerJump;

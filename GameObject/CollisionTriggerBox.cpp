@@ -5,6 +5,7 @@
 #include "CollisionConfig.h"
 #include "Global.h"
 #include "LayerManager.h"
+#include "KeyManager.h"
 namespace SGA {
 
 	CollisionTriggerBox::CollisionTriggerBox(int posX, int posY, int width, int height, std::string tag)
@@ -20,12 +21,12 @@ namespace SGA {
 
 	}
 
-	void CollisionTriggerBox::onTrigerringEnter(GameObject & other)
+	void CollisionTriggerBox::onCollidingEnter(GameObject & other)
 	{
-		LogDebugMessage("TriggeringEnter - %s\n", other.getTag().c_str());
+		//LogDebugMessage("TriggeringEnter - %s\n", other.getTag().c_str());
 	}
 
-	void CollisionTriggerBox::onTrigerring(GameObject & other)
+	void CollisionTriggerBox::onColliding(GameObject & other)
 	{
 
 		if (_targetTags.empty()) {
@@ -50,6 +51,11 @@ namespace SGA {
 
 	}
 
+	void CollisionTriggerBox::setCollisionLayer(CollisionLayers layer)
+	{
+		getCollisionComponent()->setCollisionLayer(layer);
+	}
+
 	void CollisionTriggerBox::resizeTriggerBox(int w, int h)
 	{
 		CollisionComponentRectangle * rectCollision =
@@ -57,6 +63,7 @@ namespace SGA {
 				SGA::makeRectCenter<RECT, int>(0, 0, w, h),
 				true, COLLISION_LAYER_TRIGGER_BOX);
 		CollisionComponent* oldCollision= setCollisionComponent(rectCollision);
+		
 		if (oldCollision) {
 			delete oldCollision;
 		}
@@ -64,7 +71,7 @@ namespace SGA {
 
 	bool CollisionTriggerBox::isRenderable() const {
 #if DEBUG_ENABLE_DRAW_COLLISION_TRIGGER_BOX
-		return true;
+		return GET_KEY_MANAGER()->isToggleKey('2');
 #else
 		return false;
 #endif

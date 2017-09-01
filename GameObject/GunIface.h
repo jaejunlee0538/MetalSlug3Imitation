@@ -6,5 +6,9 @@ namespace SGA {
 	public:
 		GunIface();
 		virtual ~GunIface();
+		virtual bool isRenderable() const {
+			return false;
+		}
+		virtual void fire(float posX, float posY, int xDir, int yDir) = 0;
 	};
 }

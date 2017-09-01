@@ -6,6 +6,7 @@ namespace SGA {
 
 	SpriteObject::SpriteObject(std::string spriteName, bool animation, int posX, int posY, int renderLayer)
 	{
+		disableGravity();
 		setPosition(posX, posY);
 		if (animation) {
 			_sprite = NULL;

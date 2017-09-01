@@ -3,10 +3,12 @@
 namespace SGA {
 	GameObject::GameObject()
 	{
+		setLockedToParent();
 		setPosition(0, 0);
 		setActive();
 		enableGravity();
 		disableKinamatic();
+		setGravityVelocity({ 0.0f,0.0f });
 	}
 
 	GameObject::~GameObject()
@@ -19,9 +21,7 @@ namespace SGA {
 		}
 	}
 
-
 	//////////////////////////////////////////////////////////////
-
 	GameObject * GameObject::getParent() {
 		return _parent;
 	}
@@ -53,7 +53,7 @@ namespace SGA {
 
 	POINTFLOAT GameObject::getPosition() const {
 		POINTFLOAT pos = _position;
-		if (_parent) {
+		if (_parent && _lockedToParent) {
 			POINTFLOAT parentPos = _parent->getPosition();
 			pos.x += parentPos.x;
 			pos.y += parentPos.y;
@@ -63,10 +63,20 @@ namespace SGA {
 
 	POINTFLOAT GameObject::getDeltaPosition() const
 	{
-		if (_parent) {
+		if (_parent && _lockedToParent) {
 			return _parent->getDeltaPosition();
 		}
 		return _deltaPos;
+	}
+
+	void GameObject::setGravityVelocity(POINTFLOAT gVel)
+	{
+		_gravityVel = gVel;
+	}
+
+	POINTFLOAT GameObject::getGravityVelocity() const
+	{
+		return _gravityVel;
 	}
 
 	void GameObject::beginCollisionCheck()
@@ -128,13 +138,17 @@ namespace SGA {
 	}
 	void GameObject::__collisionCheckInternal(GameObject * other, bool ccc)
 	{
+		if (getTypeID() == GameObjectTypes::PLAYER_BULLET) {
+			int a = 10;
+		}
 		//check
 		if (ccc) {
 			//나와 other/other의 자식들과의 충돌 체크를 시도 한다.
 			other->__collisionCheckInternal(this, false);
 			for (auto it = _childs.begin(); it != _childs.end(); ++it) {
 				//내 자식과 other/other의 자식들과의 충돌 체크를 시도한다.
-				other->__collisionCheckInternal(*it, false);
+				//other->__collisionCheckInternal(*it, false);
+				(*it)->checkCollisionWith(other);
 			}
 		}
 		else {
@@ -146,9 +160,11 @@ namespace SGA {
 					CollisionComponent* otherCollision = other->getCollisionComponent();
 					if (_collisionComponent->isCollidableWith(otherCollision)) {
 						if (_collisionComponent->isCollideWith(otherCollision)) {
-							_collisionComponent->handleCollision(_collisionComponent);
+							_collisionComponent->handleCollision(otherCollision);
 							otherCollision->handleCollision(_collisionComponent);
-							__resolveCollision(other);
+							if (_collisionComponent->isTrigger() == false && otherCollision->isTrigger() == false) {
+								__resolveCollision(other);
+							}
 						}
 					}
 				}

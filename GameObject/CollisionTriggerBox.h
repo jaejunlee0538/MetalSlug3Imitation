@@ -31,6 +31,8 @@ namespace SGA {
 			_targetTags = targetTags;
 		}
 
+		void setCollisionLayer(CollisionLayers layer);
+
 		void resizeTriggerBox(int w, int h);
 
 		bool isRenderable() const;
@@ -39,8 +41,8 @@ namespace SGA {
 
 		void update();
 
-		void onTrigerringEnter(GameObject& other);
-		void onTrigerring(GameObject& other);
+		void onCollidingEnter(GameObject& other);
+		void onColliding(GameObject& other);
 
 		void onTrigerringExit(GameObject& other);
 	protected:

@@ -1,12 +1,18 @@
 #pragma once
-#include <GameObject.h>
+#include "GameObject.h"
 #include "CollisionTriggerBox.h"
-#include <SpritesAnimation.h>
-#include <Sprite.h>
+#include "SpritesAnimation.h"
+#include "Sprite.h"
 #include <map>
 #include "PlayerStateIface.h"
-#include <Layer.h>
+#include "Layer.h"
+#include "GunPistol.h"
 namespace SGA {
+	enum struct PlayerActionDir {
+		FRONT,
+		UP,
+		DOWN
+	};
 	class Player :
 		public GameObject
 	{
@@ -55,14 +61,6 @@ namespace SGA {
 			_currentState = currentState;
 		}
 
-		inline void setLookingUp(bool lookingUp) {
-			_lookingUp = lookingUp;
-		}
-
-		inline bool isLookingUp() const {
-			return _lookingUp;
-		}
-
 		inline void setLookingLeft(bool lookingLeft) {
 			_lookingLeft = lookingLeft;
 		}
@@ -89,25 +87,40 @@ namespace SGA {
 		void setLowerAnimation(SpritesAnimation* animLower) {
 			_animLower = animLower;
 		}
+
 		SpritesAnimation* getUpperAnimation() {
 			return _animUpper;
 		}
+
 		SpritesAnimation* getLowerAnimation() {
 			return _animLower;
 		}
 		
+		void setPlayerActionDir(PlayerActionDir dir) {
+			_dir = dir;
+		}
+
+		PlayerActionDir getPlayerActionDir() const{
+			return _dir;
+		}
+
+		GunIface* getCurrentGun() {
+			return _currentGun;
+		}
 	protected:
+		GunIface* _currentGun = NULL;
+		GunPistol _defaultGun;
+		PlayerActionDir _dir;
 		CollisionTriggerBox * _groundCheckBox;
 		CollisionTriggerBox* _rightKnifeTrigger;
 		CollisionTriggerBox* _leftKnifeTrigger;
 
-		SpritesAnimation* _animUpper;
-		SpritesAnimation* _animLower;
+		SpritesAnimation* _animUpper = NULL;
+		SpritesAnimation* _animLower = NULL;
 
 		PlayerStateIface::PlayerStateMap _stateMap;
 		PlayerStateIface* _currentState;
 		bool _lookingLeft;
-		bool _lookingUp;
 		Layer* _layer;
 	};
 }

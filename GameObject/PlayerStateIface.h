@@ -1,7 +1,7 @@
 #pragma once
 #include <map>
 #include <assert.h>
-#include <SpritesAnimation.h>
+#include "SpritesAnimation.h"
 namespace SGA {
 	enum struct PlayerStates {
 		STANDING,

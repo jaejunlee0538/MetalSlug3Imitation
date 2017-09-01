@@ -1,10 +1,10 @@
 #include "Enemy.h"
-#include <CommonMacroHeader.h>
-#include "Stdafx.h"
-#include <CollisionComponentRectangle.h>
-#include <LayerManager.h>
-#include <BulletIface.h>
+#include "CommonMacroHeader.h"
+#include "CollisionComponentRectangle.h"
+#include "LayerManager.h"
+#include "BulletIface.h"
 #include "Player.h"
+#include "CollisionConfig.h"
 namespace SGA {
 	Enemy::Enemy(std::string tag, int hp, int width, int height, int alertRangeRadius)
 		: _tag(tag), _hp(hp)
@@ -45,7 +45,7 @@ namespace SGA {
 
 	void Enemy::onCollidingEnter(GameObject & other)
 	{
-		if (other.getTag() == "PlayerBullet") {
+		/*if (other.getTag() == "PlayerBullet") {
 			attacked();
 			BulletIface* bullet = dynamic_cast<BulletIface*>(&other);
 			assert(bullet != NULL);
@@ -55,12 +55,12 @@ namespace SGA {
 				assert(player != NULL);
 				diedByBullet(*player, *bullet);
 			}
-		}	
+		}	*/
 	}
 
 	void Enemy::onTrigerring(GameObject & other)
 	{
-		if (other.getTag() == "LeftJumpTrigger") {
+		/*if (other.getTag() == "LeftJumpTrigger") {
 			onStayJumpTrigger(true);
 		}
 		else if (other.getTag() == "RightJumpTrigger") {
@@ -73,6 +73,14 @@ namespace SGA {
 			if (getCurrentHP() == 0) {
 				diedByKnife(*player);
 			}
+		}*/
+	}
+
+	void Enemy::update()
+	{
+		if (isGrounded()) {
+			disableGravity();
+			setGravityVelocity({ 0,0 });
 		}
 	}
 

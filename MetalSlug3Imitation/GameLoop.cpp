@@ -15,6 +15,7 @@
 #include <AnimationManager.h>
 #include <GroundRectangle.h>
 #include <MapManager.h>
+#include <DummyEnemy.h>
 GameLoop::GameLoop()
 {
 	
@@ -33,7 +34,9 @@ HRESULT GameLoop::init() {
 	GET_REALTIME_CLOCK()->reset();
 
 	GET_SPRITE_MANAGER()->loadFromJSON(SPRITE_RESOURCE_PATH"SpriteTarma.json");
+	GET_SPRITE_MANAGER()->loadFromJSON(SPRITE_RESOURCE_PATH"SpritePlayerBullet.json");
 	GET_ANIMATION_MANAGER()->loadFromJSON(SPRITE_RESOURCE_PATH"AnimationTarma.json");
+	GET_ANIMATION_MANAGER()->loadFromJSON(SPRITE_RESOURCE_PATH"AnimationPlayerBullet.json");
 
 	SGA::BitmapImage::setHWND(_hWnd);
 	SGA::ScrollingScene * farScroll, *closeScroll;
@@ -51,6 +54,9 @@ HRESULT GameLoop::init() {
 	_gameObjects.insert(_gameObjects.end(), grounds.begin(), grounds.end());
 	_gameObjects.insert(_gameObjects.end(), gameObjects.begin(), gameObjects.end());
 
+	SGA::DummyEnemy* enemy = new SGA::DummyEnemy;
+	enemy->setPosition(350, 0);
+	_gameObjects.push_back(enemy);
 	GET_CAMERA()->setTarget(_player);
 	return S_OK;
 }
@@ -63,7 +69,7 @@ void GameLoop::update(void) {
 	GameNode::update();
 	GET_REALTIME_CLOCK()->updateClock();
 	GET_GAME_WORLD_CLOCK()->updateClock(UPDATE_DELTA_TIME);
-	SGA::GameObjectLoop::gravityLoop(_gameObjects, { 0.0f, 4.0f }, GET_GAME_WORLD_CLOCK()->getDeltaTimeMillis()*0.001f);
+	SGA::GameObjectLoop::gravityLoop(_gameObjects, { 0.0f, 250.0f }, GET_GAME_WORLD_CLOCK()->getDeltaTimeMillis()*0.001f);
 	SGA::GameObjectLoop::updateLoop(_gameObjects);
 	SGA::GameObjectLoop::collisionCheckLoop(_gameObjects);
 }

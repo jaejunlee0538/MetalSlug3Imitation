@@ -1,9 +1,11 @@
 #include "WalkerFootCircle.h"
-#include <CollisionComponentCircle.h>
-#include <CommonMacroHeader.h>
-#include "Stdafx.h"
-#include <LayerManager.h>
-#include <CollisionConfig.h>
+#include "CollisionComponentCircle.h"
+#include "CommonMacroHeader.h"
+//#include "Stdafx.h"
+#include "LayerManager.h"
+#include "CollisionConfig.h"
+#include "Global.h"
+#include "KeyManager.h"
 namespace SGA {
 	WalkerFootCircle::WalkerFootCircle(int posX, int posY, int radius)
 		:_R(radius)
@@ -26,7 +28,7 @@ namespace SGA {
 	
 	bool WalkerFootCircle::isRenderable() const {
 #if DEBUG_ENABLE_DRAW_PLAYER_HIDDEN_COMPONENT
-		return true;
+		return GET_KEY_MANAGER()->isToggleKey('1');
 #else
 		return false;
 #endif

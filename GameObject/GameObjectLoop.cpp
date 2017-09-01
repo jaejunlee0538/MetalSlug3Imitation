@@ -65,14 +65,19 @@ namespace SGA {
 			}
 		}
 
-		void gravityLoop(std::vector<SGA::GameObject*>& gameObjects, POINTFLOAT velocity, float dt)
+		void gravityLoop(std::vector<SGA::GameObject*>& gameObjects, POINTFLOAT gravity, float dt)
 		{
 			GameObject* object;
 			POINTFLOAT tmp;
 			for (auto it1 = gameObjects.begin(); it1 != gameObjects.end(); ++it1) {
 				object = *it1;
 				if (object->isActive() && object->isKinematic()==false &&object->isGravityEnabled()) {
-					object->movePosition(velocity.x, velocity.y);
+					POINTFLOAT vel = object->getGravityVelocity();
+					vel.x += gravity.x * dt;
+					vel.y += gravity.y * dt;
+					object->setGravityVelocity(vel);
+
+					object->movePosition(vel.x*dt, vel.y*dt);
 					//object->movePosition(velocity.x*dt, velocity.y*dt);
 					//TODO : velocity*dt로 프레임당 이동을 계산하면 소수점 반올림때문에 플레이어가 위아래로 진동한다.
 				}

@@ -131,11 +131,13 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AnimationLRPair.h" />
     <ClInclude Include="AnimationManager.h" />
     <ClInclude Include="BitmapImage.h" />
     <ClInclude Include="BulletIface.h" />
-    <ClInclude Include="BulletPistolNormal.h" />
+    <ClInclude Include="BulletPistol.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="ChoumenConga.h" />
     <ClInclude Include="CollisionCheckFunc.h" />
     <ClInclude Include="CollisionComponent.h" />
     <ClInclude Include="CollisionComponentCircle.h" />
@@ -147,6 +149,8 @@
     <ClInclude Include="CommonMacroHeader.h" />
     <ClInclude Include="CommonUtil.h" />
     <ClInclude Include="DoubleBuffering.h" />
+    <ClInclude Include="DummyEnemy.h" />
+    <ClInclude Include="Enemy.h" />
     <ClInclude Include="FrontSprite.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="GameObjectFactory.h" />
@@ -155,6 +159,7 @@
     <ClInclude Include="Global.h" />
     <ClInclude Include="GroundRectangleRotated.h" />
     <ClInclude Include="GunIface.h" />
+    <ClInclude Include="GunPistol.h" />
     <ClInclude Include="json.hpp" />
     <ClInclude Include="KeyManager.h" />
     <ClInclude Include="Layer.h" />
@@ -162,6 +167,11 @@
     <ClInclude Include="Line2D.h" />
     <ClInclude Include="MapManager.h" />
     <ClInclude Include="MathUtils.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="PlayerStateIface.h" />
+    <ClInclude Include="playerstatejumping.h" />
+    <ClInclude Include="PlayerStateStanding.h" />
+    <ClInclude Include="PlayerStateWalking.h" />
     <ClInclude Include="RandomFunction.h" />
     <ClInclude Include="ScrollingScene.h" />
     <ClInclude Include="SingletonBase.h" />
@@ -169,14 +179,17 @@
     <ClInclude Include="SpriteIface.h" />
     <ClInclude Include="SpriteManager.h" />
     <ClInclude Include="SpritesAnimation.h" />
+    <ClInclude Include="WalkerFootCircle.h" />
     <ClInclude Include="WorldClock.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AnimationLRPair.cpp" />
     <ClCompile Include="AnimationManager.cpp" />
     <ClCompile Include="BitmapImage.cpp" />
     <ClCompile Include="BulletIface.cpp" />
-    <ClCompile Include="BulletPistolNormal.cpp" />
+    <ClCompile Include="BulletPistol.cpp" />
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="ChoumenConga.cpp" />
     <ClCompile Include="CollisionCheckFunc.cpp" />
     <ClCompile Include="CollisionComponent.cpp" />
     <ClCompile Include="CollisionComponentCircle.cpp" />
@@ -185,6 +198,8 @@
     <ClCompile Include="CollisionConfig.cpp" />
     <ClCompile Include="CollisionTriggerBox.cpp" />
     <ClCompile Include="CommonUtil.cpp" />
+    <ClCompile Include="DummyEnemy.cpp" />
+    <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="FrontSprite.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameObjectFactory.cpp" />
@@ -193,15 +208,22 @@
     <ClCompile Include="GroundRectangle.cpp" />
     <ClCompile Include="GroundRectangleRotated.cpp" />
     <ClCompile Include="GunIface.cpp" />
+    <ClCompile Include="GunPistol.cpp" />
     <ClCompile Include="Layer.cpp" />
     <ClCompile Include="LayerManager.cpp" />
     <ClCompile Include="Line2D.cpp" />
     <ClCompile Include="MapManager.cpp" />
     <ClCompile Include="MathUtils.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="PlayerStateIface.cpp" />
+    <ClCompile Include="PlayerStateJumping.cpp" />
+    <ClCompile Include="PlayerStateStanding.cpp" />
+    <ClCompile Include="PlayerStateWalking.cpp" />
     <ClCompile Include="ScrollingScene.cpp" />
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="SpriteManager.cpp" />
     <ClCompile Include="SpritesAnimation.cpp" />
+    <ClCompile Include="WalkerFootCircle.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

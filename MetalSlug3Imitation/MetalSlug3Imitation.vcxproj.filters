@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
@@ -28,8 +24,9 @@
     <Filter Include="Player">
       <UniqueIdentifier>{3c8fbbab-5bc5-411f-85f7-d48dd488e225}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Enemy">
-      <UniqueIdentifier>{ce1b44ad-856a-45f2-b317-e00a8c38b361}</UniqueIdentifier>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -48,33 +45,6 @@
     <ClCompile Include="Stdafx.cpp">
       <Filter>Global</Filter>
     </ClCompile>
-    <ClCompile Include="WalkerFootCircle.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Player.cpp">
-      <Filter>Player</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerStateIface.cpp">
-      <Filter>Player</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerStateStanding.cpp">
-      <Filter>Player</Filter>
-    </ClCompile>
-    <ClCompile Include="Enemy.cpp">
-      <Filter>Enemy</Filter>
-    </ClCompile>
-    <ClCompile Include="ChoumenConga.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="AnimationLRPair.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerStateWalking.cpp">
-      <Filter>Player</Filter>
-    </ClCompile>
-    <ClCompile Include="PlayerStateJumping.cpp">
-      <Filter>Player</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="GameLoop.h">
@@ -86,32 +56,8 @@
     <ClInclude Include="Stdafx.h">
       <Filter>Global</Filter>
     </ClInclude>
-    <ClInclude Include="WalkerFootCircle.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>Player</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerStateIface.h">
-      <Filter>Player</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerStateStanding.h">
-      <Filter>Player</Filter>
-    </ClInclude>
-    <ClInclude Include="Enemy.h">
-      <Filter>Enemy</Filter>
-    </ClInclude>
-    <ClInclude Include="ChoumenConga.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="AnimationLRPair.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerStateWalking.h">
-      <Filter>Player</Filter>
-    </ClInclude>
-    <ClInclude Include="PlayerStateJumping.h">
-      <Filter>Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -123,6 +69,18 @@
     </None>
     <None Include="..\Resource\Sprites\AnimationTarma.json">
       <Filter>Resource Files\AnimationList</Filter>
+    </None>
+    <None Include="..\Resource\Sprites\AnimationEnemyMission1.json">
+      <Filter>Resource Files\AnimationList</Filter>
+    </None>
+    <None Include="..\Resource\Sprites\SpriteEnemyMission1.json">
+      <Filter>Resource Files\SpriteList</Filter>
+    </None>
+    <None Include="..\Resource\Sprites\AnimationPlayerBullet.json">
+      <Filter>Resource Files\AnimationList</Filter>
+    </None>
+    <None Include="..\Resource\Sprites\SpritePlayerBullet.json">
+      <Filter>Resource Files\SpriteList</Filter>
     </None>
   </ItemGroup>
 </Project>

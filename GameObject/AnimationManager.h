@@ -7,7 +7,7 @@
 namespace SGA {
 	class AnimationManager : public SingletonBase<AnimationManager>
 	{
-		typedef std::array<SpritesAnimation*, 20> AnimationPool;
+		typedef std::array<SpritesAnimation*, 200> AnimationPool;
 		typedef std::map<std::string, AnimationPool*> AnimationMap;
 	public:
 		AnimationManager();

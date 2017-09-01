@@ -1,6 +1,6 @@
 #pragma once
 #include <string>
-#include <SpritesAnimation.h>
+#include "SpritesAnimation.h"
 namespace SGA {
 	class AnimationLRPair {
 	public:
